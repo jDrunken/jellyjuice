@@ -13,17 +13,33 @@ module.exports = {
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
     },
-    /*
-     ** Customize the progress bar color
-     */
-    loading: { color: '#3B8070' },
-    /*
-     ** Build configuration
-     */
+
+    // loading progress bar
+    loading: false,
+    modules : [
+        '@nuxtjs/style-resources',
+        [
+            '@nuxtjs/component-cache',
+            {
+                maxAge: 1000 * 60 * 60
+            }
+        ]
+    ],
+
+    // 전역으로 사용할 설정을 미리 불러온다.
+    styleResources: {
+        scss: [
+            '~/assets/styles/env.scss',
+            '~/assets/styles/variable.scss',
+            '~/assets/styles/font.scss',
+            '~/assets/styles/common.scss'
+        ]
+    },
     build: {
         /*
          ** Run ESLint on save
          */
+        fontUrl: { limit: 1000 },
         extend (config, { isDev, isClient }) {
             if (isDev && isClient) {
                 config.module.rules.push({
@@ -33,7 +49,16 @@ module.exports = {
                     exclude: /(node_modules)/
                 })
             }
-        }
+        },
+        postcss : {
+            preset : {
+                autoprefixer : {
+                    browsers: ['last 2 versions', 'ie 11'],
+                    expand: true,
+                    grid:true,
+                }
+            }
+        },
     }
 }
 

@@ -5,16 +5,21 @@
     "author": "J Drunken <mycoolade@gmail.com>",
     "private": true,
     "scripts": {
-        "dev": "nuxt",
+        "dev": "nuxt --spa",
         "build": "nuxt build --universal",
-        "start": "nuxt start --spa",
+        "start": "nuxt start",
         "generate": "nuxt generate --universal",
         "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
         "precommit": "npm run lint",
         "deploy": "gh-pages -d dist -m 'chore: update [skip ci]' -t"
     },
     "dependencies": {
-        "nuxt": "^2.0.0"
+        "@nuxtjs/component-cache": "^1.1.4",
+        "@nuxtjs/style-resources": "^0.1.2",
+        "node-sass": "^4.11.0",
+        "nuxt": "^2.0.0",
+        "nuxt-i18n": "^5.6.0",
+        "sass-loader": "^7.1.0"
     },
     "devDependencies": {
         "babel-eslint": "^10.0.1",

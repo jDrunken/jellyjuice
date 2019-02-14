@@ -1,0 +1,113 @@
+header {
+    color:$white;
+    position:fixed;
+    left:0;
+    right:0;
+    height:81px;
+    z-index:7;
+
+    .container {
+        box-sizing:border-box;
+        padding:0 20px;
+        position:relative;
+        height:inherit;
+        display:flex;
+        align-items:center;
+    }
+
+    // 공통
+    li {
+        list-style-type:none;
+        margin:0;
+        padding:0;
+    }
+
+    a,button {
+        color:#fff;
+        font-family:$Volte;
+    }
+
+    // 제목
+    h1 {
+        background:url('~assets/images/bi-jellujuice-white@2x.png') center center no-repeat;
+        background-size:contain;
+        width:141px;
+        height:41px;
+
+        a {
+            display:block;
+            width:inherit;
+            height:inherit;
+            @include ir();
+        }
+    }
+
+    // 언어 변환
+    div.locale.change {
+        position:absolute;
+        right:20px;
+        top:50%;
+        transform:translateY(-50%);
+        button {
+            background:url('~assets/images/bg-gnb-arrow-white@2x.png') right 4px no-repeat;
+            background-size:12px 12px;
+            padding-right:16px;
+            line-height:1.1;
+        }
+
+        ul {
+            position:absolute;
+            display:none;
+        }
+    }
+
+    // gnb
+    nav {
+        $width:155px;
+        position:absolute;
+        top:0;
+        left:50%;
+        margin-left:calc(-#{$width}*2 / 2);
+
+
+       > ul {
+            width:$width*2;
+            overflow:hidden;
+
+            > li {
+                float:left;
+                width:$width;
+                border-radius: 0 0 5px 5px;
+                text-align:center;
+                padding-top:20px;
+                padding-bottom:15px;
+
+                > button,
+                > a {
+                    text-align:center;
+                    display:block;
+                    width:100%;
+                    padding-top:15px;
+                    padding-bottom:15px;
+                    letter-spacing:-0.5px;
+
+                    &:first-letter {
+                        text-transform:uppercase;
+                    }
+                }
+            }
+
+            ul {
+                margin-top:20px;
+            }
+            li.games {
+                background-color: rgba(250, 119, 12, 0.95);
+
+                ul > li > a {
+                    display:block;
+                    padding:15px 0;
+                }
+            }
+        }
+    }
+}
