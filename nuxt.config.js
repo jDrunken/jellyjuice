@@ -34,6 +34,8 @@ module.exports = {
                 })
             }
         }
+    },
+    generate : {
+        fallback : false
     }
 }
-

@@ -1,0 +1,76 @@
+section.recent.games {
+    padding-top:200px;
+    padding-bottom:82px;
+
+    .container {
+        text-align:center;
+    }
+
+    h2 + ol {
+        margin-top:78px;
+    }
+
+    ol li {
+        display:flex;
+        text-align:left;
+
+        &.eos-blasterz {
+            div {
+                order:1;
+            }
+        }
+        &.eos-to-the-moon {
+            img {
+                order:2;
+            }
+        }
+
+        img {
+            width:695px;
+            height:756px;
+        }
+
+        div {
+            margin-top:77px;
+        }
+
+        h3 {
+            font-family: Volte;
+            font-size: rem(42);
+            font-weight: bold;
+            letter-spacing: -0.5px;
+            color: $font-black;
+        }
+
+        p {
+            font-family: Volte;
+            font-size: rem(26);
+            line-height: 1.46;
+            letter-spacing: -0.5px;
+            color: $font-black;
+        }
+
+        a {
+            font-family: Volte;
+            font-size: rem(26);
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: $font-yellow;
+
+            background:url('~assets/images/bg-arrow-yellow-right@2x.png') right 15px no-repeat;
+            background-size:7px 15px;
+            padding-right:13px;
+
+            display:inline-block;
+        }
+
+        h3 ~ p {
+            margin-top:30px;
+
+            + a {
+               margin-top:50px;
+            }
+        }
+
+    }
+}

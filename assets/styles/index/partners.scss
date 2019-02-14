@@ -1,0 +1,54 @@
+section.partners {
+    padding-top:200px;
+    padding-bottom:200px;
+    background-color: #f9fafc;
+
+    .container {
+        text-align:center;
+    }
+
+    h2 + ul {
+        margin-top:140px;
+    }
+
+    ul {
+        font-size:0;
+    }
+
+    ul li {
+        width:200px;
+        height:207px;
+        font-family: Volte;
+        font-size: rem(26);
+        letter-spacing: -1px;
+        text-align: center;
+        display:inline-block;
+
+        margin-left:40px;
+        margin-right:40px;
+
+        a {
+            display:inline-block;
+            width:inherit;
+            height:inherit;
+            color: $font-black;
+            padding-top:111px;
+            box-sizing:border-box;
+        }
+
+        a.bi {
+            background-position:center top;
+            background-repeat:no-repeat;
+        }
+
+        a.bi.numbers {
+            background-image:url('~assets/images/bi-numbers@2x.png');
+            background-size:140px 64px;
+        }
+
+        a.bi.sin_games {
+            background-image:url('~assets/images/bi-singame@2x.png');
+            background-size:100px auto;
+        }
+    }
+}
