@@ -12,13 +12,13 @@
                 building utilities and community,<br />
                 we grow with creators to enable blockchain pleasure<br />
             </p>
-            <a href="mailto:eosys@eosys.io">submit proposal</a>
+            <a href="mailto:eosys@eosys.io" class="submit button">submit proposal</a>
         </div>
     </div>
 </section>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped src="../../assets/styles/partnership.intro.scss"></style>
 
 <script>
 export default {

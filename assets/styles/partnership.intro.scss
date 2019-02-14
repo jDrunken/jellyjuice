@@ -1,0 +1,56 @@
+section.intro {
+    $font-black : #1d1a18;
+
+    box-sizing:border-box;
+    background:url('../images/bg-partnership@2x.png') bottom center no-repeat #fffcf6;
+    background-size:1920px auto;
+
+    @include media ('>1920px') {
+        background-size:cover;
+    }
+    min-height:750px;
+
+    padding-top:149px;
+    padding-bottom:126px;
+
+    .container {
+    }
+
+    h2 {
+        font-family: Volte;
+        font-size: 72px;
+        font-weight: 600;
+        line-height: 1.04;
+        letter-spacing: -1px;
+        color: $font-black;
+    }
+
+    p {
+        font-family: Volte;
+        font-size: 26px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.31;
+        letter-spacing: -1px;
+        color: $font-black;
+    }
+
+    a.submit.button {
+        @include ir();
+        display:inline-block;
+        width:280px;
+        height:70px;
+        background:url('../images/bg-partnershipbtn-submit@2x.png') center center no-repeat;
+        background-size:cover;
+    }
+
+    h2 + p {
+        margin-top:25px;
+
+        & + a {
+            margin-top:50px;
+        }
+    }
+
+}
