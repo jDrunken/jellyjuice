@@ -13,7 +13,7 @@
 </section>
 </template>
 
-<style lang="scss" scoped src="../../assets/styles/index/intro.scss"></style>
+<style lang="scss" scoped src="../../assets/styles/index.intro.scss"></style>
 
 <script>
 export default {

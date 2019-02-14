@@ -28,7 +28,7 @@
 </section>
 </template>
 
-<style lang="scss" scoped src="~/assets/styles/index/recent-games.scss"></style>
+<style lang="scss" scoped src="~/assets/styles/index.recent-games.scss"></style>
 
 <script>
 export default {

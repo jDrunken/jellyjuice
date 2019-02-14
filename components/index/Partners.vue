@@ -16,7 +16,7 @@
 </section>
 </template>
 
-<style lang="scss" scoped src="~/assets/styles/index/partners.scss"></style>
+<style lang="scss" scoped src="~/assets/styles/index.partners.scss"></style>
 
 <script>
 export default {
