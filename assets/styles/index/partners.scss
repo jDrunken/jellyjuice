@@ -32,23 +32,65 @@ section.partners {
             width:inherit;
             height:inherit;
             color: $font-black;
-            padding-top:111px;
+            padding-top:155px;
             box-sizing:border-box;
+
+            position:relative;
         }
 
         a.bi {
-            background-position:center top;
-            background-repeat:no-repeat;
+            &:after {
+                content:'';
+                display:block;
+                position: absolute;
+                top:0;
+                left:0;
+                right:0;
+                width:100%;
+                height:155px; // box height - 박스 하단부터 텍스트 아래까지의 padding - 텍스트의 높이
+                background-position:center center;
+                background-repeat:no-repeat;
+            }
         }
 
-        a.bi.numbers {
-            background-image:url('~assets/images/bi-numbers@2x.png');
-            background-size:140px 64px;
+        a.bi.numbers:after {
+                background-image:url('~assets/images/bi-numbers@2x.png');
+                background-size:140px auto;
         }
 
-        a.bi.sin_games {
+        a.bi.sin_games:after {
             background-image:url('~assets/images/bi-singame@2x.png');
             background-size:100px auto;
+        }
+
+        a.bi.eosys:after {
+            background-image:url('~assets/images/bi-eosys@2x.png');
+            background-size:104px auto;
+        }
+
+        a.bi.eos_knight:after {
+            background-image:url('~assets/images/bi-eos-knight@2x.png');
+            background-size:104px auto;
+        }
+
+        a.bi.day_1:after {
+            background-image:url('~assets/images/bi-day-1@2x.png');
+            background-size:104px auto;
+        }
+
+        a.bi.meetone:after {
+            background-image:url('~assets/images/bi-meet@2x.png');
+            background-size:100px auto;
+        }
+
+        a.bi.nova:after {
+            background-image:url('~assets/images/bi-nova@2x.png');
+            background-size:110px auto;
+        }
+
+        a.bi.scatter:after {
+            background-image:url('~assets/images/bi-scatter@2x.png');
+            background-size:110px auto;
         }
     }
 }
