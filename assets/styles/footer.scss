@@ -1,0 +1,59 @@
+footer {
+    color:$font-gray;
+    background:#292423;
+
+    padding-top:78px;
+    padding-bottom:76px;
+
+    .container {
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+
+    h2 {
+        background:url('~assets/images/bi-jellyjuice-footer@2x.png');
+        background-size:contain;
+        width:80px;
+        height:96px;
+        @include ir();
+    }
+
+    div.copyright.and.address {
+        margin-left:40px;
+        flex:1;
+        font-family: Volte;
+        font-size: rem(18);
+        line-height: 1.44;
+        letter-spacing: -0.5px;
+    }
+
+    ul.communication.channel {
+        order:2;
+
+        li {
+            display:inline-block;
+
+            a.sns {
+                width:60px;
+                height:60px;
+                display:inline-block;
+                @include ir();
+
+                &.twitter {
+                    background:url('~assets/images/footer-twitter@2x.png') center center no-repeat;
+                    background-size:cover;
+                }
+
+                &.medium {
+                    background:url('~assets/images/footer-medium@2x.png') center center no-repeat;
+                    background-size:cover;
+                }
+            }
+        }
+
+        li + li {
+            margin-left:40px;
+        }
+    }
+}
