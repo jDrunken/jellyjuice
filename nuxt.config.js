@@ -26,6 +26,14 @@ module.exports = {
         ]
     ],
 
+    // 플러그인 설정
+    plugins: [
+        {
+            src: '~/plugins/vue-carousel.js',
+            ssr: false
+        }
+    ],
+
     // 전역으로 사용할 설정을 미리 불러온다.
     styleResources: {
         scss: [
@@ -35,6 +43,7 @@ module.exports = {
             '~/assets/styles/common.scss'
         ]
     },
+
     build: {
         /*
          ** Run ESLint on save

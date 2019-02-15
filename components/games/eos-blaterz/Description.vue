@@ -5,7 +5,28 @@
             Blast monsters and win the prize!</h3>
         <div class="container screenshot">
             <no-ssr>
-
+            <carousel class="description" :perPageCustom="[[320, 1],[600, 2]]" :mouse-drag="false" :navigationEnabled="true">
+                <slide class="items">
+                    <div>
+                        <img src="../../../assets/images/img-blasterz-movie@2x.png" alt="">
+                    </div>
+                </slide>
+                <slide class="items">
+                    <div>
+                        <img src="../../../assets/images/img-blasterz-screenshot-01@2x.png" alt="">
+                    </div>
+                </slide>
+                <slide class="items">
+                    <div>
+                        <img src="../../../assets/images/img-blasterz-screenshot-02@2x.png" alt="">
+                    </div>
+                </slide>
+                <slide class="items">
+                    <div>
+                        <img src="../../../assets/images/img-blasterz-screenshot-03@2x.png" alt="">
+                    </div>
+                </slide>
+            </carousel>
             </no-ssr>
         </div>
         <p>Beware, push and jump to kill monsters! EOS Blasterz is a hyper casual game based on the EOS mainnet. Multiple users can compete, and win payback EOS tokens as a reward. Enjoy fun & easy-to-play game interface! One-touch game control will introduce new blockchain game experience. Jump into your favorite competition mode and be the winner. Stay tuned to enjoy upgrade features and skins. Oh, Don’t forget to bring your blaster spirit!</p>
@@ -19,7 +40,22 @@
 </section>
 </template>
 
-<style lang="scss" scoped src="../../../assets/styles/games.eos-blasterz.description.scss"></style>
+<style lang="scss" scoped src="../../../assets/styles/games.eos-blasterz.description.scss"/>
+<style lang="scss"        src="../../../assets/styles/carousel.scss" />
+<style lang="scss">
+.items {
+    margin:0 10px;
+
+    > div {
+       max-width:630px;
+    }
+    img {
+        display:block;
+        width:100%;
+    }
+}
+
+</style>
 
 <script>
 export default {
