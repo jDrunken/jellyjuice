@@ -1,11 +1,10 @@
 section.intro {
     box-sizing:border-box;
-    background:url('../images/bg-index-intro-top@2x.png') top center no-repeat,
-              url('../images/bg-index-intro-bottom@2x.png') bottom center no-repeat;
-    background-size:1478.5px auto, 1920px auto;
+    background:url('../images/bg-index-intro@2x.png') top center no-repeat;
+    background-size:1920px auto;
 
     @include media ('>1920px') {
-        background-size:1478.5px auto, contain;
+        background-size:contain;
     }
     min-height:750px;
 

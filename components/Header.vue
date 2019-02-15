@@ -1,5 +1,5 @@
 <template>
-<header>
+<header :class="page">
     <div class="container">
         <h1>
             <nuxt-link to="/">
@@ -43,6 +43,17 @@
 
 <script>
 export default {
-    name : 'Header'
+    name : 'Header',
+    data : () => ({
+        page : ''
+    }),
+    watch : {
+        '$route' (to, from) {
+            return this.page = this.$route.name
+        }
+    },
+    mounted () {
+        this.page = this.$route.name
+    }
 }
 </script>
