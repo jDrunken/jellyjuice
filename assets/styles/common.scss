@@ -1,9 +1,8 @@
 header .container,
 footer .container,
 section > .container {
-    max-width:1426px;
+    max-width:1280px;
     margin:0 auto;
-    padding:0 20px;
 }
 
 section.recent-games,
@@ -49,7 +48,7 @@ section.partners {
     letter-spacing: -0.5px;
     color: $font-yellow;
 
-    background:url('~assets/images/bg-arrow-yellow-right@2x.png') right 15px no-repeat;
+    background:url('../images/bg-arrow-yellow-right@2x.png') right 15px no-repeat;
     background-size:7px 15px;
     padding-right:13px;
 

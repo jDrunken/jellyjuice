@@ -1,0 +1,111 @@
+section.creators {
+
+    h2 {
+        text-shadow: 0 0 20px rgba(255, 101, 0, 0.2);
+        font-family: Volte;
+        font-size: rem(56);
+        font-weight: 500;
+        letter-spacing: -2px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    h2 + p {
+        margin-top:30px;
+    }
+}
+
+section.creators.title {
+    background:url('../images/bg-partnership-creators@2x.png') center center no-repeat transparent;
+    padding-top:184px;
+    padding-bottom:174px;
+
+    p {
+        text-shadow: 0 0 20px rgba(255, 101, 0, 0.5);
+        font-family: Volte;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 1.46;
+        letter-spacing: -0.5px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+}
+
+section.creators.list {
+    padding-top:120px;
+    padding-bottom:120px;
+
+    ul {
+        display:flex;
+        justify-content: space-between;
+
+        li {
+            max-width:340px;
+            background: $white;
+            color:$font-black;
+            padding-top:154px + 60px;
+        }
+
+        li.bi {
+            position:relative;
+            &:after {
+                content:'';
+                display:block;
+                position: absolute;
+                top:0;
+                left:0;
+                right:0;
+                width:100%;
+                height:154px; // box height - 박스 하단부터 텍스트 아래까지의 padding - 텍스트의 높이
+                background-position:center center;
+                background-repeat:no-repeat;
+            }
+        }
+
+        .bi.numbers:after {
+                background-image:url('~assets/images/bi-numbers@2x.png');
+                background-size:154px auto;
+        }
+
+
+        .bi.eosys:after {
+            background-image:url('~assets/images/bi-eosys@2x.png');
+            background-size:134px auto;
+        }
+
+        .bi.day_1:after {
+            background-image:url('~assets/images/bi-day-1@2x.png');
+            background-size:119px auto;
+        }
+    }
+
+
+    h3 {
+        font-family: Volte;
+        font-size: rem(42);
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        text-align: center;
+        color: $font-black;
+    }
+
+    p {
+        width: 340px;
+        height: 216px;
+        font-family: Volte;
+        font-size: 26px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.38;
+        letter-spacing: -0.5px;
+        text-align: center;
+        color: #1d1a18;
+    }
+
+    h3 + p {
+        margin-top:20px;
+    }
+}

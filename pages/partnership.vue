@@ -1,23 +1,38 @@
 <template>
 <section class="partnership">
     <Intro />
-    <Support />
-    <Introduce />
+
+    <SupportTitle />
+    <SmartContract />
+    <Marketing/>
+    <Funding />
+
+    <CreatorsTitle />
+    <CreatorsList />
 </section>
 </template>
 
-<style lang="scss"></style>
-
 <script>
 import Intro from '../components/partnership/Intro.vue'
-import Support from '../components/partnership/Support.vue'
-import Creater from '../components/partnership/Creater.vue'
+
+import SupportTitle from '../components/partnership/support-title.vue'
+import SmartContract from '../components/partnership/smart-contract.vue'
+import Marketing from '../components/partnership/marketing.vue'
+import Funding from '../components/partnership/funding.vue'
+
+import CreatorsTitle from '../components/partnership/creators-title.vue'
+import CreatorsList from '../components/partnership/creators-list.vue'
+
 export default {
     name : 'RecentGames',
     components : {
         Intro,
-        Support,
-        Creater
+        SupportTitle,
+        SmartContract,
+        Marketing,
+        Funding,
+        CreatorsTitle,
+        CreatorsList
     }
 }
 </script>

@@ -1,30 +1,36 @@
+// local variable
+$font-black : #1d1a18;
+
 section.support {
-    $font-black : #1d1a18;
-
-    padding-top:200px;
-    padding-bottom:120px;
-    counter-reset:header;
-
-    .container {
-    }
-
-    h2 {
-        font-family: Volte;
-        font-size: rem(56);
-        letter-spacing: -4px;
-        color: $font-black;
-        text-align:center;
-    }
-
     h3 {
         font-family: Volte;
         font-size: rem(42);
         font-weight: 600;
         letter-spacing: -0.5px;
         color: $font-black;
+
+        position:relative;
+        counter-increment:header;
+        margin-top:95px;
     }
 
-    p {
+    h3 i {
+        font-style:normal;
+        font-family: Volte;
+        font-size: 26px;
+        letter-spacing: -0.3px;
+        color: $font-black;
+        min-width:80px;
+        display:block;
+        padding-bottom:14px;
+        border-bottom:1px solid $font-black;
+        position:absolute;
+        top:-95px;
+        left:0;
+    }
+
+    .container > p,
+    section > p {
         font-family: Volte;
         font-size: rem(26);
         line-height: 1.46;
@@ -44,27 +50,109 @@ section.support {
         }
     }
 
-    .container > div.container {
-        padding-top:242px;
+}
 
-        h3 {
-            position:relative;
-            counter-increment:header
+
+section.support.title {
+    padding-top:200px;
+    padding-bottom:80px;
+
+    h2 {
+        font-family: Volte;
+        font-size: rem(56);
+        letter-spacing: -4px;
+        color: $font-black;
+        text-align:center;
+    }
+}
+
+
+
+section.support.funding,
+section.support.contract {
+    margin-top:120px;
+    margin-bottom:120px;
+
+    position:relative;
+    // 개별 페이지
+    .container {
+        display:flex;
+
+        section {
+            flex:1;
+        }
+        .image.wrapper {
+            margin-left:120px;
+
+            img {
+                max-width:580px;
+            }
+
+            img:nth-of-type(2) {
+                max-width:300px;
+
+                position:absolute;
+                top:0;
+                right:0
+            }
+        }
+    }
+}
+
+
+section.support.marketing {
+    padding-top:120px;
+    padding-bottom:120px;
+
+    background:url('../images/bg-support-marketing@2x.png') center center no-repeat transparent;
+
+    p + ul {
+        margin-top:80px;
+    }
+
+    h3,
+    i,
+    .container > p {
+        color:$white;
+    }
+
+    i {
+        border-bottom-color:$white;
+    }
+
+    ul {
+        display:flex;
+        justify-content: space-between;
+
+        li {
+            max-width:400px;
+            background: $white;
+            color:$font-black;
         }
 
-        h3:before {
-            content:"0"counter(header);
-            font-family: Volte;
-            font-size: 26px;
-            letter-spacing: -0.3px;
-            color: $font-black;
-            min-width:80px;
-            display:block;
-            padding-bottom:14px;
-            border-bottom:1px solid $font-black;
-            position:absolute;
-            top:-95px;
-            left:0;
-        }
+    }
+
+    img {
+        display:block;
+        width:100%;
+    }
+
+    h4 {
+        font-family: Volte;
+        font-size: rem(26);
+        font-weight: 600;
+        line-height: 1.46;
+        letter-spacing: -0.5px;
+        color: $font-yellow;
+        margin:20px 30px 0;
+    }
+
+    li p {
+        font-family: Volte;
+        font-size: 16px;
+        line-height: 1.56;
+        letter-spacing: -0.3px;
+        color: $font-black;
+        margin:15px 30px 40px;
     }
 }
