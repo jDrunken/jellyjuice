@@ -23,4 +23,3 @@ export default {
     name : 'Partners'
 }
 </script>
-

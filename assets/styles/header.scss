@@ -142,3 +142,18 @@ header.partnership {
         }
     }
 }
+
+header.games-eos-blasterz {
+    color:$white;
+    background:$black;
+
+    h1 {
+        background:url('~assets/images/bi-jellujuice-white@2x.png') center center no-repeat;
+        background-size:contain;
+    }
+
+    a, button {
+        color:inherit;
+    }
+
+}

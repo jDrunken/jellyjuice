@@ -1,0 +1,127 @@
+section.support {
+    padding-top:120px;
+    padding-bottom: 120px;
+    background: #f9fafc;
+
+    .container{
+        &:after {
+            content:'';
+            display:block;
+            clear:both;
+        }
+
+        > section.creaters {
+            float:left;
+        }
+
+        > section.supporters {
+            float:right;
+        }
+    }
+
+    h3 {
+        font-family: Volte;
+        font-size: rem(26);
+        font-weight: 600;
+        letter-spacing: -1px;
+        color: #1d1a18;
+        text-transform:uppercase;
+    }
+
+    ul li {
+        margin-top:80px;
+
+        font-family: Volte;
+        font-size: rem(26);
+        letter-spacing: -1px;
+        text-align: center;
+        display:inline-block;
+
+        a {
+            box-sizing:border-box;
+            color: $font-black;
+            display:inline-block;
+            font-family: Volte;
+            font-size: rem(18);
+            height:inherit;
+            position:relative;
+            text-align: center;
+            width:inherit;
+            padding-top:114px;
+        }
+
+        a.bi {
+            &:after {
+                content:'';
+                display:block;
+                position: absolute;
+                top:0;
+                left:0;
+                right:0;
+                width:100%;
+                height:114px; // box height - 박스 하단부터 텍스트 아래까지의 padding - 텍스트의 높이
+                background-position:center center;
+                background-repeat:no-repeat;
+            }
+        }
+
+        a.bi.eosys {
+            width:70px;
+            &:after {
+                background-image:url('~assets/images/bi-eosys@2x.png');
+                background-size:70px auto;
+            }
+        }
+
+        a.bi.day_1 {
+            width:80px;
+            &:after {
+                background-image:url('~assets/images/bi-day-1@2x.png');
+                background-size:80px auto;
+            }
+        }
+
+        a.bi.meetone {
+            width:78px;
+            &:after {
+                background-image:url('~assets/images/bi-meet@2x.png');
+                background-size:100px auto;
+            }
+        }
+
+        a.bi.nova {
+            width:80px;
+            &:after {
+                background-image:url('~assets/images/bi-nova@2x.png');
+                background-size:80px auto;
+            }
+        }
+
+        a.bi.scatter {
+            width:80px;
+            &:after {
+                background-image:url('~assets/images/bi-scatter@2x.png');
+                background-size:80px auto;
+            }
+        }
+    }
+
+    section.creaters {
+        li:first-child {
+            margin-right:100px;
+        }
+    }
+
+    section.supporters {
+        h3 {
+            text-align:right;
+        }
+        li {
+            margin-left:100px;
+
+            &:first-child {
+                margin-left:0;
+            }
+        }
+    }
+}

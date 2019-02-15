@@ -1,0 +1,54 @@
+section.description {
+    padding-top:120px;
+    padding-bottom:120px;
+
+    h3 {
+        font-family: Volte;
+        font-size: 42px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        color: $font-black;
+    }
+
+    p {
+        font-family: Volte;
+        font-size: 26px;
+        line-height: 1.46;
+        letter-spacing: -0.5px;
+        color: #1d1a18;
+    }
+
+    .btn_area {
+        display:flex;
+        justify-content: space-between;
+        a {
+            width:290px;
+            height:90px;
+            @include ir();
+        }
+
+        a.play.ios {
+            background:url('../images/btn-game-appstore@2x.png') center center no-repeat transparent;
+            background-size:contain;
+        }
+
+        a.play.aos {
+            background:url('../images/btn-game-googleplay@2x.png') center center no-repeat transparent;
+            background-size:contain;
+        }
+
+        a.download.apk {
+            background:url('../images/btn-game-androidapk@2x.png') center center no-repeat transparent;
+            background-size:contain;
+        }
+
+        a.play.web {
+            background:url('../images/btn-game-web@2x.png') center center no-repeat transparent;
+            background-size:contain;
+        }
+    }
+
+    p + .btn_area {
+        padding-top:80px;
+    }
+}
