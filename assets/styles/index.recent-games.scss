@@ -51,17 +51,7 @@ section.recent.games {
         }
 
         a {
-            font-family: Volte;
-            font-size: rem(26);
-            font-weight: 600;
-            letter-spacing: -0.5px;
-            color: $font-yellow;
-
-            background:url('~assets/images/bg-arrow-yellow-right@2x.png') right 15px no-repeat;
-            background-size:7px 15px;
-            padding-right:13px;
-
-            display:inline-block;
+            @include viewLink()
         }
 
         h3 ~ p {
