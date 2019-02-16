@@ -2,7 +2,7 @@ header {
     position:fixed;
     left:0;
     right:0;
-    height:81px;
+    height:81px;    // 기본 높이
     z-index:7;
 
     .container {
@@ -12,6 +12,7 @@ header {
         height:inherit;
         display:flex;
         align-items:center;
+        justify-content:space-between;
     }
 
     // 공통
@@ -38,70 +39,89 @@ header {
         }
     }
 
+    // 모바일의 메뉴 보여주기 버튼
+    .mobile.menu.display {
+        display:none;
+
+        @include media ('<min') {
+            display:inline-block;
+            width:23px;
+            height:32px;
+            background:url('../images/btn-bugger@2x.png') center center no-repeat;
+            background-size:contain;
+            @include ir();
+        }
+    }
+
     // 언어 변환
     div.locale.change {
-        position:absolute;
-        right:20px;
-        top:50%;
-        transform:translateY(-50%);
         button {
             background:url('~assets/images/bg-gnb-arrow-white@2x.png') right 4px no-repeat;
             background-size:12px 12px;
             padding-right:16px;
             line-height:1.1;
         }
-
-        ul {
-            position:absolute;
-            display:none;
-        }
     }
 
     // gnb
     nav {
         $width:155px;
+        width:310px;
+        height:81px;
         position:absolute;
         top:0;
         left:50%;
-        margin-left:calc(-#{$width}*2 / 2);
+        margin-left:-$width;
 
-
-       > ul {
+        > ul {
             width:$width*2;
-            overflow:hidden;
+            height:inherit;
+            position:absolute;
+        }
 
-            > li {
-                float:left;
-                width:$width;
-                border-radius: 0 0 5px 5px;
+        > ul > li {
+            float:left;
+            width:$width;
+            border-radius: 0 0 5px 5px;
+            text-align:center;
+            line-height:81px;
+
+            button,
+            a {
                 text-align:center;
-                padding-top:20px;
-                padding-bottom:15px;
+                width:100%;
+                letter-spacing:-0.5px;
 
-                > button,
-                > a {
-                    text-align:center;
-                    display:block;
-                    width:100%;
-                    padding-top:15px;
-                    padding-bottom:15px;
-                    letter-spacing:-0.5px;
-
-                    &:first-letter {
-                        text-transform:uppercase;
-                    }
+                &:first-letter {
+                    text-transform:uppercase;
                 }
             }
+        }
 
-            ul {
-                margin-top:20px;
+        > ul > li > ul {
+            padding-bottom:15px;
+        }
+
+        li.games {
+            li {
+                padding:15px 0;
             }
-            li.games {
-                background-color: rgba(250, 119, 12, 0.95);
+        }
 
-                ul > li > a {
-                    display:block;
-                    padding:15px 0;
+        li.expand {
+            background-color: rgba(250, 119, 12, 0.95);
+        }
+
+        > ul > li {
+            > a:hover,
+            > button:hover {
+                font-weight:700;
+            }
+
+            > ul > li {
+                > li:hover,
+                > a:hover {
+                    font-weight:500;
                 }
             }
         }
@@ -110,6 +130,9 @@ header {
 
 
 // page routing에 따라서 컬러셋을 다르게 지정해줌
+header {
+    // transition:background-color 0.5s;
+}
 
 header.index {
     color:$white;
@@ -136,14 +159,21 @@ header.partnership {
         color:inherit;
     }
 
-    li {
+    li.expand {
         a, button {
             color:$white;
         }
     }
+
+    div.locale.change button {
+        background:url('~assets/images/bg-gnb-arrow-orange@2x.png') right 4px no-repeat;
+        background-size:12px 12px;
+    }
 }
 
-header.games-eos-blasterz {
+header.reflection,
+header.games-eos-blasterz,
+header.games-eos-blasterz-play {
     color:$white;
     background:$black;
 
@@ -156,4 +186,80 @@ header.games-eos-blasterz {
         color:inherit;
     }
 
+    div.locale.change button {
+        background:url('~assets/images/bg-gnb-arrow-white@2x.png') right 4px no-repeat;
+        background-size:12px 12px;
+    }
+}
+
+
+@include media ('<700px') {
+    .wrapper {
+        display:block;
+        max-width:320px;
+        max-height:568px;
+        width:100vw;
+        height:100vh;
+        position:fixed;
+        right:0;
+        top:0;
+        background-color:#34262e;
+
+        padding-top:95px;
+        padding-left:30px;
+        padding-bottom:60px;
+
+
+        button.mobile.menu {
+            position:absolute;
+            right:26px;
+            top:23px;
+        }
+
+        // initial
+        nav,
+        nav > ul,
+        nav > ul > li {
+            width:auto;
+            height:auto;
+            margin:0;
+            position:static;
+        }
+
+        nav li {
+            float:none;
+            text-align:left;
+
+            button {
+                width:auto;
+            }
+
+            > button,
+            > a {
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 1;
+                letter-spacing: -0.4px;
+            }
+        }
+
+        div.locale.change {
+            position:absolute;
+            left:30px;
+            bottom:60px;
+
+            .status {
+                display:none;
+            }
+
+            ul li {
+                display:inline-block;
+                margin-left:18px;
+
+                &:first-child {
+                    margin-left:0;
+                }
+            }
+        }
+    }
 }
