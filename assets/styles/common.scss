@@ -2,10 +2,11 @@ header .container,
 footer .container,
 section > .container {
     max-width:1280px;
+    padding:0 20px;
     margin:0 auto;
 }
 
-section.recent-games,
+section.recent.games,
 section.partners {
     .container h2 {
         margin:0 auto;
@@ -18,6 +19,12 @@ section.partners {
 
         text-transform:uppercase;
         position:relative;
+
+        @include media ('<700px') {
+            font-size: rem(27);
+            letter-spacing: -0.8px;
+            text-align: center;
+        }
 
         &:after {
             content:'';
@@ -48,9 +55,23 @@ section.partners {
     letter-spacing: -0.5px;
     color: $font-yellow;
 
-    background:url('../images/bg-arrow-yellow-right@2x.png') right 15px no-repeat;
+    background-image:url('../images/bg-arrow-yellow-right@2x.png');
+    background-position:right 15px;
+    background-repeat:no-repeat;
     background-size:7px 15px;
     padding-right:13px;
 
     display:inline-block;
+
+    @include media('<700px') {
+        font-size: rem(16);
+        font-weight: 600;
+        letter-spacing: -0.4px;
+        background-size:4px 9px;
+        padding-right:9px;
+        background-position:right 10px;
+    }
+
 }
+
+// 반응형 개발중 임시 속성

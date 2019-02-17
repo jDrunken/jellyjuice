@@ -1,13 +1,16 @@
 section.description {
-    padding-top:120px;
-    padding-bottom:120px;
-
     h3 {
         font-family: Volte;
-        font-size: 42px;
+        font-size: rem(42);
         font-weight: 600;
         letter-spacing: -0.5px;
         color: $font-black;
+        @include media ('<700px') {
+            font-size: rem(26);
+            font-weight: 600;
+            line-height: 1.42;
+            letter-spacing: -0.4px;
+        }
     }
 
     p {
@@ -16,6 +19,23 @@ section.description {
         line-height: 1.46;
         letter-spacing: -0.5px;
         color: #1d1a18;
+    }
+
+    button.play.video {
+        @include ir()
+        width:80px;
+        height:80px;
+        background:url('../images/img-movie-play@2x.png') center center no-repeat;
+        background-size:cover;
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin:-40px 0 0 -40px;
+        transition:transform 0.3s;
+
+        &:hover {
+            transform:scale(1.02)
+        }
     }
 
     .btn_area {
@@ -51,4 +71,23 @@ section.description {
     p + .btn_area {
         padding-top:80px;
     }
+
+}
+
+section.description.title {
+    padding-top:74px;
+}
+
+section.description.screenshot{
+    padding:0;
+
+    > .container {
+        max-width:none;
+        margin:60px auto 40px;
+    }
+}
+
+section.description.script {
+    padding-top:40px;
+    padding-bottom:120px;
 }

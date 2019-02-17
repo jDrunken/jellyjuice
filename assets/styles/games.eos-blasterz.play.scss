@@ -1,0 +1,77 @@
+section.play {
+
+    min-height:1000px;
+
+    background:url('../images/play-main-visual@2x.png') center 81px no-repeat;
+    background-size:contain;
+
+    > .container {
+        text-align:center;
+        padding-top:167px;
+        padding-bottom:200px;
+    }
+
+    h2 {
+        display:inline-block;
+        width:574px;
+        height:241px;
+        background:url('../images/bnr-blasterz-logo@2x.png') center center no-repeat;
+        background-size:cover;
+        @include ir();
+    }
+
+    p {
+        text-shadow: 0 5px 20px rgba(29, 26, 24, 0.5);
+        font-family: Volte;
+        font-size: 18px;
+        line-height: 1.89;
+        text-align: center;
+        color: #f1f1f1;
+        a {
+            font-weight: bold;
+            color: $font-yellow;
+        }
+    }
+
+    p.image.container {
+        margin-top:25px;
+
+        img {
+            max-width:1280px;
+        }
+    }
+
+    div.btn_area {
+        display:flex;
+        justify-content: center;
+
+        a {
+            width:290px;
+            height:90px;
+            margin-left:40px;
+            @include ir();
+
+            &:first-child {
+                margin-left:0;
+            }
+        }
+
+        a.play.ios {
+            background:url('../images/btn-game-appstore@2x.png') center center no-repeat transparent;
+            background-size:contain;
+        }
+
+        a.play.aos {
+            background:url('../images/btn-game-googleplay@2x.png') center center no-repeat transparent;
+            background-size:contain;
+        }
+
+        a.download.apk {
+            background:url('../images/btn-game-androidapk@2x.png') center center no-repeat transparent;
+            background-size:contain;
+        }
+    }
+
+
+
+}

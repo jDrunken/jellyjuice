@@ -23,6 +23,55 @@ module.exports = {
             {
                 maxAge: 1000 * 60 * 60
             }
+        ],
+        [
+            'nuxt-i18n', {
+                locales: [
+                    {
+                        code: 'en',
+                        iso: 'en-US',
+                        name: 'English'
+                    },
+                    {
+                        code: 'ko',
+                        iso: 'ko-KR',
+                        name : 'Korean'
+                    },
+                    {
+                        code: 'zh',
+                        iso: 'zh-CN',
+                        name: 'Chinese'
+                    }
+                ],
+                strategy: 'prefix',
+                enableInSFC: true,
+                vueI18n: {
+                    fallbackLocale: 'ko'
+                },
+                detectBrowserLanguage: {
+                    useCookie: true,
+                    cookieKey: 'i18n_redirected',
+                    alwaysRedirect: true
+                },
+                vueI18nLoader: true,
+                defaultLocale: 'ko',
+                vuex: {
+                    // Module namespace
+                    moduleName: 'i18n',
+
+                    // Mutations config
+                    mutations: {
+                        // Mutation to commit to store current locale, set to false to disable
+                        setLocale: 'I18N_SET_LOCALE',
+
+                        // Mutation to commit to store current message, set to false to disable
+                        setMessages: 'I18N_SET_MESSAGES'
+                    },
+
+                    // PreserveState from server
+                    preserveState: false
+                }
+            }
         ]
     ],
 
@@ -33,16 +82,6 @@ module.exports = {
             ssr: false
         }
     ],
-
-    // 전역으로 사용할 설정을 미리 불러온다.
-    styleResources: {
-        scss: [
-            '~/assets/styles/env.scss',
-            '~/assets/styles/variable.scss',
-            '~/assets/styles/font.scss',
-            '~/assets/styles/common.scss'
-        ]
-    },
 
     build: {
         /*
@@ -71,5 +110,55 @@ module.exports = {
     },
     generate : {
         fallback : false
-    }
+    },
+    router : {
+        scrollBehavior(to, from, savedPosition) {
+            // debugger
+            let position = false
+
+            // if no children detected
+            if (to.matched.length < 2) {
+                // scroll to the top of the page
+                position = { x: 0, y: 0 }
+            } else if (to.matched.some((r) => r.components.default.options.scrollToTop)) {
+                // if one of the children has scrollToTop option set to true
+                position = { x: 0, y: 0 }
+            }
+
+            // savedPosition is only available for popstate navigations (back button)
+            if (savedPosition) {
+                position = savedPosition
+            }
+
+            return new Promise(resolve => {
+                // wait for the out transition to complete (if necessary)
+                window.$nuxt.$once('triggerScroll', () => {
+                    // coords will be used if no selector is provided,
+                    // or if the selector didn't match any element.
+                    if (to.hash && document.querySelector(to.hash)) {
+                        // scroll to anchor by returning the selector
+                        position = { selector: to.hash }
+                    }
+                    resolve(position)
+                })
+            })
+        }
+    },
+    devserver : {
+        host: '0,0,0,0'
+    },
+
+    // -----------------------------------------
+    // 커스텀 설정
+    // -----------------------------------------
+    // 전역으로 사용할 설정을 미리 불러온다.
+    styleResources: {
+        scss: [
+            '~/assets/styles/env.scss',
+            '~/assets/styles/variable.scss',
+            '~/assets/styles/font.scss',
+            '~/assets/styles/common.scss'
+        ]
+    },
+
 }

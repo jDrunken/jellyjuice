@@ -8,41 +8,83 @@ section.intro {
     @include media ('>1920px') {
         background-size:cover;
     }
-    min-height:750px;
 
+    @include media ('<650px') {
+        background:url('../images/bg-partnership-mobile@2x.png') center bottom no-repeat #fffcf6;
+        background-size:cover;
+    }
+
+    min-height:750px;
     padding-top:149px;
     padding-bottom:126px;
 
-    .container {
+    @include media ('<700px') {
+        min-height:auto;
+        padding-top:120px;
+        padding-bottom:77px;
+
+        .container {
+            text-align:center;
+        }
     }
+
 
     h2 {
         font-family: Volte;
-        font-size: 72px;
+        font-size: rem(72);
         font-weight: 600;
         line-height: 1.04;
         letter-spacing: -1px;
         color: $font-black;
+
+        @include media ('<700px') {
+            font-size: rem(31);
+            line-height: 1.16;
+            letter-spacing: -0.9px;
+            text-align:center;
+        }
     }
 
     p {
         font-family: Volte;
-        font-size: 26px;
+        font-size: rem(26);
         font-weight: normal;
         font-style: normal;
         font-stretch: normal;
         line-height: 1.31;
         letter-spacing: -1px;
         color: $font-black;
+
+        @include media ('<700px') {
+            font-size: rem(16);
+            line-height: 1.44;
+            letter-spacing: -0.8px;
+            text-align: center;
+        }
     }
 
     a.submit.button {
-        @include ir();
         display:inline-block;
-        width:280px;
+        text-align:center;
+        min-width:280px;
+        padding-left:20px;
+        padding-right:20px;
         height:70px;
-        background:url('../images/bg-partnershipbtn-submit@2x.png') center center no-repeat;
-        background-size:cover;
+        line-height:64px;
+        color:$orange;
+        font-family: Volte;
+        font-size: rem(26);
+        font-weight: 600;
+        letter-spacing: -0.8px;
+        text-align: center;
+        border:2px solid $orange;
+        border-radius:35px;
+        text-transform:capitalize;
+
+        @include media ('<700px') {
+            min-width:214px;
+            font-size:rem(20);
+        }
     }
 
     h2 + p {

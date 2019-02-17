@@ -40,17 +40,8 @@ header {
     }
 
     // 모바일의 메뉴 보여주기 버튼
-    .mobile.menu.display {
+    .mobile.menu {
         display:none;
-
-        @include media ('<min') {
-            display:inline-block;
-            width:23px;
-            height:32px;
-            background:url('../images/btn-bugger@2x.png') center center no-repeat;
-            background-size:contain;
-            @include ir();
-        }
     }
 
     // 언어 변환
@@ -100,6 +91,7 @@ header {
 
         > ul > li > ul {
             padding-bottom:15px;
+            display:none;
         }
 
         li.games {
@@ -108,13 +100,20 @@ header {
             }
         }
 
-        li.expand {
+        li.games:hover {
             background-color: rgba(250, 119, 12, 0.95);
+
+            ul {
+                display:block;
+            }
+
+            button {
+                font-weight:700;
+            }
         }
 
         > ul > li {
-            > a:hover,
-            > button:hover {
+            > a:hover {
                 font-weight:700;
             }
 
@@ -134,7 +133,9 @@ header {
     // transition:background-color 0.5s;
 }
 
-header.index {
+header.index,
+header.games-eos-blasterz,
+header.games-eos-blasterz-play {
     color:$white;
 
     h1 {
@@ -159,7 +160,7 @@ header.partnership {
         color:inherit;
     }
 
-    li.expand {
+    li.games:hover {
         a, button {
             color:$white;
         }
@@ -171,9 +172,7 @@ header.partnership {
     }
 }
 
-header.reflection,
-header.games-eos-blasterz,
-header.games-eos-blasterz-play {
+header.reflection {
     color:$white;
     background:$black;
 
@@ -193,73 +192,208 @@ header.games-eos-blasterz-play {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// mobile
 @include media ('<700px') {
-    .wrapper {
-        display:block;
-        max-width:320px;
-        max-height:568px;
-        width:100vw;
-        height:100vh;
-        position:fixed;
-        right:0;
-        top:0;
-        background-color:#34262e;
+header {
+    h1 {
+        width:122px;
+        height:35px;
+    }
 
-        padding-top:95px;
-        padding-left:30px;
-        padding-bottom:60px;
+    .container {
+        padding:18px 16px;
+    }
+}
+
+.wrapper {
+    transition:transform 0.4s;
+    transform:translateX(100%)
+}
+
+.wrapper.expand {
+    transform:translateX(0)
+}
+
+button.mobile.menu {
+    z-index:9;
+    position:absolute;
+    right:26px;
+    top:23px;
+    display:inline-block;
+    width:23px;
+    height:32px;
+    background:url('../images/btn-bugger-white@2x.png') center center no-repeat;
+    background-size:contain;
+    @include ir();
+    animation: slideOutButton 2s;
+
+    header.partnership & {
+        background:url('../images/btn-bugger-orange@2x.png') center center no-repeat;
+        background-size:contain;
+    }
+
+    header.reflection & {
+        background:url('../images/btn-bugger-white@2x.png') center center no-repeat;
+        background-size:contain;
+    }
+}
+
+header button.mobile.menu.expand {
+    background:url('../images/btn-close@2x.png') center center no-repeat;
+    background-size:contain;
+    animation: slideInButton 0.4s;
+}
+
+@keyframes slideOutButton {
+    from {
+        opacity:0;
+        // transform:translateX(0);
+    }
+
+    to {
+        opacity:1;
+    //     transform:translateX(100px) scale(1);
+    }
+}
+
+@keyframes slideInButton {
+    from {
+        opacity:0;
+        // transform:translateX(100px)
+    }
+
+    to {
+        opacity:1;
+        // transform:translateX(0)
+    }
+}
 
 
-        button.mobile.menu {
-            position:absolute;
-            right:26px;
-            top:23px;
+header .wrapper {
+    color:$white;
+    display:block;
+    box-sizing:border-box;
+    max-width:425px;
+    max-height:853px;
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    right:0;
+    top:0;
+    background-color:#34262e;
+
+    padding-top:95px;
+    padding-left:30px;
+    padding-bottom:60px;
+
+
+    // initial
+    nav,
+    nav > ul,
+    nav > ul > li {
+        width:auto;
+        height:auto;
+        margin:0;
+        position:static;
+    }
+
+    nav > ul > li {
+        margin-top:52px;
+        &:first-child {
+            margin-top:0;
         }
+    }
 
-        // initial
-        nav,
-        nav > ul,
-        nav > ul > li {
+    nav li {
+        float:none;
+        text-align:left;
+        line-height:1.1;
+
+        button {
             width:auto;
-            height:auto;
-            margin:0;
-            position:static;
         }
 
-        nav li {
-            float:none;
-            text-align:left;
+        > button,
+        > a {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1;
+            letter-spacing: -0.4px;
+        }
+    }
 
-            button {
-                width:auto;
+    nav li ul {
+        display:block;
+    }
+
+    nav li.games:hover {
+        background:none;
+    }
+
+    nav li.games li {
+        padding:0;
+    }
+
+    nav li li {
+        margin-top:22px;
+        a {
+            font-family: Volte;
+            font-size: rem(22);
+            line-height: 1;
+            letter-spacing: -0.7px;
+            font-weight:400;
+
+            &:hover {
+                font-weight:inherit;
+            }
+        }
+    }
+
+    div.locale.change {
+        position:absolute;
+        left:30px;
+        bottom:60px;
+
+        .status {
+            display:none;
+        }
+
+        ul li {
+            display:inline-block;
+            margin-left:18px;
+
+            &:first-child {
+                margin-left:0;
             }
 
-            > button,
-            > a {
-                font-size: 24px;
-                font-weight: bold;
+            a {
+                font-size: rem(16);
+                font-weight: 500;
                 line-height: 1;
-                letter-spacing: -0.4px;
-            }
-        }
+                letter-spacing: -0.7px;
+                color:#938c87;
 
-        div.locale.change {
-            position:absolute;
-            left:30px;
-            bottom:60px;
-
-            .status {
-                display:none;
-            }
-
-            ul li {
-                display:inline-block;
-                margin-left:18px;
-
-                &:first-child {
-                    margin-left:0;
+                html[lang='ko-KR'] &.ko,
+                html[lang='zh-CN'] &.zh,
+                html[lang='en-US'] &.en {
+                    font-weight:500;
+                    color:$white;
                 }
             }
         }
     }
+}
 }

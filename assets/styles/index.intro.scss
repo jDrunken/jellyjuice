@@ -6,11 +6,27 @@ section.intro {
     @include media ('>1920px') {
         background-size:contain;
     }
+
+    @include media ('<700px') {
+        background-image:url('../images/bg-index-intro-top@2x.png'),
+                   url('../images/bg-index-intro-bottom@2x.png');
+        background-position:-435px top, bottom center;
+        background-size:auto 159px,auto 70px;
+        background-color:#fafcff;
+    }
+
     min-height:750px;
+    @include media ('<700px') {
+        min-height:420px;
+        max-height:100vh;
+    }
 
     padding-top:286px;
     padding-bottom:190px;
-
+    @include media ('<700px') {
+        padding-top:189px;
+        padding-bottom:120px;
+    }
 
     h2 {
         font-family: Volte;
@@ -18,7 +34,15 @@ section.intro {
         font-weight: 500;
         letter-spacing: -3px;
         text-align: center;
-        color: $font-black
+        color: $font-black;
+
+        @include media ('<700px') {
+            font-size: rem(31);
+            font-weight: 500;
+            line-height: 1.16;
+            letter-spacing: -0.9px;
+            text-align: center;
+        }
     }
 
     p {
@@ -28,6 +52,12 @@ section.intro {
         letter-spacing: -1px;
         text-align: center;
         color: $font-black;
+
+        @include media ('<700px') {
+            font-size: rem(16);
+            line-height: 1.44;
+            letter-spacing: -1px;
+        }
     }
 
     h2 + p {

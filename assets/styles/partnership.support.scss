@@ -12,12 +12,17 @@ section.support {
         position:relative;
         counter-increment:header;
         margin-top:95px;
+        @include media ('<700px') {
+            margin-top:68px;
+            font-size: rem(26);
+            letter-spacing: -0.4px;
+        }
     }
 
     h3 i {
         font-style:normal;
         font-family: Volte;
-        font-size: 26px;
+        font-size: rem(26);
         letter-spacing: -0.3px;
         color: $font-black;
         min-width:80px;
@@ -27,6 +32,12 @@ section.support {
         position:absolute;
         top:-95px;
         left:0;
+
+        @include media ('<700px') {
+            top:-71px;
+            font-size: rem(16);
+            font-weight:400;
+        }
     }
 
     .container > p,
@@ -36,6 +47,12 @@ section.support {
         line-height: 1.46;
         letter-spacing: -0.5px;
         color: $font-black;
+
+        @include media ('<700px') {
+            font-size: rem(16);
+            line-height: 1.56;
+            letter-spacing: -0.4px;
+        }
     }
 
     a {
@@ -44,9 +61,15 @@ section.support {
 
     h3 + p {
         margin-top:30px;
+        @include media ('<700px') {
+            margin-top:15px;
+        }
 
         & + a {
             margin-top:50px;
+            @include media ('<700px') {
+                margin-top:25px;
+            }
         }
     }
 
@@ -57,12 +80,23 @@ section.support.title {
     padding-top:200px;
     padding-bottom:80px;
 
+    @include media ('<700px') {
+        padding-top:92px;
+        padding-bottom:42px;
+    }
+
     h2 {
         font-family: Volte;
         font-size: rem(56);
         letter-spacing: -4px;
         color: $font-black;
         text-align:center;
+        @include media ('<700px') {
+            font-size: rem(29);
+            line-height: 1.17;
+            letter-spacing: -0.9px;
+            text-align: center;
+        }
     }
 }
 
@@ -73,10 +107,19 @@ section.support.contract {
     margin-top:120px;
     margin-bottom:120px;
 
-    position:relative;
+    @include media ('<700px') {
+        margin-top:118px;
+        margin-bottom:50px;
+    }
+
     // 개별 페이지
     .container {
         display:flex;
+        position:relative;
+
+        @include media ('<700px') {
+            display:block;
+        }
 
         section {
             flex:1;
@@ -84,7 +127,13 @@ section.support.contract {
         .image.wrapper {
             margin-left:120px;
 
+            @include media ('<700px') {
+                margin-left:0;
+                margin-top:50px;
+            }
+
             img {
+                width:100%;
                 max-width:580px;
             }
 
@@ -93,7 +142,11 @@ section.support.contract {
 
                 position:absolute;
                 top:0;
-                right:0
+                left:100%;
+
+                @include media ('<700px') {
+                    display:none;
+                }
             }
         }
     }
@@ -104,10 +157,19 @@ section.support.marketing {
     padding-top:120px;
     padding-bottom:120px;
 
-    background:url('../images/bg-support-marketing@2x.png') center center no-repeat transparent;
+    @include media ('<700px') {
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+
+    background:url('../images/bg-support-marketing@2x.png') top center no-repeat #1d1a18;
+    background-size:auto 1059px;
 
     p + ul {
         margin-top:80px;
+        @include media ('<700px') {
+            margin-top:50px;
+        }
     }
 
     h3,
@@ -124,12 +186,23 @@ section.support.marketing {
         display:flex;
         justify-content: space-between;
 
+        @include media ('<700px') {
+            display:block;
+        }
+
         li {
             max-width:400px;
             background: $white;
             color:$font-black;
+            padding-bottom:40px;
+            @include media ('<700px') {
+                margin-top:30px;
+                padding-bottom:30px;
+                &:first-child {
+                    margin-top:0;
+                }
+            }
         }
-
     }
 
     img {
@@ -145,14 +218,31 @@ section.support.marketing {
         letter-spacing: -0.5px;
         color: $font-yellow;
         margin:20px 30px 0;
+
+        @include media ('<700px') {
+            font-size: rem(20);
+            line-height: 1;
+            letter-spacing: -0.1px;
+            margin-left:20px;
+            margin-right:20px;
+        }
     }
 
     li p {
         font-family: Volte;
-        font-size: 16px;
+        font-size: rem(16);
         line-height: 1.56;
         letter-spacing: -0.3px;
         color: $font-black;
-        margin:15px 30px 40px;
+        margin:15px 30px 0;
+
+        @include media ('<700px') {
+            font-size: rem(15);
+            line-height: 1.47;
+            letter-spacing: -0.4px;
+            color: #1d1a18;
+            margin-left:20px;
+            margin-right:20px;
+        }
     }
 }

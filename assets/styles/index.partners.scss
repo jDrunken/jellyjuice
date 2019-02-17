@@ -3,12 +3,20 @@ section.partners {
     padding-bottom:200px;
     background-color: #f9fafc;
 
+    @include media('<700px') {
+        padding-top:80px;
+        padding-bottom:80px;
+    }
+
     .container {
         text-align:center;
     }
 
     h2 + ul {
         margin-top:70px;
+        @include media('<700px') {
+            margin-top:33px;
+        }
     }
 
     ul {
@@ -16,26 +24,43 @@ section.partners {
     }
 
     ul li {
-        width:200px;
-        height:207px;
         font-family: Volte;
         font-size: rem(26);
         letter-spacing: -1px;
         text-align: center;
         display:inline-block;
 
+        width:200px;
+        height:207px;
         margin-left:40px;
         margin-right:40px;
-
         margin-top:70px;
 
+        @include media('<700px') {
+            width:108px;
+            height:111px;
+            margin-left:10px;
+            margin-right:10px;
+            margin-top:40px;
+        }
+
+
+        $padding-top:155px;
+        @include media('<700px') {
+            $padding-top:81px;
+        }
         a {
             display:inline-block;
             width:inherit;
             height:inherit;
             color: $font-black;
-            padding-top:155px;
+            padding-top:$padding-top;
             box-sizing:border-box;
+
+            @include media('<700px') {
+                font-size: rem(16);
+                letter-spacing: -0.7px;
+            }
 
             position:relative;
         }
@@ -49,7 +74,7 @@ section.partners {
                 left:0;
                 right:0;
                 width:100%;
-                height:155px; // box height - 박스 하단부터 텍스트 아래까지의 padding - 텍스트의 높이
+                height:$padding-top; // box height - 박스 하단부터 텍스트 아래까지의 padding - 텍스트의 높이
                 background-position:center center;
                 background-repeat:no-repeat;
             }
@@ -93,6 +118,40 @@ section.partners {
         a.bi.scatter:after {
             background-image:url('~assets/images/bi-scatter@2x.png');
             background-size:110px auto;
+        }
+
+        @include media('<700px') {
+            a.bi.numbers:after {
+                background-size:83.1px auto;
+            }
+
+            a.bi.sin_games:after {
+                background-size:66px auto;
+            }
+
+            a.bi.eosys:after {
+                background-size:62px auto;
+            }
+
+            a.bi.eos_knight:after {
+                background-size:66px auto;
+            }
+
+            a.bi.day_1:after {
+                background-size:66px auto;
+            }
+
+            a.bi.meetone:after {
+                background-size:66px auto;
+            }
+
+            a.bi.nova:after {
+                background-size:66px auto;
+            }
+
+            a.bi.scatter:after {
+                background-size:66px auto;
+            }
         }
     }
 }

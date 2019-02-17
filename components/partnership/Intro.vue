@@ -1,5 +1,5 @@
 <template>
-<section class="intro">
+<section class="partnership intro">
     <div class="container">
         <div class="container">
             <h2>Join JellyJuice’s<br />

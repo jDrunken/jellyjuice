@@ -1,14 +1,19 @@
 <template>
-<section class="description">
-    <div class="container">
-        <h3>It's payback time!<br />
-            Blast monsters and win the prize!</h3>
-        <div class="container screenshot">
+<div>
+    <section class="description title">
+        <div class="container">
+            <h3>It's payback time!<br />
+                Blast monsters and win the prize!</h3>
+        </div>
+    </section>
+    <section class="description screenshot" v-on:touchstart="preventScroll($event)" v-on:touchmove="preventScroll($event)" v-on:touchend="enableScroll($event)" v-on:click.prevent.self="preventScroll($event)">
+        <div class="container">
             <no-ssr>
-            <carousel class="description" :perPageCustom="[[320, 1],[600, 2]]" :mouse-drag="false" :navigationEnabled="true">
+            <carousel class="how to play" :perPageCustom="[[320, 1],[1700, 2]]" :mouse-drag="false" :navigationEnabled="true">
                 <slide class="items">
                     <div>
                         <img src="../../../assets/images/img-blasterz-movie@2x.png" alt="">
+                        <button type="button" class="play video">play video</button>
                     </div>
                 </slide>
                 <slide class="items">
@@ -29,36 +34,49 @@
             </carousel>
             </no-ssr>
         </div>
-        <p>Beware, push and jump to kill monsters! EOS Blasterz is a hyper casual game based on the EOS mainnet. Multiple users can compete, and win payback EOS tokens as a reward. Enjoy fun & easy-to-play game interface! One-touch game control will introduce new blockchain game experience. Jump into your favorite competition mode and be the winner. Stay tuned to enjoy upgrade features and skins. Oh, Don’t forget to bring your blaster spirit!</p>
-        <div class="btn_area">
-            <a href="#" class="play ios">IOS Play</a>
-            <a href="#" class="play aos">Google Play</a>
-            <a href="#" class="download apk">Android APK</a>
-            <a href="#" class="play web">WEB</a>
+    </section>
+    <section class="description script">
+        <div class="container">
+            <p>Beware, push and jump to kill monsters! EOS Blasterz is a hyper casual game based on the EOS mainnet. Multiple users can compete, and win payback EOS tokens as a reward. Enjoy fun & easy-to-play game interface! One-touch game control will introduce new blockchain game experience. Jump into your favorite competition mode and be the winner. Stay tuned to enjoy upgrade features and skins. Oh, Don’t forget to bring your blaster spirit!</p>
+            <div class="btn_area">
+                <a href="#" class="play ios">IOS Play</a>
+                <a href="#" class="play aos">Google Play</a>
+                <a href="#" class="download apk">Android APK</a>
+                <nuxt-link to="/games/eos-blasterz/play" class="play web">WEB</nuxt-link>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 </template>
 
 <style lang="scss" scoped src="../../../assets/styles/games.eos-blasterz.description.scss"/>
-<style lang="scss"        src="../../../assets/styles/carousel.scss" />
-<style lang="scss">
-.items {
-    margin:0 10px;
-
-    > div {
-       max-width:630px;
-    }
-    img {
-        display:block;
-        width:100%;
-    }
-}
-
-</style>
+<style lang="scss" src="../../../assets/styles/carousel.scss"></style>
 
 <script>
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+
 export default {
-    name : 'Description'
+    name : 'Description',
+    methods : {
+        preventScroll (event) {
+            event.stopPropagation();
+            console.log(event.target)
+            disableBodyScroll(event.target)
+        },
+        enableScroll () {
+            enableBodyScroll(event.target)
+        }
+    }
+
+// var touchmoved;
+// $('button').on('touchend', function(e){
+//     if(touchmoved != true){
+//         // you're on button click action
+//     }
+// }).on('touchmove', function(e){
+//     touchmoved = true;
+// }).on('touchstart', function(){
+//     touchmoved = false;
+// });
 }
 </script>

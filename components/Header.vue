@@ -2,34 +2,54 @@
 <header :class="[page,{reflection : isReflection}]">
     <div class="container">
         <h1>
-            <nuxt-link to="/">
+            <nuxt-link :to="'/'+$i18n.locale" >
                 Jelly Juice
             </nuxt-link>
         </h1>
-        <div class="wrapper">
-            <button type="button" class="mobile menu display" role="button" aria-hidden="hidden">메뉴 열기/닫기</button>
+        <button type="button"
+                class="mobile menu display"
+                role="button"
+                aria-hidden="hidden"
+                v-on:click="toggleMenu()"
+                :class="{expand : isExpandMenu}">
+            메뉴 열기/닫기
+        </button>
+        <div class="wrapper" :class="{expand : isExpandMenu}">
             <nav>
                 <ul>
-                    <li class="games" :class="{expand : isExpandMenu}" v-on:mouseleave="shrinkMenuGame">
-                        <button type="button" v-on:mouseenter="expandMenuGame">games</button>
-                        <transition name="fade">
-                        <ul v-if="isExpandMenu">
-                            <li><nuxt-link to="/games/eos-blasterz/">EOS Blasterz</nuxt-link></li>
+                    <li class="games">
+                        <button type="button">games</button>
+                        <ul>
+                            <li>
+                                <nuxt-link :to="'/' + $i18n.locale + '/games/eos-blasterz'">
+                                    EOS Blasterz
+                                </nuxt-link>
+                            </li>
                         </ul>
-                        </transition>
                     </li>
                     <li class="partnership">
-                        <nuxt-link to="/partnership">Partnership</nuxt-link>
+                        <nuxt-link :to="'/' + $i18n.locale + '/partnership'">Partnership</nuxt-link>
                     </li>
                 </ul>
             </nav>
             <div class="locale change">
-                <button type="button" class="status">lang</button>
+                <button type="button"
+                        class="status"
+                        v-for="locale in $i18n.locales"
+                        :key="locale.code">
+                    {{locale.name}}
+                </button>
+
                 <ul>
-                    <li><a href="#">Korean</a></li>
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">Chinese</a></li>
+                    <li v-for="locale in $i18n.locales" :key="locale.code">
+                        <nuxt-link
+                            :to="switchLocalePath(locale.code)"
+                            :class="locale.code">
+                            {{ locale.name }}
+                         </nuxt-link>
+                    </li>
                 </ul>
+
             </div>
         </div>
     </div>
@@ -52,26 +72,24 @@ export default {
         isExpandMenu : false
     }),
     watch : {
-        '$route' (to, from) {
+        '$route' () {
             this.isExpandMenu = false
-            this.page = this.$route.name
+            this.page = this.$route.name.replace(/_/g,'').replace(/(ko|en|zh)/g,'')
         }
     },
     methods : {
         viewReflection () {
-            return this.isReflection = this.$store.state.scrollPosition < 1 ? false : true
+            return this.isReflection = this.$store.state.scrollPosition <= 0 ? false : true
+            // let scroll = (window.scrollY || window.pageYOffset || document.body.scrollTop + (document.documentElement && document.documentElement.scrollTop || 0))
+            // return this.isReflection = scroll < 0 ? false : true
         },
-        expandMenuGame () {
-            this.isExpandMenu = true
+        toggleMenu () {
+            this.isExpandMenu = !!this.isExpandMenu ? false : true
         },
-        shrinkMenuGame () {
-            this.isExpandMenu = false
-        }
     },
     mounted () {
         // 현재 페이지 이름을 받아와서 스타일링 하는데 쓴다.
-        this.page = this.$route.name
-        this.scrollTop = this.$store.state.scrollTop
+        this.page = this.$route.name.replace(/_/g,'').replace(/(ko|en|zh)/g,'')
         window.addEventListener('scroll',this.viewReflection)
     },
     destroyed () {

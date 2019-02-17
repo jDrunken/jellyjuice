@@ -26,6 +26,11 @@ footer {
         font-size: rem(18);
         line-height: 1.44;
         letter-spacing: -0.5px;
+
+        address {
+            display:block;
+            margin-top:0.8em;
+        }
     }
 
     ul.communication.channel {
@@ -56,4 +61,48 @@ footer {
             margin-left:40px;
         }
     }
+}
+
+@include media ('<750px') {
+footer {
+    padding:50px 20px;
+
+    .container {
+        display:block;
+        position:relative;
+        padding:0;
+    }
+
+    h2 {
+        width:45px;
+        height:54px;
+    }
+
+    div.copyright.and.address {
+        width:47.1875vw;
+        margin-left:0;
+        margin-top:20px;
+        max-width:151px;
+        font-size: rem(12);
+        letter-spacing: -0.4px;
+    }
+
+    ul.communication.channel {
+        position:absolute;
+        bottom:0;
+        right:0;
+        font-size:0;
+
+        li {
+            a.sns {
+                width:34px;
+                height:34px;
+            }
+
+            + li {
+                margin-left:20px;
+            }
+        }
+    }
+}
 }

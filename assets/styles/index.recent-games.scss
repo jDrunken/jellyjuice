@@ -1,6 +1,12 @@
 section.recent.games {
     padding-top:200px;
     padding-bottom:82px;
+    overflow:hidden;
+
+    @include media('<700px') {
+        padding-top:81px;
+        padding-bottom:80px;
+    }
 
     .container {
         text-align:center;
@@ -14,24 +20,48 @@ section.recent.games {
         display:flex;
         text-align:left;
 
+        @include media('<700px') {
+            display:block;
+            &+li {
+                margin-top:70px;
+            }
+        }
+
         &.eos-blasterz {
             div {
                 order:1;
+            }
+            @include media('<700px') {
+                >   img {
+                    margin-left:-40px;
+                }
             }
         }
         &.eos-to-the-moon {
             img {
                 order:2;
             }
+            @include media('<700px') {
+                >   img {
+                    margin-left:-130px;
+                }
+            }
         }
 
         img {
             width:695px;
             height:756px;
+            @include media('<700px') {
+                width:auto;
+                height:470px;
+            }
         }
 
         div {
             margin-top:77px;
+            @include media('<700px') {
+                margin-top:0;
+            }
         }
 
         h3 {
@@ -40,6 +70,13 @@ section.recent.games {
             font-weight: bold;
             letter-spacing: -0.5px;
             color: $font-black;
+
+            @include media('<700px') {
+                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+                font-size: 26px;
+                font-weight: bold;
+                letter-spacing: -0.4px;
+            }
         }
 
         p {
@@ -49,6 +86,12 @@ section.recent.games {
             letter-spacing: -0.5px;
             color: $font-black;
             max-width:702px;
+
+            @include media('<700px') {
+                font-size: rem(16);
+                line-height: 1.56;
+                letter-spacing: -0.4px;
+            }
         }
 
         a {
@@ -57,11 +100,17 @@ section.recent.games {
 
         h3 ~ p {
             margin-top:30px;
+            @include media('<700px') {
+                margin-top:15px;
+            }
 
             + a {
                margin-top:50px;
+
+               @include media('<700px') {
+                   margin-top:25px;
+               }
             }
         }
-
     }
 }

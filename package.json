@@ -4,6 +4,11 @@
     "description": "jelly juice (SPA+ssr)",
     "author": "J Drunken <mycoolade@gmail.com>",
     "private": true,
+    "config": {
+        "nuxt": {
+            "host": "0.0.0.0"
+        }
+    },
     "scripts": {
         "dev": "nuxt --spa",
         "build": "nuxt build --universal",
@@ -16,11 +21,13 @@
     "dependencies": {
         "@nuxtjs/component-cache": "^1.1.4",
         "@nuxtjs/style-resources": "^0.1.2",
+        "body-scroll-lock": "^2.6.1",
         "node-sass": "^4.11.0",
         "nuxt": "^2.0.0",
         "nuxt-i18n": "^5.6.0",
         "sass-loader": "^7.1.0",
-        "vue-carousel": "^0.17.0"
+        "vue-carousel": "^0.17.0",
+        "vue-clickaway": "^2.2.2"
     },
     "devDependencies": {
         "babel-eslint": "^10.0.1",
