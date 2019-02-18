@@ -7,7 +7,7 @@
             <li><a href="#" class="sin_games bi">Sin Games</a></li>
             <li><a href="#" class="eosys bi">EOSYS</a></li>
             <li><a href="#" class="eos_knight bi">EOS Knights</a></li>
-            <li><a href="#" class="day_1 bi">DAY 1</a></li>
+            <li><a href="#" class="day1 bi">DAY 1</a></li>
             <li><a href="#" class="meetone bi">MeetOne</a></li>
             <li><a href="#" class="nova bi">NOVA</a></li>
             <li><a href="#" class="scatter bi">Scatter</a></li>

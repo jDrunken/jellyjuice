@@ -41,7 +41,7 @@
                 <a href="#" class="play ios">IOS Play</a>
                 <a href="#" class="play aos">Google Play</a>
                 <a href="#" class="download apk">Android APK</a>
-                <nuxt-link to="/games/eos-blasterz/play" class=" web">WEB</nuxt-link>
+                <nuxt-link :to="localePath('games-eos-blasterz-play')" class=" web">WEB</nuxt-link>
             </div>
         </div>
     </section>
@@ -56,27 +56,6 @@
 
 <script>
 export default {
-    name : 'Description',
-    methods : {
-        preventScroll (event) {
-            event.stopPropagation();
-            console.log(event.target)
-            disableBodyScroll(event.target)
-        },
-        enableScroll () {
-            enableBodyScroll(event.target)
-        }
-    }
-
-// var touchmoved;
-// $('button').on('touchend', function(e){
-//     if(touchmoved != true){
-//         // you're on button click action
-//     }
-// }).on('touchmove', function(e){
-//     touchmoved = true;
-// }).on('touchstart', function(){
-//     touchmoved = false;
-// });
+    name : 'Description'
 }
 </script>

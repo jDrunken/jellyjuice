@@ -1,11 +1,12 @@
 <template>
 <section class="support title">
     <div class="container">
-        <h2>What JellyJuice support and build</h2>
+        <h2>{{$t('support.title')}}</h2>
     </div>
 </section>
 </template>
 
+<i18n src="../../locales/partnership.json"/>
 <style lang="scss" scoped src="../../assets/styles/partnership.support.scss"></style>
 
 <script>

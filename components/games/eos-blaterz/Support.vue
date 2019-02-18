@@ -2,14 +2,14 @@
 <section class="support">
     <div class="container">
         <section class="creaters">
-            <h3>creaters</h3>
+            <h3>{{$t('feature.creators')}}</h3>
             <ul class="bi group">
                 <li><a href="#" class="bi eosys">EOSYS</a></li>
-                <li><a href="#" class="bi day_1">DAY 1</a></li>
+                <li><a href="#" class="bi day1">DAY 1</a></li>
             </ul>
         </section>
         <section class="supporters">
-            <h3>supporters</h3>
+            <h3>{{$t('feature.supporters')}}</h3>
             <ul class="bi group">
                 <li><a href="#" class="bi meetone">Meet.one</a></li>
                 <li><a href="#" class="bi nova">NOVA</a></li>
@@ -20,6 +20,7 @@
 </section>
 </template>
 
+<i18n src="../../../locales/eos-blasterz.json"/>
 <style lang="scss" scoped src="../../../assets/styles/games.eos-blasterz.support.scss"></style>
 
 <script>

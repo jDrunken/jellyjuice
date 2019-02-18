@@ -19,7 +19,11 @@
 
 <script>
 export default {
-    name : 'EosBlasterzPlay'
+    name : 'EosBlasterzPlay',
+    mounted () {
+        console.log(this.$route)
+    }
+
 }
 </script>
 
