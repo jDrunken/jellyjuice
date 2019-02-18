@@ -6,10 +6,10 @@
                 Blast monsters and win the prize!</h3>
         </div>
     </section>
-    <section class="description screenshot" v-on:touchstart="preventScroll($event)" v-on:touchmove="preventScroll($event)" v-on:touchend="enableScroll($event)" v-on:click.prevent.self="preventScroll($event)">
+    <section class="description screenshot">
         <div class="container">
             <no-ssr>
-            <carousel class="how to play" :perPageCustom="[[320, 1],[1700, 2]]" :mouse-drag="false" :navigationEnabled="true">
+            <carousel class="how to play" :perPageCustom="[[320, 1],[900, 2]]" :mouse-drag="false" :navigationEnabled="true">
                 <slide class="items">
                     <div>
                         <img src="../../../assets/images/img-blasterz-movie@2x.png" alt="">
@@ -42,7 +42,7 @@
                 <a href="#" class="play ios">IOS Play</a>
                 <a href="#" class="play aos">Google Play</a>
                 <a href="#" class="download apk">Android APK</a>
-                <nuxt-link to="/games/eos-blasterz/play" class="play web">WEB</nuxt-link>
+                <nuxt-link to="/games/eos-blasterz/play" class=" web">WEB</nuxt-link>
             </div>
         </div>
     </section>
@@ -53,8 +53,6 @@
 <style lang="scss" src="../../../assets/styles/carousel.scss"></style>
 
 <script>
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
-
 export default {
     name : 'Description',
     methods : {

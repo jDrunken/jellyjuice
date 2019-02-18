@@ -18,12 +18,6 @@ export default {
     components : {
         Header,
         Footer
-    },
-    mounted () {
-        window.addEventListener('scroll', () => {
-            let scrollTop = window.scrollY || window.pageYOffset || document.body.scrollTop + (document.documentElement && document.documentElement.scrollTop || 0)
-            this.$store.commit('reflectionScrollPosition',scrollTop)
-        })
     }
 }
 </script>

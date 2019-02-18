@@ -75,3 +75,75 @@ section.partners {
 }
 
 // 반응형 개발중 임시 속성
+ul.bi.group {
+    font-size:0;
+
+    li {
+        font-family: Volte;
+        font-size: rem(26);
+        letter-spacing: -1px;
+        text-align: center;
+        display:inline-block;
+
+        a {
+            width:inherit;
+            height:inherit;
+            color: $font-black;
+            box-sizing:border-box;
+            display:flex;
+            flex-flow:column;
+            align-items:center;
+
+            @include media('<700px') {
+                font-size: rem(16);
+                letter-spacing: -0.7px;
+            }
+
+            position:relative;
+        }
+
+        a.bi {
+            &:before {
+                content:'';
+                display:block;
+                width:100%;
+                min-height:66px;
+                background-position:center center;
+                background-repeat:no-repeat;
+                flex:1;
+            }
+        }
+
+        a.bi.numbers:before {
+            background-image:url('~assets/images/bi-numbers@2x.png');
+        }
+
+        a.bi.sin_games:before {
+            background-image:url('~assets/images/bi-singame@2x.png');
+        }
+
+        a.bi.eosys:before {
+            background-image:url('~assets/images/bi-eosys@2x.png');
+        }
+
+        a.bi.eos_knight:before {
+            background-image:url('~assets/images/bi-eos-knight@2x.png');
+        }
+
+        a.bi.day_1:before {
+            background-image:url('~assets/images/bi-day-1@2x.png');
+        }
+
+        a.bi.meetone:before {
+            background-image:url('~assets/images/bi-meet@2x.png');
+        }
+
+        a.bi.nova:before {
+            background-image:url('~assets/images/bi-nova@2x.png');
+        }
+
+        a.bi.scatter:before {
+            background-image:url('~assets/images/bi-scatter@2x.png');
+        }
+    }
+}

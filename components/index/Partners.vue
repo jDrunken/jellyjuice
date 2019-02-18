@@ -2,7 +2,7 @@
 <section class="partners">
     <div class="container">
         <h2>partners</h2>
-        <ul>
+        <ul class="bi group">
             <li><a href="#" class="numbers bi">Numbers</a></li>
             <li><a href="#" class="sin_games bi">Sin Games</a></li>
             <li><a href="#" class="eosys bi">EOSYS</a></li>

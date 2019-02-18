@@ -4,7 +4,7 @@ section.intro {
     background-size:1920px auto;
 
     @include media ('>1920px') {
-        background-size:contain;
+        background-size:cover;
     }
 
     @include media ('<700px') {
@@ -23,6 +23,11 @@ section.intro {
 
     padding-top:286px;
     padding-bottom:190px;
+    @include media ('>1920px') {
+        padding-top:411px;
+        padding-bottom:301px;
+    }
+
     @include media ('<700px') {
         padding-top:189px;
         padding-bottom:120px;

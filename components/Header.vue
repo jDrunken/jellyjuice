@@ -2,9 +2,7 @@
 <header :class="[page,{reflection : isReflection}]">
     <div class="container">
         <h1>
-            <nuxt-link :to="'/'+$i18n.locale" >
-                Jelly Juice
-            </nuxt-link>
+            <nuxt-link :to="localePath('index')">Jelly Juice</nuxt-link>
         </h1>
         <button type="button"
                 class="mobile menu display"
@@ -33,21 +31,11 @@
                 </ul>
             </nav>
             <div class="locale change">
-                <button type="button"
-                        class="status"
-                        v-for="locale in $i18n.locales"
-                        :key="locale.code">
-                    {{locale.name}}
-                </button>
-
-                <ul>
-                    <li v-for="locale in $i18n.locales" :key="locale.code">
-                        <nuxt-link
-                            :to="switchLocalePath(locale.code)"
-                            :class="locale.code">
-                            {{ locale.name }}
-                         </nuxt-link>
-                    </li>
+                <button type="button" :class="$i18n.locale" @click="toggleLocale()">{{ $t('locale') }}</button>
+                <ul v-if="isExpandLocale">
+                    <li><nuxt-link :to="switchLocalePath('ko')" v-if="$i18n.locale !== 'ko'" class="ko">한글</nuxt-link></li>
+                    <li><nuxt-link :to="switchLocalePath('en')" v-if="$i18n.locale !== 'en'" class="en">English</nuxt-link></li>
+                    <li><nuxt-link :to="switchLocalePath('zh')" v-if="$i18n.locale !== 'zh'" class="zh">中文</nuxt-link></li>
                 </ul>
 
             </div>
@@ -57,6 +45,8 @@
 </template>
 
 <style lang="scss" scoped src="../assets/styles/header.scss"></style>
+
+<i18n src="../locales/header.json"/>
 
 <script>
 import { directive as onClickaway } from 'vue-clickaway';
@@ -69,7 +59,8 @@ export default {
     data : () => ({
         page : '/',
         isReflection : false,
-        isExpandMenu : false
+        isExpandMenu : false,
+        isExpandLocale : false
     }),
     watch : {
         '$route' () {
@@ -77,20 +68,31 @@ export default {
             this.page = this.$route.name.replace(/_/g,'').replace(/(ko|en|zh)/g,'')
         }
     },
+    computed: {
+        availableLocales () {
+            return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+        }
+    },
     methods : {
         viewReflection () {
-            return this.isReflection = this.$store.state.scrollPosition <= 0 ? false : true
-            // let scroll = (window.scrollY || window.pageYOffset || document.body.scrollTop + (document.documentElement && document.documentElement.scrollTop || 0))
-            // return this.isReflection = scroll < 0 ? false : true
+            // return this.isReflection = this.$store.state.scrollPosition <= 0 ? false : true
+            let scroll = (window.scrollY || window.pageYOffset || document.body.scrollTop + (document.documentElement && document.documentElement.scrollTop || 0))
+            this.isExpandLocale = false;
+            return this.isReflection = scroll <= 0 ? false : true
         },
         toggleMenu () {
             this.isExpandMenu = !!this.isExpandMenu ? false : true
         },
+        toggleLocale () {
+            this.isExpandLocale = !!this.isExpandLocale ? false : true
+        }
     },
     mounted () {
         // 현재 페이지 이름을 받아와서 스타일링 하는데 쓴다.
         this.page = this.$route.name.replace(/_/g,'').replace(/(ko|en|zh)/g,'')
         window.addEventListener('scroll',this.viewReflection)
+        window.addEventListener('DOMContentLoaded', this.viewReflection)
+        console.log(this.$i18n.locales)
     },
     destroyed () {
         window.removeEventListener('scroll',this.viewReflection)

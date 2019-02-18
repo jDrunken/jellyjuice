@@ -13,145 +13,48 @@ section.partners {
     }
 
     h2 + ul {
-        margin-top:70px;
+        margin-top:50px;
         @include media('<700px') {
             margin-top:33px;
         }
     }
 
-    ul {
-        font-size:0;
-    }
-
-    ul li {
-        font-family: Volte;
-        font-size: rem(26);
-        letter-spacing: -1px;
-        text-align: center;
-        display:inline-block;
-
-        width:200px;
-        height:207px;
-        margin-left:40px;
-        margin-right:40px;
-        margin-top:70px;
-
-        @include media('<700px') {
-            width:108px;
-            height:111px;
-            margin-left:10px;
-            margin-right:10px;
-            margin-top:40px;
-        }
-
-
-        $padding-top:155px;
-        @include media('<700px') {
-            $padding-top:81px;
-        }
-        a {
-            display:inline-block;
-            width:inherit;
-            height:inherit;
-            color: $font-black;
-            padding-top:$padding-top;
-            box-sizing:border-box;
+    ul.bi.group {
+        li {
+            width:200px;
+            height:207px;
+            margin-left:40px;
+            margin-right:40px;
+            margin-top:70px;
 
             @include media('<700px') {
-                font-size: rem(16);
-                letter-spacing: -0.7px;
-            }
-
-            position:relative;
-        }
-
-        a.bi {
-            &:after {
-                content:'';
-                display:block;
-                position: absolute;
-                top:0;
-                left:0;
-                right:0;
-                width:100%;
-                height:$padding-top; // box height - 박스 하단부터 텍스트 아래까지의 padding - 텍스트의 높이
-                background-position:center center;
-                background-repeat:no-repeat;
+                width:108px;
+                height:111px;
+                margin-left:10px;
+                margin-right:10px;
+                margin-top:40px;
             }
         }
 
-        a.bi.numbers:after {
-                background-image:url('~assets/images/bi-numbers@2x.png');
-                background-size:140px auto;
-        }
-
-        a.bi.sin_games:after {
-            background-image:url('~assets/images/bi-singame@2x.png');
-            background-size:100px auto;
-        }
-
-        a.bi.eosys:after {
-            background-image:url('~assets/images/bi-eosys@2x.png');
-            background-size:104px auto;
-        }
-
-        a.bi.eos_knight:after {
-            background-image:url('~assets/images/bi-eos-knight@2x.png');
-            background-size:104px auto;
-        }
-
-        a.bi.day_1:after {
-            background-image:url('~assets/images/bi-day-1@2x.png');
-            background-size:104px auto;
-        }
-
-        a.bi.meetone:after {
-            background-image:url('~assets/images/bi-meet@2x.png');
-            background-size:100px auto;
-        }
-
-        a.bi.nova:after {
-            background-image:url('~assets/images/bi-nova@2x.png');
-            background-size:110px auto;
-        }
-
-        a.bi.scatter:after {
-            background-image:url('~assets/images/bi-scatter@2x.png');
-            background-size:110px auto;
-        }
+        a.bi.numbers:before { background-size:140px auto; }
+        a.bi.sin_games:before { background-size:100px auto; }
+        a.bi.eosys:before { background-size:104px auto; }
+        a.bi.eos_knight:before { background-size:104px auto; }
+        a.bi.day_1:before { background-size:104px auto; }
+        a.bi.meetone:before { background-size:100px auto; }
+        a.bi.nova:before { background-size:110px auto; }
+        a.bi.scatter:before { background-size:110px auto; }
 
         @include media('<700px') {
-            a.bi.numbers:after {
-                background-size:83.1px auto;
-            }
-
-            a.bi.sin_games:after {
-                background-size:66px auto;
-            }
-
-            a.bi.eosys:after {
-                background-size:62px auto;
-            }
-
-            a.bi.eos_knight:after {
-                background-size:66px auto;
-            }
-
-            a.bi.day_1:after {
-                background-size:66px auto;
-            }
-
-            a.bi.meetone:after {
-                background-size:66px auto;
-            }
-
-            a.bi.nova:after {
-                background-size:66px auto;
-            }
-
-            a.bi.scatter:after {
-                background-size:66px auto;
-            }
+            a.bi.numbers:before { background-size:83.1px auto; }
+            a.bi.sin_games:before { background-size:66px auto; }
+            a.bi.eosys:before { background-size:62px auto; }
+            a.bi.eos_knight:before { background-size:66px auto; }
+            a.bi.day_1:before { background-size:66px auto; }
+            a.bi.meetone:before { background-size:66px auto; }
+            a.bi.nova:before { background-size:66px auto; }
+            a.bi.scatter:before { background-size:66px auto; }
         }
+
     }
 }

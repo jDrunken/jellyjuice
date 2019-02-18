@@ -5,7 +5,7 @@
         <p>Co-work with developers, design studios, solution providers and platform players</p>
     </div>
     <div class="container">
-        <ul>
+        <ul class="bi group">
             <li>
                 <h3>Numbers</h3>
                 <p>7Chain is a team of experts who have decentralized RNG technology. They provide RNG solutions and history viewers. Now we can trust random box.</p>

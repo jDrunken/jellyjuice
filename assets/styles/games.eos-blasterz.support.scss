@@ -3,6 +3,12 @@ section.support {
     padding-bottom: 120px;
     background: #f9fafc;
 
+    @include media ('<700px') {
+        padding-top:51px;
+        padding-bottom:49px;
+    }
+
+
     .container{
         &:after {
             content:'';
@@ -12,11 +18,18 @@ section.support {
 
         > section.creaters {
             float:left;
+            @include media ('<700px') {
+                float:none;
+            }
         }
 
         > section.supporters {
             float:right;
+            @include media ('<700px') {
+                float:none;
+            }
         }
+
     }
 
     h3 {
@@ -26,102 +39,96 @@ section.support {
         letter-spacing: -1px;
         color: #1d1a18;
         text-transform:uppercase;
-    }
 
-    ul li {
-        margin-top:80px;
-
-        font-family: Volte;
-        font-size: rem(26);
-        letter-spacing: -1px;
-        text-align: center;
-        display:inline-block;
-
-        a {
-            box-sizing:border-box;
-            color: $font-black;
-            display:inline-block;
+        @include media('<700px') {
             font-family: Volte;
             font-size: rem(18);
-            height:inherit;
-            position:relative;
-            text-align: center;
-            width:inherit;
-            padding-top:114px;
+            font-weight: 600;
+            letter-spacing: -0.4px;
+            color: $font-black;
+        }
+    }
+
+    ul.bi.group {
+        margin-left:-50px;
+        margin-right:-50px;
+        margin-top:80px;
+        a.bi:before {
+            background-size:contain;
         }
 
-        a.bi {
-            &:after {
-                content:'';
-                display:block;
-                position: absolute;
-                top:0;
-                left:0;
-                right:0;
-                width:100%;
-                height:114px; // box height - 박스 하단부터 텍스트 아래까지의 padding - 텍스트의 높이
-                background-position:center center;
-                background-repeat:no-repeat;
-            }
-        }
-
-        a.bi.eosys {
-            width:70px;
-            &:after {
-                background-image:url('~assets/images/bi-eosys@2x.png');
-                background-size:70px auto;
-            }
-        }
-
-        a.bi.day_1 {
-            width:80px;
-            &:after {
-                background-image:url('~assets/images/bi-day-1@2x.png');
-                background-size:80px auto;
-            }
-        }
-
-        a.bi.meetone {
-            width:78px;
-            &:after {
-                background-image:url('~assets/images/bi-meet@2x.png');
-                background-size:100px auto;
-            }
-        }
-
-        a.bi.nova {
-            width:80px;
-            &:after {
-                background-image:url('~assets/images/bi-nova@2x.png');
-                background-size:80px auto;
-            }
-        }
-
-        a.bi.scatter {
-            width:80px;
-            &:after {
-                background-image:url('~assets/images/bi-scatter@2x.png');
-                background-size:80px auto;
+        li {
+            margin:0 50px;
+            @include media ('<700px') {
+                margin:0;
             }
         }
     }
 
-    section.creaters {
-        li:first-child {
-            margin-right:100px;
-        }
-    }
 
     section.supporters {
         h3 {
             text-align:right;
         }
-        li {
-            margin-left:100px;
+    }
 
-            &:first-child {
-                margin-left:0;
+    @include media ('<700px') {
+        section.creaters,
+        section.supporters {
+            h3 {
+                text-align:center;
             }
+
+            ul {
+                margin-top:33px;
+                text-align:center;
+            }
+       }
+
+        section + section {
+            margin-top:50px;
+        }
+
+        ul.bi.group {
+            margin-top:30px;
+            li {
+                min-width:50px;
+                width:62px;
+                height:86px;
+                margin:0 15px;
+
+                a.bi.eosys {
+                    &:before {
+                        background-size:43px auto;
+                    }
+                }
+
+                a.bi.day_1 {
+                    &:before {
+                        background-size:50px auto;
+                    }
+                }
+
+                a.bi.meetone {
+                    &:before {
+                        background-size:50px auto;
+                    }
+                }
+
+                a.bi.nova {
+                    &:before {
+                        background-size:50px auto;
+                    }
+                }
+
+                a.bi.scatter {
+                    &:before {
+                        background-size:50px auto;
+                    }
+                }
+            }
+
         }
     }
+
 }

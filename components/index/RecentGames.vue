@@ -6,7 +6,6 @@
         </h2>
         <ol>
             <li class="eos-blasterz">
-                <img src="~assets/images/bnr-eosblasterz@2x.png" alt="">
                 <div>
                     <h3>EOS Blasterz</h3>
                     <p>EOS Blasterz is a hyper casual game based on the EOS mainnet. Multiple users can compete, and win payback EOS tokens as a prize. Enjoy fun & easy-to-play game interface!</p>
@@ -15,7 +14,6 @@
                 </div>
             </li>
             <li class="eos-to-the-moon">
-                <img src="~assets/images/bnr-eostothemoon@2x.png" alt="">
                 <div>
                     <h3>EOS to the Moon</h3>
                     <p>EOS to the Moon is a hyper casual game similar to EOS Blasterz. Motivated by EOS, EOS to the Moon utilizes the EOS mainnet to introduce different competition modes.</p>

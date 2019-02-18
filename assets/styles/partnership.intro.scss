@@ -15,8 +15,14 @@ section.intro {
     }
 
     min-height:750px;
+
     padding-top:149px;
     padding-bottom:126px;
+
+    @include media ('>1920px') {
+        padding-top:280px;
+        padding-bottom:250px;
+    }
 
     @include media ('<700px') {
         min-height:auto;
