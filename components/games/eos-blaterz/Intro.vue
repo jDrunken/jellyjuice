@@ -3,7 +3,7 @@
     <div class="container">
         <h2>{{$t('intro.title')}}</h2>
         <p>{{$t('intro.description')}}</p>
-        <a href="#">Play now</a>
+        <nuxt-link :to="localePath('games-eos-blasterz-play')">Play now</nuxt-link>
     </div>
 </section>
 </template>

@@ -7,7 +7,7 @@
                 <div>
                     <h3>{{$t('eos-blasterz.title')}}</h3>
                     <p :key="description.index" v-for="description in $t('eos-blasterz.descriptions')">{{description}}</p>
-                    <a href="/games/eos-blasterz/">{{$t('learn-more')}}</a>
+                    <nuxt-link :to="localePath('games-eos-blasterz')">{{$t('learn-more')}}</nuxt-link>
                 </div>
             </li>
             <li class="eos-to-the-moon">

@@ -16,17 +16,19 @@
             <nav>
                 <ul>
                     <li class="games">
-                        <button type="button">games</button>
+                        <button type="button" :class="page === 'games-eos-blasterz' ? 'viewing' : null">games</button>
                         <ul>
                             <li>
-                                <nuxt-link :to="'/' + $i18n.locale + '/games/eos-blasterz'">
+                                <nuxt-link :to="localePath('games-eos-blasterz')">
                                     EOS Blasterz
                                 </nuxt-link>
                             </li>
                         </ul>
                     </li>
-                    <li class="partnership">
-                        <nuxt-link :to="'/' + $i18n.locale + '/partnership'">Partnership</nuxt-link>
+                    <li class="partnership" :class="page === 'partnership' ? 'viewing' : null">
+                        <nuxt-link :to="localePath('partnership')">
+                            Partnership
+                        </nuxt-link>
                     </li>
                 </ul>
             </nav>
@@ -49,13 +51,8 @@
 <i18n src="../locales/header.json"/>
 
 <script>
-import { directive as onClickaway } from 'vue-clickaway';
-
 export default {
     name : 'Header',
-    directives: {
-        onClickout: onClickaway,
-    },
     data : () => ({
         page : '/',
         isReflection : false,

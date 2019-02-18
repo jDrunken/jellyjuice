@@ -2,21 +2,37 @@ section.play {
 
     min-height:1000px;
 
-    background:url('../images/play-main-visual@2x.png') center 81px no-repeat;
-    background-size:contain;
+    &:before {
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        height:1000px;
+        background:url('../images/play-main-visual@2x.png') center top no-repeat;
+        background-size:auto 1000px;
+
+        @include media ('>1920px') {
+            background-position:center 20%;
+            background-size:cover;
+        }
+    }
+
 
     > .container {
+        position:relative;
         text-align:center;
         padding-top:167px;
         padding-bottom:200px;
     }
 
     h2 {
+        position:relative;
         display:inline-block;
-        width:574px;
-        height:241px;
+        width:603px;
+        height:366px;
         background:url('../images/bnr-blasterz-logo@2x.png') center center no-repeat;
-        background-size:cover;
+        background-size:574px auto;
         @include ir();
     }
 
@@ -26,10 +42,6 @@ section.play {
         line-height: 1.89;
         text-align: center;
         color: #f1f1f1;
-        a {
-            font-weight: bold;
-            color: $font-yellow;
-        }
     }
 
     p.image.container {
@@ -37,6 +49,7 @@ section.play {
 
         img {
             max-width:1280px;
+            width:100%;
         }
     }
 
@@ -66,7 +79,7 @@ section.play {
         }
 
         a.download.apk {
-            background:url('../images/btn-game-androidapk@2x.png') center center no-repeat transparent;
+            background:url('../images/btn-game-androidapk@2x.png') center center no-repeat $white;
             background-size:contain;
         }
     }

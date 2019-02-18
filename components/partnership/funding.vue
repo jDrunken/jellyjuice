@@ -4,7 +4,7 @@
         <section>
             <h3><i>03</i>{{$t('support.type.resource.title')}}</h3>
             <p>{{$t('support.type.resource.description')}}</p>
-            <a href="#">{{$t('support.type.resource.link')}}</a>
+            <a href="https://www.officialdia.com/" target="_blank">{{$t('support.type.resource.link')}}</a>
         </section>
         <div class="image wrapper">
             <img src="~assets/images/bnr-support-funding-color@2x.png" alt="">

@@ -64,6 +64,10 @@ header {
         left:50%;
         margin-left:-$width;
 
+        .viewing {
+            font-weight:700;
+        }
+
         > ul {
             width:$width*2;
             height:inherit;
@@ -86,6 +90,10 @@ header {
                 &:first-letter {
                     text-transform:uppercase;
                 }
+            }
+
+            button {
+                cursor:default;
             }
         }
 

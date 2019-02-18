@@ -2,7 +2,7 @@
 <section class="creators list">
     <div class="container">
         <ul>
-            <li :key="list"
+            <li :key="list.name"
                 class="bi"
                 :class="list.name.toLowerCase()"
                 v-for="list in $t('introduce.lists')">
