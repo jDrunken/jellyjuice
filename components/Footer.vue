@@ -4,21 +4,23 @@
         <h2>jellyjuice</h2>
         <ul class="communication channel">
             <li>
-                <a href="#" class="sns medium">medium</a>
+                <a href="https://medium.com/eosys" class="sns medium" target="_blank">medium</a>
             </li>
             <li>
-                <a href="#" class="sns twitter">twitter</a>
+                <a href="https://twitter.com/eosys_io" class="sns twitter" target="_blank">twitter</a>
             </li>
         </ul>
         <div class="copyright and address">
-            <p class="copyright">Copyright © 2019 Jelly Juice, All rights reserved.</p>
-            <address>06210 302, Teheran-ro Gangnam-gu Seoul, Korea</address>
+            <p class="copyright">{{$t('copyright')}}</p>
+            <address>{{$t('address')}}</address>
         </div>
     </div>
 </footer>
 </template>
 
 <style lang="scss" scoped src="~/assets/styles/footer.scss"></style>
+
+<i18n src="../locales/footer.json"/>
 
 <script>
 export default {

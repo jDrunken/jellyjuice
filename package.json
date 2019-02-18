@@ -11,6 +11,7 @@
     },
     "scripts": {
         "dev": "nuxt --spa",
+        "dev-dual": "nuxt",
         "build": "nuxt build --universal",
         "start": "nuxt start",
         "generate": "nuxt generate --universal",

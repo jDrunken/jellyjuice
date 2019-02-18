@@ -1,24 +1,20 @@
 <template>
 <section class="recent games">
     <div class="container">
-        <h2>
-            Recent Games
-        </h2>
+        <h2>{{$t('title')}}</h2>
         <ol>
             <li class="eos-blasterz">
                 <div>
-                    <h3>EOS Blasterz</h3>
-                    <p>EOS Blasterz is a hyper casual game based on the EOS mainnet. Multiple users can compete, and win payback EOS tokens as a prize. Enjoy fun & easy-to-play game interface!</p>
-                    <p>One-touch game control will introduce new blockchain game experience. With different competition modes, not only EOS holders but also those who doesn’t have an account can play. Stay tuned and win EOS! </p>
-                    <a href="/games/eos-blasterz/">Learn more</a>
+                    <h3>{{$t('eos-blasterz.title')}}</h3>
+                    <p :key="description.index" v-for="description in $t('eos-blasterz.descriptions')">{{description}}</p>
+                    <a href="/games/eos-blasterz/">{{$t('learn-more')}}</a>
                 </div>
             </li>
             <li class="eos-to-the-moon">
                 <div>
-                    <h3>EOS to the Moon</h3>
-                    <p>EOS to the Moon is a hyper casual game similar to EOS Blasterz. Motivated by EOS, EOS to the Moon utilizes the EOS mainnet to introduce different competition modes.</p>
-                    <p>Users can target planets and shoot EOS according to the timing. Handy, light-weighted playing experience will make your snack time worthwhile.</p>
-                    <a href="/games/eos-to-the-moon/">Learn more</a>
+                    <h3>{{$t('eos-to-the-moon.title')}}</h3>
+                    <p :key="description.index" v-for="description in $t('eos-to-the-moon.descriptions')">{{description}}</p>
+                    <a href="#" @click.prevent.self disabled>{{$t('comming-soon')}}</a>
                 </div>
             </li>
         </ol>
@@ -27,6 +23,8 @@
 </template>
 
 <style lang="scss" scoped src="~/assets/styles/index.recent-games.scss"></style>
+
+<i18n src="../../locales/index.recent-games.json"/>
 
 <script>
 export default {

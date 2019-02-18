@@ -1,0 +1,17 @@
+{
+    "ko" : {
+        "locale" : "한글",
+        "games" : "Games",
+        "partnership" : "Partnership"
+    },
+    "en" : {
+        "locale" : "English",
+        "games" : "Games",
+        "partnership" : "Partnership"
+    },
+    "zh" : {
+        "locale" : "中文",
+        "games" : "",
+        "partnership" : ""
+    }
+}

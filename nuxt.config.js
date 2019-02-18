@@ -35,12 +35,12 @@ module.exports = {
                     {
                         code: 'ko',
                         iso: 'ko-KR',
-                        name : 'Korean'
+                        name : '한글'
                     },
                     {
                         code: 'zh',
                         iso: 'zh-CN',
-                        name: 'Chinese'
+                        name: '中文'
                     }
                 ],
                 strategy: 'prefix',
@@ -51,7 +51,7 @@ module.exports = {
                 detectBrowserLanguage: {
                     useCookie: true,
                     cookieKey: 'i18n_redirected',
-                    alwaysRedirect: true
+                    alwaysRedirect: false
                 },
                 vueI18nLoader: true,
                 defaultLocale: 'ko',

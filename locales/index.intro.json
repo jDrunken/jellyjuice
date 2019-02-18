@@ -1,0 +1,16 @@
+{
+    "ko" : {
+        "title" : "New Flavor of Entertainment DAPP",
+        "description" : "젤리주스는 누구나 쉽게 즐길 수 있는 엔터테인먼트 어플리케이션을 지향합니다.<br> 이제는 블록체인 기반의 서비스가 무엇인지 직접 체험해 보세요.<br> 간편한 조작만으로도 새로운 경험이 가능해집니다.<br> EOS 블록 프로듀서인 EOSYS와 전세계의 다양한 파트너들이 함께 합니다.",
+        "recent-games" : {
+        }
+    },
+    "en" : {
+        "title" : "New Flavor of Entertainment DAPP",
+        "description" :" JellyJuice brings off-chain entertainment<br /> applications into blockchain space.<br /> Powered by experienced<br> EOS node operator EOSYS, <br /> we collaborate with various global<br> partners to provide<br /> Entertainment DApps for broader audience.  "
+    },
+    "zh" : {
+        "title" : "New Flavor of Entertainment DAPP",
+        "description" :"JellyJuice将Off-chain娱乐应用带到区块链领域。由经验丰富的EOS节点运营商EOSYS提供支持，我们与各种全球合作伙伴进行合作，为更广泛的受众提供娱乐DApp。"
+    }
+}

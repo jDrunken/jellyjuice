@@ -1,18 +1,13 @@
 <template>
 <section class="index intro">
     <div class="container">
-        <h2>New Flavor of Entertainment DAPP</h2>
-        <p>
-            JellyJuice brings off-chain entertainment<br />
-            applications into blockchain space.<br />
-            Powered by experienced<br> EOS node operator EOSYS, <br />
-            we collaborate with various global<br> partners to provide<br />
-            Entertainment DApps for broader audience.
-        </p>
+        <h2>{{$t('title')}}</h2>
+        <p v-html="$t('description')"></p>
     </div>
 </section>
 </template>
 
+<i18n src="../../locales/index.intro.json"/>
 <style lang="scss" scoped src="../../assets/styles/index.intro.scss"></style>
 
 <script>

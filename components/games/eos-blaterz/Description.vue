@@ -2,8 +2,7 @@
 <div>
     <section class="description title">
         <div class="container">
-            <h3>It's payback time!<br />
-                Blast monsters and win the prize!</h3>
+            <h3 v-html="$t('detail.title')"></h3>
         </div>
     </section>
     <section class="description screenshot">
@@ -37,7 +36,7 @@
     </section>
     <section class="description script">
         <div class="container">
-            <p>Beware, push and jump to kill monsters! EOS Blasterz is a hyper casual game based on the EOS mainnet. Multiple users can compete, and win payback EOS tokens as a reward. Enjoy fun & easy-to-play game interface! One-touch game control will introduce new blockchain game experience. Jump into your favorite competition mode and be the winner. Stay tuned to enjoy upgrade features and skins. Oh, Don’t forget to bring your blaster spirit!</p>
+            <p>{{$t('detail.description')}}</p>
             <div class="btn_area">
                 <a href="#" class="play ios">IOS Play</a>
                 <a href="#" class="play aos">Google Play</a>
@@ -49,8 +48,11 @@
 </div>
 </template>
 
+<i18n src="../../../locales/eos-blasterz.json" />
+
 <style lang="scss" scoped src="../../../assets/styles/games.eos-blasterz.description.scss"/>
 <style lang="scss" src="../../../assets/styles/carousel.scss"></style>
+
 
 <script>
 export default {
