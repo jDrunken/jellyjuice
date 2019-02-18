@@ -33,7 +33,6 @@ section.support {
     }
 
     h3 {
-        font-family: Volte;
         font-size: rem(26);
         font-weight: 600;
         letter-spacing: -1px;
@@ -41,7 +40,6 @@ section.support {
         text-transform:uppercase;
 
         @include media('<700px') {
-            font-family: Volte;
             font-size: rem(18);
             font-weight: 600;
             letter-spacing: -0.4px;

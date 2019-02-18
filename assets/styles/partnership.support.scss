@@ -3,7 +3,6 @@ $font-black : #1d1a18;
 
 section.support {
     h3 {
-        font-family: Volte;
         font-size: rem(42);
         font-weight: 600;
         letter-spacing: -0.5px;
@@ -21,7 +20,6 @@ section.support {
 
     h3 i {
         font-style:normal;
-        font-family: Volte;
         font-size: rem(26);
         letter-spacing: -0.3px;
         color: $font-black;
@@ -42,7 +40,6 @@ section.support {
 
     .container > p,
     section > p {
-        font-family: Volte;
         font-size: rem(26);
         line-height: 1.46;
         letter-spacing: -0.5px;
@@ -86,7 +83,6 @@ section.support.title {
     }
 
     h2 {
-        font-family: Volte;
         font-size: rem(56);
         letter-spacing: -4px;
         color: $font-black;
@@ -211,7 +207,6 @@ section.support.marketing {
     }
 
     h4 {
-        font-family: Volte;
         font-size: rem(26);
         font-weight: 600;
         line-height: 1.46;
@@ -229,7 +224,6 @@ section.support.marketing {
     }
 
     li p {
-        font-family: Volte;
         font-size: rem(16);
         line-height: 1.56;
         letter-spacing: -0.3px;

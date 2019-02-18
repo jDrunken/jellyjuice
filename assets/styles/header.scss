@@ -22,10 +22,6 @@ header {
         padding:0;
     }
 
-    a,button {
-        font-family:$Volte;
-    }
-
     // 제목
     h1 {
         width:141px;
@@ -354,7 +350,6 @@ header .wrapper {
     nav li li {
         margin-top:22px;
         a {
-            font-family: Volte;
             font-size: rem(22);
             line-height: 1;
             letter-spacing: -0.7px;
