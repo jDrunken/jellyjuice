@@ -68,6 +68,11 @@ section.creators.list {
             max-width:340px;
             background: $white;
             color:$font-black;
+            @include media ('<700px') {
+                margin-left:auto;
+                margin-right:auto;
+                display:block;
+            }
         }
 
         li.bi {

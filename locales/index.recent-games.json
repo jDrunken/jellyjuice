@@ -40,8 +40,8 @@
     },
     "zh" : {
         "title" : "最新游戏",
-        "learn-more" : "",
-        "comming-soon" : "",
+        "learn-more" : "更多",
+        "comming-soon" : "即将公开",
         "eos-blasterz" : {
             "title" : "EOS Blasterz",
             "descriptions" : [
@@ -49,9 +49,9 @@
                 "一键式游戏控制将引入新的区块链游戏体验。通过不同的竞争模式，不仅EOS持有者而且还有没有账户的人皆可享受游戏乐趣。敬请期待并赢得EOS！"
             ]
         },
-        "eos-to-the-moons" : {
+        "eos-to-the-moon" : {
             "title" : "EOS to the Moon",
-            "description" : [
+            "descriptions" : [
                 "EOS to the Moon是一款类似于EOS Blasterz的超级休闲游戏。在EOS的推动下，EOS to the Moon利用EOS主网来实现不同的竞争模式。",
                 "用户可以根据时间对着星球发射EOS。方便，轻盈的游戏体验将使您的休闲时间变得具有价值。"
             ]

@@ -11,7 +11,7 @@
                 "contract" : {
                     "title" : "스마트 컨트랙트",
                     "description" : "특정 서비스에 가장 최적화된 분산 구조를 찾아내고, 이를 기반으로 스마트 컨트랙트를 설계하여 서비스와 블록체인을 연결합니다.",
-                    "view-more" : ""
+                    "view-more" : "파트너십 신청"
                 },
                 "marketing" : {
                     "title" : "마케팅",
@@ -73,7 +73,7 @@
                 },
                 "marketing" : {
                     "title" : "Marketing",
-                    "description" : "",
+                    "description" : "Based on EOSYS' global network and experiences, JellyJuice reaches out to broader pool of audience.",
                     "lists" : {
                         "eosys": {
                             "title" : "EOSYS",
@@ -117,58 +117,58 @@
     },
     "zh" : {
         "intro" : {
-            "title" : "",
-            "description" : "",
-            "link" : ""
+            "title" : "加入 JellyJuice’s<br> dApp Studio",
+            "description" : "JellyJuice的目标为DApp Studio，共同开发应用程序。通过把生活中的东西(Things)放到链上(on-chain)的过程中我们与合作伙伴们创造\"Blockchain Flavor\"。 EOS的超级节点EOSYS与世界各国的合作伙伴们一同进行。",
+            "link" : "申请合作"
         },
         "support" : {
-            "title" : "",
+            "title" : "我们提供",
             "type" : {
                 "contract" : {
-                    "title" : "",
-                    "description" : "",
-                    "view-more" : ""
+                    "title" : "智能合约",
+                    "description" : "为特定服务找到最优化的分布式体系结构，并基于此设计智能合约来连接服务和区块链。",
+                    "view-more" : "Github 链接"
                 },
                 "marketing" : {
-                    "title" : "",
-                    "description" : "",
+                    "title" : "营销",
+                    "description" : "基于EOSYS的全球影响力，我们将提供各种营销策略。",
                     "lists" : {
                         "eosys": {
                             "title" : "EOSYS",
-                            "description" : ""
+                            "description" : "EOSYS和全球合作伙伴，12个超级节点和17家公司，供您灵活合作。"
                         },
                         "decenter" : {
                             "title" : "Decenter",
-                            "description" : ""
+                            "description" : "Decenter是韩国最大区块链专业媒体平台，可以通过该平台进行针对用户的宣传活动。"
                         },
                         "refereum" : {
                             "title" : "Refereum",
-                            "description" : ""
+                            "description" : "Decenter是韩国最大区块链专业媒体平台，可以通过该平台进行针对用户的宣传活动。"
                         }
                     }
                 },
                 "resource" : {
-                    "title" : "",
-                    "description" : "",
+                    "title" : "共享资源",
+                    "description" : "共享开发应用是所需要的资源。并且通过DIA(DApp Incubation Alliance)等全球关系协助项目方的融资。",
                     "link" : "DApp Incubation Alliance"
                 }
             }
         },
         "introduce" : {
-            "title" : "",
-            "description" : "",
+            "title" : "介绍我们的制作者们",
+            "description" : "我们与开发者，设计工作室，解决方案提供商和平台方一起发展。",
             "lists" : [
                 {
                     "name" : "Numbers",
-                    "description" : ""
+                    "description" : "7Chain是一个拥有分散式RNG技术的专业团队。他们提供RNG解决方案和历史观众。现在我们可以信任随机盒子。"
                 },
                 {
                     "name" : "EOSYS",
-                    "description" : ""
+                    "description" : "基于EOS主网的启动和运营经验，EOSYS提供智能合约开发和DApp构造的新范例。"
                 },
                 {
                     "name" : "Day1",
-                    "description" : ""
+                    "description" : "Day1 Entertainment为区块链生态带来独特的休闲游戏，以覆盖更广泛的终端用户。现在，每个人都可以享受区块链游戏了。"
                 }
             ]
         }

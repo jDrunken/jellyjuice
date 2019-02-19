@@ -18,18 +18,12 @@ body {
     text-size-adjust: 100%;
     overflow-x:hidden;
     background:$white;
-    font-family: sans-serif;
+    font-family: Volte,'Apple SD Gothic', sans-serif;
 }
 
-:lang(en) body {
-    font-family: Volte, sans-serif;
+:lang(zh) * {
+    word-break:break-all;
 }
-
-:lang(ko) body {
-    font-family: 'Apple SD Gothic', sans-serif;
-}
-
-
 sub,sup {
     font-family:inherit;
 }

@@ -8,8 +8,8 @@ section.intro {
     }
 
     @include media ('<700px') {
-        background:url('../images/bg-games-eos-blasterz-mobile@2x.png') left top no-repeat;
-        background-size:100%;
+        background:url('../images/bg-games-eos-blasterz-mobile@2x.png') center bottom no-repeat;
+        background-size:cover;
         min-height:572px;
         // background-position:center;
     }
@@ -21,6 +21,8 @@ section.intro {
         text-align:center;
 
         @include media ('>1920px') {
+            padding-top:14.1vw;
+            padding-bottom:8.25vw;
         }
     }
 
@@ -60,20 +62,26 @@ section.intro {
     }
 
     a {
-        @include ir();
         display:inline-block;
+        text-align:center;
+        min-width:220px;
+        padding-left:20px;
+        padding-right:20px;
+        height:65px;
+        line-height:65px;
+        color:$white;
+        font-size: rem(24);
+        font-weight: 600;
+        letter-spacing: -0.8px;
+        text-align: center;
+        border-radius:35px;
+        text-transform:capitalize;
 
-        background:url('../images/btn-playnow-desktop@2x.png') center center no-repeat;
-        background-size:contain;
-
-        width:280px;
-        height:70px;
+        background-image:linear-gradient(to bottom,#ff8a00 0%, #ff7a00 100% );
 
         @include media ('<700px') {
-            width:180px;
-            height:46px;
-            background:url('../images/btn-download-mobile@2x.png') center center no-repeat;
-            background-size:contain;
+            min-width:214px;
+            font-size:rem(20);
         }
     }
 
@@ -84,7 +92,7 @@ section.intro {
         }
 
         + a {
-            margin-top:14px;
+            margin-top:8px;
         }
     }
 }

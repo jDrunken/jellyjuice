@@ -185,15 +185,19 @@ section.support.marketing {
         @include media ('<700px') {
             display:block;
         }
+        margin-left:-20px;
+        margin-right:-20px;
 
         li {
+            flex:1;
             max-width:400px;
             background: $white;
             color:$font-black;
             padding-bottom:40px;
+
+            margin:0 20px;
             @include media ('<700px') {
-                margin-top:30px;
-                padding-bottom:30px;
+                margin:30px auto;
                 &:first-child {
                     margin-top:0;
                 }
@@ -203,7 +207,7 @@ section.support.marketing {
 
     img {
         display:block;
-        width:100%;
+        max-width:100%;
     }
 
     h4 {

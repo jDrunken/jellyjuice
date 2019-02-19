@@ -1,7 +1,7 @@
 <template>
 <section class="partners">
     <div class="container">
-        <h2>partners</h2>
+        <h2>{{$t('partners')}}</h2>
         <ul class="bi group">
             <li><a href="#" class="numbers bi">Numbers</a></li>
             <li><a href="http://singames.io/" target="_blank" class="sin_games bi">Sin Games</a></li>
@@ -16,6 +16,7 @@
 </section>
 </template>
 
+<i18n src="../../locales/index.partners.json" />
 <style lang="scss" scoped src="../../assets/styles/index.partners.scss"></style>
 
 <script>

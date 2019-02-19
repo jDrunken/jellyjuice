@@ -4,7 +4,7 @@
         <section>
             <h3><i>01</i>{{$t('support.type.contract.title')}}</h3>
             <p>{{$t('support.type.contract.description')}}</p>
-            <a href="#" target="_blank">{{$t('support.type.contract.link')}}</a>
+            <a href="#" target="_blank">{{$t('support.type.contract.view-more')}}</a>
         </section>
         <div class="image wrapper">
             <img src="~assets/images/bnr-support-smart-contract-color@2x.png" alt="">

@@ -16,7 +16,7 @@
             <nav>
                 <ul>
                     <li class="games">
-                        <button type="button" :class="page === 'games-eos-blasterz' ? 'viewing' : null">games</button>
+                        <button type="button" :class="page === 'games-eos-blasterz' ? 'viewing' : null">{{$t('games')}}</button>
                         <ul>
                             <li>
                                 <nuxt-link :to="localePath('games-eos-blasterz')">
@@ -27,7 +27,7 @@
                     </li>
                     <li class="partnership" :class="page === 'partnership' ? 'viewing' : null">
                         <nuxt-link :to="localePath('partnership')">
-                            Partnership
+                            {{$t('partnership')}}
                         </nuxt-link>
                     </li>
                 </ul>

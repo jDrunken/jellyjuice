@@ -11,7 +11,7 @@
     },
     "zh" : {
         "locale" : "中文",
-        "games" : "",
-        "partnership" : ""
+        "games" : "游戏",
+        "partnership" : "合作伙伴"
     }
 }
