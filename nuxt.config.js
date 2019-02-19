@@ -112,7 +112,6 @@ module.exports = {
         fallback : false
     },
     router : {
-        base : '/jellyjuice/',
         scrollBehavior(to, from, savedPosition) {
             // debugger
             let position = false
