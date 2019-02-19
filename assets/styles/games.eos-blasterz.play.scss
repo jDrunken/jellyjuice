@@ -24,6 +24,10 @@ section.play {
         text-align:center;
         padding-top:167px;
         padding-bottom:200px;
+
+        @include media ('<700px') {
+            padding-top:150px;
+        }
     }
 
     h2 {
@@ -34,6 +38,13 @@ section.play {
         background:url('../images/bnr-blasterz-logo@2x.png') center center no-repeat;
         background-size:574px auto;
         @include ir();
+
+        @include media ('<700px') {
+            // margin-top:61.7px;
+            width:278px;
+            height:132px;
+            background-size:279px auto;
+        }
     }
 
     p {
@@ -53,36 +64,92 @@ section.play {
         }
     }
 
-    div.btn_area {
+    .btn_area {
         display:flex;
-        justify-content: center;
+        justify-content: space-between;
+
+        @include media ('<700px') {
+            display:block;
+        }
 
         a {
-            width:290px;
-            height:90px;
+            flex:1;
             margin-left:40px;
-            @include ir();
-
             &:first-child {
                 margin-left:0;
             }
+            height:90px;
+
+            @include media('<700px') {
+                min-width:200px;
+                margin-left:0;
+            }
+
+            font-size: rem(26);
+            @include media ('>700px','<1300px') {
+                margin-left:10px;
+                font-size:rem(22);
+            }
+            font-weight: 600;
+            text-align:center;
+            border-radius:8px;
+            box-sizing:border-box;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            border:2px solid $font-black;
+            color:$font-black;
+
+            @include media ('<700px') {
+                width:100%;
+                font-size:rem(20);
+            }
+
+            background:#fff;
         }
 
-        a.play.ios {
-            background:url('../images/btn-game-appstore@2x.png') center center no-repeat transparent;
-            background-size:contain;
+        a ~ a {
+            margin-top:15px;
         }
 
-        a.play.aos {
-            background:url('../images/btn-game-googleplay@2x.png') center center no-repeat transparent;
-            background-size:contain;
-        }
+        a.play {
+            color: $white;
+            background:$font-black;
+            &:before {
+                display:inline-block;
+                content:'';
+            }
 
-        a.download.apk {
-            background:url('../images/btn-game-androidapk@2x.png') center center no-repeat $white;
-            background-size:contain;
+            &.ios:before {
+                background:url('../images/bg-apple@2x.png') left center no-repeat;
+                background-size:contain;
+                width:36px;
+                height:42px;
+                margin-right:18px;
+
+                @include media ('<700px') {
+                    width:25px;
+                    height:29.3px;
+                }
+            }
+
+            &.aos:before {
+                background:url('../images/bg-google@2x.png') center center no-repeat transparent;
+                background-size:contain;
+                width:35px;
+                height:38px;
+                margin-right:20px;
+
+                @include media ('<700px') {
+                    width:27px;
+                    height:30px;
+                }
+            }
         }
     }
+
 
 
 

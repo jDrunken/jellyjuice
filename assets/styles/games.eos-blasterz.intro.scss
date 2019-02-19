@@ -10,8 +10,11 @@ section.intro {
     @include media ('<700px') {
         background:url('../images/bg-games-eos-blasterz-mobile@2x.png') center bottom no-repeat;
         background-size:cover;
-        min-height:572px;
-        // background-position:center;
+        min-height:auto;
+        max-height:572px;
+        height:100vh;
+        display:flex;
+        align-items:center;
     }
 
 
@@ -36,7 +39,7 @@ section.intro {
         @include ir();
 
         @include media ('<700px') {
-            margin-top:61.7px;
+            // margin-top:61.7px;
             width:278px;
             height:132px;
             background-size:279px auto;
@@ -88,11 +91,12 @@ section.intro {
     h2 + p {
         margin-top:50px;
         @include media ('<700px') {
-            margin-top:62px;
+            margin-top:48px;
         }
 
         + a {
-            margin-top:8px;
+            margin-top:16px;
+            margin-bottom:32px;
         }
     }
 }

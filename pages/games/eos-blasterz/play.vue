@@ -2,7 +2,9 @@
 <section class="play eos-blasterz">
     <div class="container">
         <h2>Eos Blasterz</h2>
-        <p v-html="$t('notice')"></p>
+
+        <p v-if="$device.isDesktop" v-html="$t('notice')"></p>
+
         <p class="image container">
             <img src="../../../assets/images/bnr-play-game-view@2x.png" alt="">
         </p>

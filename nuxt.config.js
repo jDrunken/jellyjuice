@@ -16,11 +16,16 @@ module.exports = {
 
     // loading progress bar
     loading: true,
+
+    // page routing animation
     css : [
         'assets/styles/route.scss'
     ],
+
+
     modules : [
         '@nuxtjs/style-resources',
+        'nuxt-device-detect',
         [
             '@nuxtjs/component-cache',
             {

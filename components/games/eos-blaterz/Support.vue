@@ -21,6 +21,7 @@
 </template>
 
 <i18n src="../../../locales/eos-blasterz.json"/>
+
 <style lang="scss" scoped src="../../../assets/styles/games.eos-blasterz.support.scss"></style>
 
 <script>

@@ -1,6 +1,7 @@
 {
     "ko" : {
         "play" : "Play Now",
+        "download" : "Download",
         "intro" : {
             "title" : "EOS Blasterz",
             "description" : "몬스터를 처치하고 EOS를 획득하세요!"
@@ -17,6 +18,7 @@
     },
     "en" : {
         "play" : "Play Now",
+        "download" : "Download",
         "intro" : {
             "title" : "EOS Blasterz",
             "description" : "Blast Monsters and Win EOS!"
@@ -34,6 +36,7 @@
     },
     "zh" : {
         "play" : "开始",
+        "download" : "下载",
         "intro" : {
             "title" : "EOS Blasterz",
             "description" : "打击怪兽赢得EOS!"
