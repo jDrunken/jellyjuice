@@ -15,7 +15,10 @@ module.exports = {
     },
 
     // loading progress bar
-    loading: false,
+    loading: true,
+    css : [
+        'assets/styles/route.scss'
+    ],
     modules : [
         '@nuxtjs/style-resources',
         [

@@ -93,6 +93,6 @@ export default {
     },
     destroyed () {
         window.removeEventListener('scroll',this.viewReflection)
-    }
+    },
 }
 </script>

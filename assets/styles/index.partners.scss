@@ -36,24 +36,24 @@ section.partners {
             }
         }
 
-        a.bi.numbers:before { background-size:140px auto; }
-        a.bi.sin_games:before { background-size:100px auto; }
-        a.bi.eosys:before { background-size:104px auto; }
+        a.bi.numbers:before    { background-size:140px auto; }
+        a.bi.sin_games:before  { background-size:100px auto; }
+        a.bi.eosys:before      { background-size:104px auto; }
         a.bi.eos_knight:before { background-size:104px auto; }
-        a.bi.day1:before { background-size:104px auto; }
-        a.bi.meetone:before { background-size:100px auto; }
-        a.bi.nova:before { background-size:110px auto; }
-        a.bi.scatter:before { background-size:110px auto; }
+        a.bi.day1:before       { background-size:104px auto; }
+        a.bi.meetone:before    { background-size:100px auto; }
+        a.bi.nova:before       { background-size:110px auto; }
+        a.bi.scatter:before    { background-size:110px auto; }
 
         @include media('<700px') {
-            a.bi.numbers:before { background-size:83.1px auto; }
-            a.bi.sin_games:before { background-size:66px auto; }
-            a.bi.eosys:before { background-size:62px auto; }
+            a.bi.numbers:before    { background-size:83.1px auto; }
+            a.bi.sin_games:before  { background-size:66px auto; }
+            a.bi.eosys:before      { background-size:62px auto; }
             a.bi.eos_knight:before { background-size:66px auto; }
-            a.bi.day1:before { background-size:66px auto; }
-            a.bi.meetone:before { background-size:66px auto; }
-            a.bi.nova:before { background-size:66px auto; }
-            a.bi.scatter:before { background-size:66px auto; }
+            a.bi.day1:before       { background-size:66px auto; }
+            a.bi.meetone:before    { background-size:66px auto; }
+            a.bi.nova:before       { background-size:66px auto; }
+            a.bi.scatter:before    { background-size:66px auto; }
         }
 
     }

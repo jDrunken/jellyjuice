@@ -137,8 +137,18 @@ header {
 
 
 // page routing에 따라서 컬러셋을 다르게 지정해줌
+@keyframes header {
+    0% {
+        transform:translateY(-100%);
+    }
+
+    100% {
+        transform:translateY(0%);
+    }
+}
+
 header {
-    // transition:background-color 0.5s;
+    animation:header 1s;
 }
 
 header.index,
