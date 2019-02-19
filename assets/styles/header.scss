@@ -51,6 +51,11 @@ header {
 
         ul {
             position:absolute;
+            display:none;
+
+            &.expand {
+                display:block;
+            }
         }
     }
 
@@ -385,6 +390,15 @@ header .wrapper {
         bottom:60px;
 
         .status {
+            display:none;
+        }
+
+        ul {
+            display:block;
+            position:static;
+        }
+
+        button.locale.status {
             display:none;
         }
 

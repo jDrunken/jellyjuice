@@ -33,11 +33,11 @@
                 </ul>
             </nav>
             <div class="locale change">
-                <button type="button" :class="$i18n.locale" @click="toggleLocale()">{{ $t('locale') }}</button>
-                <ul v-if="isExpandLocale">
-                    <li><nuxt-link :to="switchLocalePath('ko')" v-if="$i18n.locale !== 'ko'" class="ko">한글</nuxt-link></li>
-                    <li><nuxt-link :to="switchLocalePath('en')" v-if="$i18n.locale !== 'en'" class="en">English</nuxt-link></li>
-                    <li><nuxt-link :to="switchLocalePath('zh')" v-if="$i18n.locale !== 'zh'" class="zh">中文</nuxt-link></li>
+                <button type="button" class="locale status" :class="$i18n.locale" @click="toggleLocale()">{{ $t('locale') }}</button>
+                <ul :class="{expand : isExpandLocale}">
+                    <li><nuxt-link :to="switchLocalePath('ko')" :class="$i18n.locale !== 'ko'" class="ko">한글</nuxt-link></li>
+                    <li><nuxt-link :to="switchLocalePath('en')" :class="$i18n.locale !== 'en'" class="en">English</nuxt-link></li>
+                    <li><nuxt-link :to="switchLocalePath('zh')" :class="$i18n.locale !== 'zh'" class="zh">中文</nuxt-link></li>
                 </ul>
 
             </div>
