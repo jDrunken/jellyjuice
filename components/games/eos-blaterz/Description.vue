@@ -34,14 +34,14 @@
             </no-ssr>
         </div>
     </section>
-    <section class="description script">
+    <section class="description script" id="download">
         <div class="container">
             <p>{{$t('detail.description')}}</p>
             <div class="btn_area">
                 <a href="#" class="play ios">IOS Play</a>
                 <a href="#" class="play aos">Google Play</a>
                 <a href="#" class="download apk">Android APK</a>
-                <nuxt-link :to="localePath('games-eos-blasterz-play')" class=" web">WEB</nuxt-link>
+                <nuxt-link :to="localePath('games-eos-blasterz-play')" class="web">WEB</nuxt-link>
             </div>
         </div>
     </section>
