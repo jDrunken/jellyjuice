@@ -29,7 +29,7 @@ section.description {
         position:relative;
     }
 
-    button.play.video {
+    a.play.video {
         @include ir()
         width:80px;
         height:80px;
@@ -40,6 +40,7 @@ section.description {
         left:50%;
         margin:-40px 0 0 -40px;
         transition:transform 0.3s;
+        cursor:pointer;
 
         &:hover {
             transform:scale(1.02)

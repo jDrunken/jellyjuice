@@ -12,7 +12,7 @@
                 <slide class="items">
                     <div>
                         <img src="../../../assets/images/img-blasterz-movie@2x.png" alt="">
-                        <button type="button" class="play video">play video</button>
+                        <a :href="$t('detail.url')" target="_blank" class="play video">play video</a>
                     </div>
                 </slide>
                 <slide class="items">
