@@ -60,7 +60,7 @@
     "en" : {
         "intro" : {
             "title" : "Join JellyJuice’s<br> dApp Studio",
-            "description" : "JellyJuice, started from various experience of EOSYS, is the Co-creation Studio of Entertainment DApps. By integrating 'Things' of the real world with decentralized technology, we make it possible for co-creators to enable 'Blockchain Flavor'.",
+            "description" : "JellyJuice aims to be a dApp Studio where creators co-develop applications. By making ‘Things’ on-chain, we create ‘Blockchain Flavor’ with our partners.  Powered by the EOS block producer EOSYS and global partners",
             "link" : "Submit Proposal"
         },
         "support" : {
@@ -68,16 +68,16 @@
             "type" : {
                 "contract" : {
                     "title" : "Smart Contract",
-                    "description" : "",
+                    "description" : "Finding optimal structures for each service, we build smart contracts to connect applications with blockchain. ",
                     "view-more" : "EOS Smart Contract"
                 },
                 "marketing" : {
                     "title" : "Marketing",
-                    "description" : "Based on EOSYS' global network and experiences, JellyJuice reaches out to broader pool of audience.",
+                    "description" : "With EOSYS’ global network, JellyJuice provides winning marketing strategies.",
                     "lists" : {
                         "eosys": {
                             "title" : "EOSYS",
-                            "description" : ""
+                            "description" : "Leveraging on EOSYS’ global network, JellyJuice is connected to 12 block producers and 17 companies."
                         },
                         "decenter" : {
                             "title" : "Decenter",
@@ -98,11 +98,11 @@
         },
         "introduce" : {
             "title" : "We Introduce Our Creators",
-            "description" : "Co-work with developers, design studios, solution providers and platform players",
+            "description" : "Co-work with developers, designers, solution providers and platform players",
             "lists" : [
                 {
                     "name" : "Numbers",
-                    "description" : "7Chain is a team of experts who have decentralized RNG technology. They provide RNG solutions and history viewers. Now we can trust random box. "
+                    "description" : "7Chain is a team of experts who have decentralized RNG technology. They provide RNG solutions and history viewers. Now we can trust random box."
                 },
                 {
                     "name" : "EOSYS",
@@ -110,7 +110,7 @@
                 },
                 {
                     "name" : "Day1",
-                    "description" : "Day1 Entertainment brings unique and casual games to blockchain space to reach out to broader end-users. Now, everyone can enjoy blockchain games.    "
+                    "description" : "Day1 Entertainment brings unique and casual games to blockchain space to reach out to broader end-users. Now, everyone can enjoy blockchain games."
                 }
             ]
         }

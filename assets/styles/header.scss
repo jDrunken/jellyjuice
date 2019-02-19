@@ -57,6 +57,10 @@ header {
                 display:block;
             }
         }
+
+        :lang(ko) a.ko { display:none; }
+        :lang(en) a.en { display:none; }
+        :lang(zh) a.zh { display:none; }
     }
 
     // gnb
@@ -422,6 +426,7 @@ header .wrapper {
                 html[lang='en-US'] &.en {
                     font-weight:500;
                     color:$white;
+                    display:inherit;
                 }
             }
         }
