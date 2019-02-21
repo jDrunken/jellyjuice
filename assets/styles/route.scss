@@ -10,3 +10,19 @@
 .page-leave-active {
     opacity: 0;
 }
+
+
+// 초기 로딩시 발생하는 스타일로 처리한다.
+// 보통 foaf를 막아주기 위해서 쓰는 스타일인데, 웹에도 매우 잘 맞을거 같다.
+// html에 class로 binding 되는 거라서 처리도 좋다.
+
+// 웹폰트가 로딩될떄
+.wf-loading #__nuxt {
+    opacity:0;
+}
+
+// 웹폰트가 로딩이 다 되고 난 후
+.wf-active #__nuxt {
+    opacity:1;
+    transition:0.5s;
+}
