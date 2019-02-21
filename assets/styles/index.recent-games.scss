@@ -115,6 +115,15 @@ section.recent.games {
             }
         }
 
+        a {
+            &:lang(ko) {
+                font-family: 'Apple SD Gothic Neo';
+                font-size: rem(26);
+                font-weight: 300;
+                line-height: 1.46;
+                background-position-y:10px;
+            }
+        }
 
         h3 {
             font-size: rem(42);
@@ -135,6 +144,13 @@ section.recent.games {
             line-height: 1.46;
             letter-spacing: -0.5px;
             color: $font-black;
+
+            &:lang(ko) {
+                font-family: 'Apple SD Gothic Neo';
+                font-size: rem(26);
+                font-weight: 300;
+                line-height: 1.46;
+            }
 
             @include media('<700px') {
                 font-size: rem(16);

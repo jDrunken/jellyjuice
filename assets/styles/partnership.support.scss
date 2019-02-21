@@ -11,6 +11,14 @@ section.support {
         position:relative;
         counter-increment:header;
         margin-top:95px;
+
+        &:lang(ko) {
+            font-family: 'Apple SD Gothic Neo';
+            font-size: rem(42);
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
         @include media ('<700px') {
             margin-top:68px;
             font-size: rem(26);
@@ -19,6 +27,7 @@ section.support {
     }
 
     h3 i {
+        font-weight:400;
         font-style:normal;
         font-size: rem(26);
         letter-spacing: -0.3px;
@@ -45,6 +54,12 @@ section.support {
         letter-spacing: -0.5px;
         color: $font-black;
 
+        &:lang(ko) {
+            font-family: 'Apple SD Gothic Neo';
+            font-size: rem(26);
+            font-weight: 300;
+        }
+
         @include media ('<700px') {
             font-size: rem(16);
             line-height: 1.56;
@@ -54,6 +69,14 @@ section.support {
 
     a {
         @include viewLink();
+        &:lang(ko) {
+            font-family: 'Apple SD Gothic Neo';
+            font-size: rem(26);
+            font-weight: 300;
+            line-height: 1.46;
+            background-position-y:10px;
+        }
+
     }
 
     h3 + p {

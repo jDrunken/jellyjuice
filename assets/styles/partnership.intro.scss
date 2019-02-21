@@ -60,6 +60,13 @@ section.intro {
         letter-spacing: -1px;
         color: $font-black;
 
+        &:lang(ko) {
+            font-family: 'Apple SD Gothic Neo';
+            font-size: rem(24);
+            font-weight: 200;
+            line-height: 1.5;
+        }
+
         @include media ('<700px') {
             font-size: rem(16);
             line-height: 1.44;
@@ -84,6 +91,12 @@ section.intro {
         border:2px solid $orange;
         border-radius:35px;
         text-transform:capitalize;
+
+        &:lang(ko) {
+            font-family: 'Apple SD Gothic Neo';
+            font-size: rem(26);
+            line-height:70px;
+        }
 
         @include media ('<700px') {
             min-width:214px;

@@ -32,7 +32,8 @@
         "sass-loader": "^7.1.0",
         "vue-carousel": "^0.17.0",
         "vue-clickaway": "^2.2.2",
-        "vue-scrollto": "^2.13.0"
+        "vue-scrollto": "^2.13.0",
+        "webfontloader": "^1.6.28"
     },
     "devDependencies": {
         "babel-eslint": "^10.0.1",

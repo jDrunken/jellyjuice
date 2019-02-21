@@ -56,6 +56,12 @@ section.intro {
         text-align: center;
         color: $font-black;
 
+        &:lang(ko) {
+            font-size: rem(24);
+            font-weight: 200;
+            line-height: 1.5;
+        }
+
         @include media ('<700px') {
             font-size: rem(16);
             line-height: 1.44;

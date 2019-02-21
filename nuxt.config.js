@@ -15,7 +15,7 @@ module.exports = {
     },
 
     // loading progress bar
-    loading: true,
+    loading: {color:'#f7770c'},
 
     // page routing animation
     css : [
@@ -91,6 +91,10 @@ module.exports = {
         },
         {
             src: '~/plugins/vue-scrollto.js',
+            ssr: false
+        },
+        {
+            src: '~/plugins/web-font-loader.js',
             ssr: false
         }
     ],
@@ -168,7 +172,6 @@ module.exports = {
         scss: [
             '~/assets/styles/env.scss',
             '~/assets/styles/variable.scss',
-            '~/assets/styles/font.scss',
             '~/assets/styles/common.scss'
         ]
     },

@@ -1,0 +1,55 @@
+@font-face {
+    font-family: Volte;
+    font-weight: 400;
+    src: local('Volte'),
+        url('/fonts/volte-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: Volte;
+    font-weight: 500;
+    src: local('Volte'),
+        url('/fonts/volte-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: Volte;
+    font-weight: 600;
+    src: local('Volte'),
+        url('/fonts/volte-semibold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: Volte;
+    font-weight: 700;
+    src: local('Volte'),
+        url('/fonts/volte-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: volte;
+    font-weight: 400;
+    src: local('Volte'),
+        url('/fonts/volte-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: volte;
+    font-weight: 500;
+    src: local('Volte'),
+        url('/fonts/volte-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: volte;
+    font-weight: 600;
+    src: local('Volte'),
+        url('/fonts/volte-semibold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: volte;
+    font-weight: 700;
+    src: local('Volte'),
+        url('/fonts/volte-bold-webfont.woff') format('woff');
+}

@@ -4,6 +4,13 @@ section.description {
         font-weight: 600;
         letter-spacing: -0.5px;
         color: $font-black;
+
+        &:lang(ko) {
+            font-family: 'Apple SD Gothic Neo';
+            font-size: rem(42);
+            font-weight: 700;
+        }
+
         @include media ('<700px') {
             font-size: rem(26);
             font-weight: 600;
@@ -17,6 +24,12 @@ section.description {
         line-height: 1.46;
         letter-spacing: -0.5px;
         color: $font-black;
+
+        &:lang(ko) {
+            font-family: 'Apple SD Gothic Neo';
+            font-size: rem(26);
+            font-weight: 300;
+        }
 
         @include media ('<700px') {
             font-size: rem(16);
