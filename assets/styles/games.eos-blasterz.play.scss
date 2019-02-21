@@ -110,8 +110,10 @@ section.play {
             background:#fff;
         }
 
-        a ~ a {
-            margin-top:15px;
+        @include media ('<700px') {
+            a ~ a {
+                margin-top:15px;
+            }
         }
 
         a.play {
