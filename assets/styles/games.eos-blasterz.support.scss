@@ -40,7 +40,7 @@ section.support {
         text-transform:uppercase;
 
         &:lang(ko) {
-            font-family: 'Apple SD Gothic Neo';
+            font-family: $korean;
             font-size: rem(26);
         }
 

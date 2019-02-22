@@ -11,23 +11,23 @@
             <carousel class="how to play" :perPageCustom="[[320, 1],[900, 2]]" :mouse-drag="false" :navigationEnabled="true">
                 <slide class="items">
                     <div>
-                        <img src="../../../assets/images/img-blasterz-movie@2x.png" alt="">
+                        <img src="../../../assets/images/img-blasterz-movie.jpg" alt="">
                         <a :href="$t('detail.url')" target="_blank" class="play video">play video</a>
                     </div>
                 </slide>
                 <slide class="items">
                     <div>
-                        <img src="../../../assets/images/img-blasterz-screenshot-01@2x.png" alt="">
+                        <img src="../../../assets/images/img-blasterz-screenshot-01.jpg" alt="">
                     </div>
                 </slide>
                 <slide class="items">
                     <div>
-                        <img src="../../../assets/images/img-blasterz-screenshot-02@2x.png" alt="">
+                        <img src="../../../assets/images/img-blasterz-screenshot-skip.jpg" alt="">
                     </div>
                 </slide>
                 <slide class="items">
                     <div>
-                        <img src="../../../assets/images/img-blasterz-screenshot-03@2x.png" alt="">
+                        <img src="../../../assets/images/img-blasterz-screenshot-03.jpg" alt="">
                     </div>
                 </slide>
             </carousel>

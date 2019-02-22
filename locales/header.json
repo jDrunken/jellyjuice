@@ -1,6 +1,6 @@
 {
     "ko" : {
-        "locale" : "한글",
+        "locale" : "Korean",
         "games" : "Games",
         "partnership" : "Partnership"
     },
@@ -10,7 +10,7 @@
         "partnership" : "Partnership"
     },
     "zh" : {
-        "locale" : "中文",
+        "locale" : "Chinese",
         "games" : "游戏",
         "partnership" : "合作伙伴"
     }

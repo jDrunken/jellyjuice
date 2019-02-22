@@ -2,7 +2,7 @@ section.intro {
     $font-black : #1d1a18;
 
     box-sizing:border-box;
-    background:url('../images/bg-partnership@2x.png') bottom center no-repeat #fffcf6;
+    background:url('../images/bg-partnership.jpg') bottom center no-repeat #fffcf6;
     background-size:1920px auto;
 
     @include media ('>1920px') {
@@ -61,7 +61,7 @@ section.intro {
         color: $font-black;
 
         &:lang(ko) {
-            font-family: 'Apple SD Gothic Neo';
+            font-family: $korean;
             font-size: rem(24);
             font-weight: 200;
             line-height: 1.5;
@@ -93,7 +93,7 @@ section.intro {
         text-transform:capitalize;
 
         &:lang(ko) {
-            font-family: 'Apple SD Gothic Neo';
+            font-family: $korean;
             font-size: rem(26);
             line-height:70px;
         }

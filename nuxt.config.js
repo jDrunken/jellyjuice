@@ -10,7 +10,7 @@ module.exports = {
             { hid: 'description', name: 'description', content: '' }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+            { rel: 'icon', type: 'image/x-icon', href: '/jellyjuice.favicon.ico' }
         ]
     },
 
@@ -43,12 +43,12 @@ module.exports = {
                     {
                         code: 'ko',
                         iso: 'ko-KR',
-                        name : '한글'
+                        name : 'Korean'
                     },
                     {
                         code: 'zh',
                         iso: 'zh-CN',
-                        name: '中文'
+                        name: 'Chinese'
                     }
                 ],
                 strategy: 'prefix',

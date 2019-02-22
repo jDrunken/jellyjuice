@@ -9,15 +9,14 @@ section.play {
         left:0;
         right:0;
         height:1000px;
-        background:url('../images/play-main-visual@2x.png') center top no-repeat;
-        background-size:auto 1000px;
+        background:url('../images/main-visual.jpg') center top no-repeat #000;
+        background-size:1920px auto;
 
         @include media ('>1920px') {
             background-position:center 20%;
             background-size:cover;
         }
     }
-
 
     > .container {
         position:relative;
@@ -57,6 +56,9 @@ section.play {
 
     p.image.container {
         margin-top:25px;
+        font-size:0;
+        box-shadow: 0 40px 80px 0 rgba(0, 0, 0, 0.2);
+
 
         img {
             max-width:1280px;
@@ -67,6 +69,10 @@ section.play {
     .btn_area {
         display:flex;
         justify-content: space-between;
+        margin-top:120px;
+        max-width:950px;
+        margin-left:auto;
+        margin-right:auto;
 
         @include media ('<700px') {
             display:block;

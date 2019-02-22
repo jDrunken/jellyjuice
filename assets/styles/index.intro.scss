@@ -1,6 +1,7 @@
 section.intro {
     box-sizing:border-box;
-    background:url('../images/bg-index-intro@2x.png') top center no-repeat;
+    background:url('../images/bg-index-intro.svg') top center no-repeat;
+    // background:url('../images/bg-index-intro@2x.png') top center no-repeat;
     background-size:1920px auto;
 
     @include media ('>1920px') {
@@ -57,6 +58,7 @@ section.intro {
         color: $font-black;
 
         &:lang(ko) {
+            font-family: $korean;
             font-size: rem(24);
             font-weight: 200;
             line-height: 1.5;

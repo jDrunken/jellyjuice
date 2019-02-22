@@ -42,7 +42,7 @@ section.creators.title {
         color: #ffffff;
 
         &:lang(ko) {
-            font-family: 'Apple SD Gothic Neo';
+            font-family: $korean;
             font-size: rem(26);
             font-weight: 500;
         }
@@ -147,7 +147,7 @@ section.creators.list {
         padding:0 20px;
 
         &:lang(ko) {
-            font-family: 'Apple SD Gothic Neo';
+            font-family: $korean;
             font-size: rem(26);
             font-weight: 200;
             line-height: 1.46;

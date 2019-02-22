@@ -42,25 +42,67 @@ header {
 
     // 언어 변환
     div.locale.change {
+
+        padding-left:20px;
+        padding-right:20px;
+        padding-top:20px;
+        padding-bottom:20px;
+        min-width:96px;
+        box-sizing:border-box;
+
         button {
-            background:url('~assets/images/bg-gnb-arrow-white@2x.png') right 4px no-repeat;
             background-size:12px 12px;
-            padding-right:16px;
             line-height:1.1;
+            box-sizing:border-box;
         }
 
+        position:relative;
         ul {
             position:absolute;
+            left:0;
+            right:0;
             display:none;
+            padding-top:10px;
+            padding-bottom: 10px;
+            padding-left:inherit;
+
+            li {
+                padding-top:10px;
+                padding-bottom:10px;
+            }
 
             &.expand {
                 display:block;
             }
         }
 
-        :lang(ko) a.ko { display:none; }
-        :lang(en) a.en { display:none; }
-        :lang(zh) a.zh { display:none; }
+        :lang(ko) li.ko,
+        :lang(en) li.en,
+        :lang(zh) li.zh {
+            display:none;
+        }
+
+        &.expand {
+            background-color:$orange;
+
+            ul {
+                background-color:$orange;
+            }
+
+            button {
+                font-weight:700;
+            }
+
+            a,button {
+                color:$white;
+            }
+
+            // radius
+            border-radius:5px 5px 0 0;
+            ul {
+                border-radius:0 0 5px 5px;
+            }
+        }
     }
 
     // gnb
@@ -192,11 +234,6 @@ header.partnership {
             color:$white;
         }
     }
-
-    div.locale.change button {
-        background:url('~assets/images/bg-gnb-arrow-orange@2x.png') right 4px no-repeat;
-        background-size:12px 12px;
-    }
 }
 
 header.reflection {
@@ -210,11 +247,6 @@ header.reflection {
 
     a, button {
         color:inherit;
-    }
-
-    div.locale.change button {
-        background:url('~assets/images/bg-gnb-arrow-white@2x.png') right 4px no-repeat;
-        background-size:12px 12px;
     }
 }
 
@@ -392,6 +424,7 @@ header .wrapper {
         position:absolute;
         left:30px;
         bottom:60px;
+        padding:0;
 
         .status {
             display:none;
@@ -400,6 +433,7 @@ header .wrapper {
         ul {
             display:block;
             position:static;
+            padding:0;
         }
 
         button.locale.status {
@@ -407,13 +441,13 @@ header .wrapper {
         }
 
         ul li {
-            display:inline-block;
+            display:inline-block !important;
             margin-left:18px;
+            padding:0;
 
             &:first-child {
                 margin-left:0;
             }
-
             a {
                 font-size: rem(16);
                 font-weight: 500;
@@ -421,14 +455,20 @@ header .wrapper {
                 letter-spacing: -0.7px;
                 color:#938c87;
 
-                html[lang='ko-KR'] &.ko,
-                html[lang='zh-CN'] &.zh,
-                html[lang='en-US'] &.en {
-                    font-weight:500;
-                    color:$white;
-                    display:inherit;
-                }
             }
+            html[lang='ko-KR'] &.ko a,
+            html[lang='zh-CN'] &.zh a,
+            html[lang='en-US'] &.en a {
+                font-weight:500;
+                color:$white;
+                display:inherit;
+            }
+
+        }
+
+        &.expand,
+        &.expand ul {
+            background-color:transparent;
         }
     }
 }

@@ -70,7 +70,7 @@ section.recent.games {
             }
 
             &:before {
-                background-image:url('~assets/images/bnr-eosblasterz@2x.png');
+                background-image:url('~assets/images/bnr-eosblasterz.jpg');
 
                 @include media('<700px') {
                     left:50%;
@@ -104,7 +104,7 @@ section.recent.games {
 
 
             &:before {
-                background-image:url('~assets/images/bnr-eostothemoon@2x.png');
+                background-image:url('~assets/images/bnr-eostothemoon.jpg');
                 background-size:contain;
                 order:2;
 
@@ -117,7 +117,7 @@ section.recent.games {
 
         a {
             &:lang(ko) {
-                font-family: 'Apple SD Gothic Neo';
+                font-family: $korean;
                 font-size: rem(26);
                 font-weight: 300;
                 line-height: 1.46;
@@ -146,7 +146,7 @@ section.recent.games {
             color: $font-black;
 
             &:lang(ko) {
-                font-family: 'Apple SD Gothic Neo';
+                font-family: $korean;
                 font-size: rem(26);
                 font-weight: 300;
                 line-height: 1.46;

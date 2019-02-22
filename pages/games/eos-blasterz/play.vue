@@ -6,7 +6,7 @@
         <p v-if="$device.isDesktop" v-html="$t('notice')"></p>
 
         <p class="image container">
-            <img src="../../../assets/images/bnr-play-game-view@2x.png" alt="">
+            <img src="../../../assets/images/img-blasterz-screenshot-skip.jpg" alt="">
         </p>
         <div class="btn_area">
             <a href="#" class="play ios">IOS Play</a>
@@ -30,10 +30,6 @@ p >>> a {
 <script>
 export default {
     name : 'EosBlasterzPlay',
-    mounted () {
-        console.log(this.$route)
-    }
-
 }
 </script>
 

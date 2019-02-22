@@ -7,8 +7,8 @@
             <a href="#" target="_blank">{{$t('support.type.contract.view-more')}}</a>
         </section>
         <div class="image wrapper">
-            <img src="~assets/images/bnr-support-smart-contract-color@2x.png" alt="">
-            <img src="~assets/images/bnr-support-smart-contract-mono@2x.png" alt="">
+            <img src="~assets/images/bnr-support-smart-contract-color.jpg" alt="">
+            <img src="~assets/images/bnr-support-smart-contract-mono.jpg" alt="">
         </div>
     </div>
 </section>

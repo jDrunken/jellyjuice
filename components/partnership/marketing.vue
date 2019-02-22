@@ -5,17 +5,17 @@
         <p>{{$t('support.type.marketing.description')}}</p>
         <ul>
             <li>
-                <img src="~assets/images/bnr-support-marketing-eosys-medium@2x.png" alt="">
+                <img src="~assets/images/bnr-support-marketing-eosys-medium.jpg" alt="">
                 <h4>{{$t('support.type.marketing.lists.eosys.title')}}</h4>
                 <p>{{$t('support.type.marketing.lists.eosys.description')}}</p>
             </li>
             <li>
-                <img src="~assets/images/bnr-support-marketing-eosys-decenter@2x.png" alt="">
+                <img src="~assets/images/bnr-support-marketing-eosys-decenter.jpg" alt="">
                 <h4>{{$t('support.type.marketing.lists.decenter.title')}}</h4>
                 <p>{{$t('support.type.marketing.lists.decenter.description')}}</p>
             </li>
             <li>
-                <img src="~assets/images/bnr-support-marketing-eosys-partners@2x.png" alt="">
+                <img src="~assets/images/bnr-support-marketing-eosys-partner.jpg" alt="">
                 <h4>{{$t('support.type.marketing.lists.refereum.title')}}</h4>
                 <p>{{$t('support.type.marketing.lists.refereum.description')}}</p>
             </li>

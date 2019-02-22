@@ -7,8 +7,8 @@
             <a href="https://www.officialdia.com/" target="_blank">{{$t('support.type.resource.link')}}</a>
         </section>
         <div class="image wrapper">
-            <img src="~assets/images/bnr-support-funding-color@2x.png" alt="">
-            <img src="~assets/images/bnr-support-funding-mono@2x.png" alt="">
+            <img src="~assets/images/bnr-support-funding-color.jpg" alt="">
+            <img src="~assets/images/bnr-support-funding-mono.jpg" alt="">
         </div>
     </div>
 </section>

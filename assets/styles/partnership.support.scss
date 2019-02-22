@@ -13,7 +13,7 @@ section.support {
         margin-top:95px;
 
         &:lang(ko) {
-            font-family: 'Apple SD Gothic Neo';
+            font-family: $korean;
             font-size: rem(42);
             font-weight: 700;
             line-height: 1.5;
@@ -55,7 +55,7 @@ section.support {
         color: $font-black;
 
         &:lang(ko) {
-            font-family: 'Apple SD Gothic Neo';
+            font-family: $korean;
             font-size: rem(26);
             font-weight: 300;
         }
@@ -70,7 +70,7 @@ section.support {
     a {
         @include viewLink();
         &:lang(ko) {
-            font-family: 'Apple SD Gothic Neo';
+            font-family: $korean;
             font-size: rem(26);
             font-weight: 300;
             line-height: 1.46;
@@ -181,7 +181,7 @@ section.support.marketing {
         padding-bottom:50px;
     }
 
-    background:url('../images/bg-support-marketing@2x.png') top center no-repeat #1d1a18;
+    background:url('../images/bg-support-marketing.jpg') top center no-repeat #1d1a18;
     background-size:auto 1059px;
 
     p + ul {

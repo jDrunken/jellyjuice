@@ -1,14 +1,16 @@
 section.intro {
-    background:url('../images/bg-games-eos-blasterz@2x.png') center center no-repeat;
-    background-size:1920px auto;
+    background-image:url('../images/bg-mainvisual-bottom@2x.png'),url('../images/main-visual.jpg');
+    background-position: bottom center, top center;
+    background-repeat:no-repeat,no-repeat;
+    background-size:contain,1920px auto;
     min-height:750px;
 
-    @include media ('>1920px') {
-        background-size:cover;
-    }
+    // @include media ('>1920px') {
+    //     background-size:cover, contain;
+    // }
 
     @include media ('<700px') {
-        background:url('../images/bg-games-eos-blasterz-mobile@2x.png') center bottom no-repeat;
+        background:url('../images/main-visual.jpg') center bottom no-repeat;
         background-size:cover;
         min-height:auto;
         max-height:572px;

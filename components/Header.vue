@@ -32,12 +32,14 @@
                     </li>
                 </ul>
             </nav>
-            <div class="locale change">
-                <button type="button" class="locale status" :class="$i18n.locale" @click="toggleLocale()">{{ $t('locale') }}</button>
+            <div class="locale change" :class="{expand : isExpandLocale}" @mouseleave="hideLocale()">
+                <button type="button" class="locale status" :class="$i18n.locale" v-if="$i18n.locale === 'ko'" @click="toggleLocale()">Korean</button>
+                <button type="button" class="locale status" :class="$i18n.locale" v-if="$i18n.locale === 'en'" @click="toggleLocale()">English</button>
+                <button type="button" class="locale status" :class="$i18n.locale" v-if="$i18n.locale === 'zh'" @click="toggleLocale()">Chinese</button>
                 <ul :class="{expand : isExpandLocale}">
-                    <li><nuxt-link :to="switchLocalePath('ko')" class="ko">한글</nuxt-link></li>
-                    <li><nuxt-link :to="switchLocalePath('en')" class="en">English</nuxt-link></li>
-                    <li><nuxt-link :to="switchLocalePath('zh')" class="zh">中文</nuxt-link></li>
+                    <li class="ko"><nuxt-link :to="switchLocalePath('ko')">Korean</nuxt-link></li>
+                    <li class="en"><nuxt-link :to="switchLocalePath('en')">English</nuxt-link></li>
+                    <li class="zh"><nuxt-link :to="switchLocalePath('zh')">Chinese</nuxt-link></li>
                 </ul>
 
             </div>
@@ -82,6 +84,9 @@ export default {
         },
         toggleLocale () {
             this.isExpandLocale = !!this.isExpandLocale ? false : true
+        },
+        hideLocale () {
+            this.isExpandLocale = false;
         }
     },
     mounted () {
@@ -89,7 +94,6 @@ export default {
         this.page = this.$route.name.replace(/_/g,'').replace(/(ko|en|zh)/g,'')
         window.addEventListener('scroll',this.viewReflection)
         window.addEventListener('DOMContentLoaded', this.viewReflection)
-        console.log(this.$i18n.locales)
     },
     destroyed () {
         window.removeEventListener('scroll',this.viewReflection)
