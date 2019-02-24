@@ -4,6 +4,7 @@ header {
     right:0;
     height:81px;    // 기본 높이
     z-index:7;
+    transition:background-color 0.2s;
 
     .container {
         box-sizing:border-box;
