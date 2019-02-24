@@ -1,12 +1,5 @@
 html:lang(en) {
     .index.intro p {
-        @include media ('>=700px') {
-            br:nth-of-type(3),
-            br:nth-of-type(5) {
-                display:none;
-            }
-        }
-
         @include media ('<700px') {
             br:nth-of-type(6) {
                 display:none;
