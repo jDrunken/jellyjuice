@@ -184,6 +184,11 @@ section.support.marketing {
     background:url('../images/bg-support-marketing.jpg') top center no-repeat #1d1a18;
     background-size:auto 1059px;
 
+    @include media ('>1920px') {
+        background-position:center 7%;
+        background-size:cover;
+    }
+
     p + ul {
         margin-top:80px;
         @include media ('<700px') {
