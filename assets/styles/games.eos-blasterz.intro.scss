@@ -5,9 +5,9 @@ section.intro {
     background-size:contain,1920px auto;
     min-height:750px;
 
-    // @include media ('>1920px') {
-    //     background-size:cover, contain;
-    // }
+    @include media ('>1920px') {
+        background-size:contain, 100vw auto;
+    }
 
     @include media ('<700px') {
         background:url('../images/main-visual.jpg') center bottom no-repeat;
