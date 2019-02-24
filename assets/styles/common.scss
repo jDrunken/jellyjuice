@@ -56,6 +56,10 @@ section.partners {
     background-size:7px 15px;
     padding-right:13px;
 
+    &.comming.soon {
+        background:none;
+    }
+
     display:inline-block;
 
     @include media('<700px') {

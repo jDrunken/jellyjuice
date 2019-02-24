@@ -14,7 +14,7 @@
                 <div>
                     <h3>{{$t('eos-to-the-moon.title')}}</h3>
                     <p :key="description.index" v-for="description in $t('eos-to-the-moon.descriptions')">{{description}}</p>
-                    <a href="#" @click.prevent.self disabled>{{$t('comming-soon')}}</a>
+                    <a href="#" @click.prevent.self disabled class="comming soon">{{$t('comming-soon')}}</a>
                 </div>
             </li>
         </ol>
