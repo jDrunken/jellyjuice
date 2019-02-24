@@ -10,11 +10,12 @@ section.support {
 
         position:relative;
         counter-increment:header;
-        margin-top:95px;
+        margin-top:117px;
 
         &:lang(ko) {
             font-family: $korean;
             font-size: rem(42);
+            letter-spacing:-2px;
             font-weight: 700;
             line-height: 1.5;
         }
@@ -36,21 +37,28 @@ section.support {
         display:block;
         padding-bottom:14px;
         border-bottom:1px solid $font-black;
+        line-height:1.15;
         position:absolute;
-        top:-95px;
+        top:-119px;
         left:0;
+
+        &:lang(ko) {
+            font-family:volte;
+            top:-113px;
+        }
 
         @include media ('<700px') {
             top:-71px;
             font-size: rem(16);
             font-weight:400;
+
         }
     }
 
     .container > p,
     section > p {
         font-size: rem(26);
-        line-height: 1.46;
+        line-height: 1.49;
         letter-spacing: -0.5px;
         color: $font-black;
 
@@ -58,6 +66,7 @@ section.support {
             font-family: $korean;
             font-size: rem(26);
             font-weight: 300;
+            letter-spacing:-1.5px;
         }
 
         @include media ('<700px') {
@@ -69,24 +78,35 @@ section.support {
 
     a {
         @include viewLink();
+
         &:lang(ko) {
             font-family: $korean;
             font-size: rem(26);
-            font-weight: 300;
             line-height: 1.46;
-            background-position-y:10px;
+            padding-right:17px;
+            background-position-y:13px;
+            letter-spacing:-1.5px;
         }
 
     }
 
     h3 + p {
-        margin-top:30px;
+        margin-top:37px;
+        &:lang(ko) {
+            margin-top:27px;
+        }
+
         @include media ('<700px') {
             margin-top:15px;
         }
 
         & + a {
-            margin-top:50px;
+            margin-top:73px;
+
+            &:lang(ko) {
+                margin-top:46px;
+            }
+
             @include media ('<700px') {
                 margin-top:25px;
             }
@@ -119,12 +139,26 @@ section.support.title {
     }
 }
 
+section.support.funding {
+    a:lang(ko) {
+        padding-right:13px;
+        font-family:volte;
+        letter-spacing:-0.5px;
+    }
+
+    p + a {
+        margin-top:37px;
+        &:lang(ko) {
+            margin-top:74px;
+        }
+    }
+}
 
 
 section.support.funding,
 section.support.contract {
     margin-top:120px;
-    margin-bottom:120px;
+    margin-bottom:112px;
 
     @include media ('<700px') {
         margin-top:118px;
@@ -190,7 +224,7 @@ section.support.marketing {
     }
 
     p + ul {
-        margin-top:80px;
+        margin-top:75px;
         @include media ('<700px') {
             margin-top:50px;
         }
@@ -244,7 +278,7 @@ section.support.marketing {
         line-height: 1.46;
         letter-spacing: -0.5px;
         color: $font-yellow;
-        margin:20px 30px 0;
+        margin:23px 30px 0;
 
         @include media ('<700px') {
             font-size: rem(20);

@@ -64,7 +64,7 @@ section.intro {
             font-family: $korean;
             font-size: rem(24);
             font-weight: 200;
-            line-height: 1.5;
+            line-height: 1.46;
         }
 
         @include media ('<700px') {
@@ -109,6 +109,10 @@ section.intro {
 
         & + a {
             margin-top:50px;
+
+            &:lang(ko) {
+                margin-top:74px;
+            }
         }
     }
 
