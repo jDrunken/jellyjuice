@@ -16,7 +16,7 @@ section.intro {
 
     min-height:750px;
 
-    padding-top:149px;
+    padding-top:157px;
     padding-bottom:126px;
 
     @include media ('>1920px') {
@@ -105,7 +105,7 @@ section.intro {
     }
 
     h2 + p {
-        margin-top:25px;
+        margin-top:32px;
 
         & + a {
             margin-top:50px;
