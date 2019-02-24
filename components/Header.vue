@@ -16,7 +16,7 @@
             <nav>
                 <ul>
                     <li class="games">
-                        <button type="button" :class="page === 'games-eos-blasterz' ? 'viewing' : null">{{$t('games')}}</button>
+                        <nuxt-link :to="localePath('games-eos-blasterz')" :class="page === 'games-eos-blasterz' ? 'viewing' : null">{{$t('games')}}</nuxt-link>
                         <ul>
                             <li>
                                 <nuxt-link :to="localePath('games-eos-blasterz')">
