@@ -53,3 +53,39 @@
     src: local('Volte'),
         url('/fonts/volte-bold-webfont.woff') format('woff');
 }
+
+@font-face {
+    font-family: 'Apple SD Gothic Neo';
+    font-weight:200;
+    src: local('AppleSDGothicNeo-Thin');
+}
+
+@font-face {
+    font-family: 'Apple SD Gothic Neo';
+    font-weight:300;
+    src: local('AppleSDGothicNeo-Light');
+}
+
+@font-face {
+    font-family: 'Apple SD Gothic Neo';
+    font-weight:400;
+    src: local('AppleSDGothicNeo-Regular');
+}
+
+@font-face {
+    font-family: 'Apple SD Gothic Neo';
+    font-weight:500;
+    src: local('AppleSDGothicNeo-Medium');
+}
+
+@font-face {
+    font-family: 'Apple SD Gothic Neo';
+    font-weight:600;
+    src: local('AppleSDGothicNeo-SemiBold');
+}
+
+@font-face {
+    font-family: 'Apple SD Gothic Neo';
+    font-weight:700;
+    src: local('AppleSDGothicNeo-Bold');
+}

@@ -1,6 +1,6 @@
 section.support {
-    padding-top:120px;
-    padding-bottom: 120px;
+    padding-top:124px;
+    padding-bottom: 118px;
     background: #f9fafc;
 
     @include media ('<700px') {
@@ -55,18 +55,35 @@ section.support {
     }
 
     ul.bi.group {
-        margin-left:-50px;
+        margin-left:-55px;
         margin-right:-50px;
-        margin-top:80px;
-        a.bi:before {
-            background-size:contain;
-        }
+        margin-top:69px;
 
         li {
             margin:0 50px;
+
+            a.bi {
+                font-size:rem(18);
+                height:124px;
+                width:80px;
+                letter-spacing:0;
+            }
+
+            a.bi:before {
+                background-size:auto 80px;;
+            }
+
             @include media ('<700px') {
                 margin:0;
             }
+        }
+    }
+
+
+    section.creaters {
+        ul.bi.group li:nth-of-type(1) a.bi {
+            width:80px;
+            margin-right:-4px;
         }
     }
 
@@ -85,7 +102,6 @@ section.support {
             }
 
             ul {
-                margin-top:33px;
                 text-align:center;
             }
        }
@@ -95,47 +111,25 @@ section.support {
         }
 
         ul.bi.group {
-            margin-top:30px;
+            margin-top:21px;
             margin-left:0;
             margin-right:0;
 
             li {
-                min-width:50px;
-                width:62px;
-                height:86px;
-                margin:0 15px;
+                a.bi {
+                    margin:0 5px;
+                    height:96px;
+                    font-size:rem(14);
 
-                a.bi.eosys {
-                    &:before {
-                        background-size:43px auto;
-                    }
+                }
+                &:nth-of-type(1) {
+                    margin:0 !important;
                 }
 
-                a.bi.day1 {
-                    &:before {
-                        background-size:50px auto;
-                    }
-                }
-
-                a.bi.meetone {
-                    &:before {
-                        background-size:50px auto;
-                    }
-                }
-
-                a.bi.nova {
-                    &:before {
-                        background-size:50px auto;
-                    }
-                }
-
-                a.bi.scatter {
-                    &:before {
-                        background-size:50px auto;
-                    }
+                a.bi:before {
+                    background-size:auto 50px;
                 }
             }
-
         }
     }
 

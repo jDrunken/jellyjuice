@@ -16,7 +16,6 @@ section.support {
             &:lang(ko) {
                 font-family: $korean;
                 font-size: rem(42);
-                letter-spacing:-2px;
                 font-weight: 700;
                 line-height: 1.5;
             }
@@ -47,7 +46,7 @@ section.support {
         @include media ('>=700px') {
             &:lang(ko) {
                 font-family:volte;
-                top:-113px;
+                top:-118px;
             }
         }
 
@@ -71,7 +70,6 @@ section.support {
                 font-family: $korean;
                 font-size: rem(26);
                 font-weight: 300;
-                letter-spacing:-1.5px;
             }
         }
 
@@ -90,9 +88,7 @@ section.support {
                 font-family: $korean;
                 font-size: rem(26);
                 line-height: 1.46;
-                padding-right:17px;
-                background-position-y:13px;
-                letter-spacing:-1.5px;
+                background-position-y:11px;
             }
         }
 
@@ -102,7 +98,7 @@ section.support {
         margin-top:37px;
         @include media ('>=700px') {
             &:lang(ko) {
-                margin-top:27px;
+                margin-top:26px;
             }
         }
 
@@ -115,7 +111,7 @@ section.support {
 
             @include media ('>=700px') {
                 &:lang(ko) {
-                    margin-top:46px;
+                    margin-top:44px;
                 }
             }
 
@@ -154,19 +150,13 @@ section.support.title {
 section.support.funding {
     @include media ('>=700px') {
         a:lang(ko) {
-            padding-right:13px;
             font-family:volte;
-            letter-spacing:-0.5px;
+            background-position-y:13px;
         }
     }
 
     p + a {
-        margin-top:37px;
-        @include media ('>=700px') {
-            &:lang(ko) {
-                margin-top:74px;
-            }
-        }
+        margin-top:72px !important;
     }
 }
 
@@ -223,7 +213,7 @@ section.support.contract {
 
 
 section.support.marketing {
-    padding-top:120px;
+    padding-top:119px;
     padding-bottom:120px;
 
     @include media ('<700px') {
@@ -239,16 +229,18 @@ section.support.marketing {
         background-size:cover;
     }
 
+    h3 + p {
+        margin-top:30px;
+    }
+
     p + ul {
-        margin-top:75px;
+        margin-top:104px;
         @include media ('<700px') {
             margin-top:50px;
         }
     }
 
-    h3,
-    i,
-    .container > p {
+    h3, i, .container > p {
         color:$white;
     }
 

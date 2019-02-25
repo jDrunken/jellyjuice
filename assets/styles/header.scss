@@ -48,7 +48,7 @@ header {
     div.locale.change {
 
         height:54px;
-        width:96px;
+        width:101px;
         box-sizing:border-box;
         text-align:center;
 
@@ -339,24 +339,20 @@ header button.mobile.menu.expand {
 @keyframes slideOutButton {
     from {
         opacity:0;
-        // transform:translateX(0);
     }
 
     to {
         opacity:1;
-    //     transform:translateX(100px) scale(1);
     }
 }
 
 @keyframes slideInButton {
     from {
         opacity:0;
-        // transform:translateX(100px)
     }
 
     to {
         opacity:1;
-        // transform:translateX(0)
     }
 }
 

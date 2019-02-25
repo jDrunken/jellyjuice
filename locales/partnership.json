@@ -2,7 +2,7 @@
     "ko" : {
         "intro" : {
             "title" : "Join JellyJuice’s <br>dApp Studio",
-            "description" : "젤리주스는 어플리케이션을 공동으로 개발하는 dApp Studio를 지향합니다. 세상의 것(Things)들을 온체인(on-chain)하는 과정을 통해 우리는 파트너사와 함께 'Blockchain Flavor'을 만듭니다.<br> EOS 블록 프로듀서인 EOSYS와 전세계의 다양한 협력사들이 함께 합니다.",
+            "description" : "젤리주스는 어플리케이션을 공동으로 개발하는 dApp Studio를 지향합니다.<br> 세상의 것(Things)들을 온체인(on-chain)하는 과정을 통해<br> 우리는 파트너사와 함께 'Blockchain Flavor'을 만듭니다.<br> EOS 블록 프로듀서인 EOSYS와 전세계의 다양한 협력사들이 함께 합니다.",
             "link" : "파트너십 신청"
         },
         "support" : {
@@ -60,7 +60,7 @@
     "en" : {
         "intro" : {
             "title" : "Join JellyJuice’s<br> dApp Studio",
-            "description" : "JellyJuice aims to be a dApp Studio where creators co-develop applications. By making ‘Things’ on-chain, we create ‘Blockchain Flavor’ with our partners.  Powered by the EOS block producer EOSYS and global partners",
+            "description" : "JellyJuice aims to be a dApp Studio where creators<br> co-develop applications. By making ‘Things’ on-chain,<br> we create ‘Blockchain Flavor’ with our partners.<br> Powered by the EOS block producer EOSYS and <br> global partners",
             "link" : "Submit Proposal"
         },
         "support" : {
@@ -118,7 +118,7 @@
     "zh" : {
         "intro" : {
             "title" : "加入 JellyJuice’s<br> dApp Studio",
-            "description" : "JellyJuice的目标为DApp Studio，共同开发应用程序。通过把生活中的东西(Things)放到链上(on-chain)的过程中我们与合作伙伴们创造\"Blockchain Flavor\"。 EOS的超级节点EOSYS与世界各国的合作伙伴们一同进行。",
+            "description" : "JellyJuice的目标为DApp Studio，共同开发应用程序。<br>通过把生活中的东西(Things)放到链上(on-chain)的过<br>程中我们与合作伙伴们创造\"Blockchain Flavor\"。<br> EOS的超级节点EOSYS与世界各国的合作伙伴们一同进行。",
             "link" : "申请合作"
         },
         "support" : {

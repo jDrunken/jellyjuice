@@ -61,14 +61,14 @@ section.recent.games {
 
 
         &.eos-blasterz {
-            margin-left:-61px;
+            margin-left:-60px;
 
             @include media('<700px') {
                 margin:0;
             }
 
             div {
-                margin-left:10px;
+                margin-left:9px;
             }
 
             &:before {
@@ -85,7 +85,7 @@ section.recent.games {
 
         &.eos-to-the-moon {
             margin-top:-106px;
-            margin-right:-65px;
+            margin-right:-66px;
 
             @include media('<700px') {
                 margin-top:54px;
@@ -94,7 +94,7 @@ section.recent.games {
             }
 
             div {
-                margin-right:8px;
+                margin-right:7px;
                 margin-top:140px;
                 text-align:right;
 
@@ -155,7 +155,7 @@ section.recent.games {
                     font-family: $korean;
                     font-size: rem(26);
                     font-weight: 300;
-                    line-height: 1.46;
+                    line-height: 1.48;
                 }
             }
 
@@ -171,7 +171,7 @@ section.recent.games {
         }
 
         h3 {
-            padding-bottom:5px;
+            padding-bottom:7px;
             @include media('<700px') {
                 padding-bottom:1px;
             }
@@ -183,7 +183,7 @@ section.recent.games {
                 }
 
                 + a {
-                    margin-top:38px;
+                    margin-top:46px;
 
                     @include media('<700px') {
                         margin-top:19px;

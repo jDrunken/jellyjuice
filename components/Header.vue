@@ -16,7 +16,7 @@
             <nav>
                 <ul>
                     <li class="games" @mouseenter="toggleGamgesMenu('show')" @mouseleave="toggleGamgesMenu('hide')">
-                        <nuxt-link :to="localePath('games-eos-blasterz')" :class="page === 'games-eos-blasterz' ? 'viewing' : null">{{$t('games')}}</nuxt-link>
+                        <nuxt-link :to="localePath('index')" :class="page === 'index' ? 'viewing' : null">{{$t('games')}}</nuxt-link>
                         <transition name="dropdown">
                             <ul v-if="isExpandGames || $device.isMobile">
                                 <li>

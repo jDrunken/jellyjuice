@@ -70,7 +70,9 @@ section.description {
         justify-content: space-between;
 
         @include media ('<700px') {
+            overflow:hidden;
             display:block;
+            margin:0 -5px;
         }
 
         a {

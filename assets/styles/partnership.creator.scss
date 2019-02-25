@@ -24,6 +24,7 @@ section.creators {
 
 section.creators.title {
     background:url('../images/bg-partnership-creators@2x.png') center center no-repeat transparent;
+    background-size:cover;
     height:510px;
     display:flex;
     flex-direction:column;
@@ -40,7 +41,6 @@ section.creators.title {
             padding:0 20px;
         }
     }
-
 
     p {
         text-shadow: 0 0 20px rgba(255, 101, 0, 0.5);
@@ -64,12 +64,21 @@ section.creators.title {
         }
     }
 
+    h2 + p {
+        margin-top:21px;
+        margin-bottom:6px;
+    }
 }
 
 section.creators.list {
     height:733px;
     display:flex;
     align-items:center;
+
+    .container {
+        max-width:1380px;
+        padding-bottom:17px;
+    }
 
     @include media ('<700px') {
         height:auto;
@@ -87,7 +96,9 @@ section.creators.list {
         }
 
         li {
-            max-width:380px;
+            box-sizing:border-box;
+            padding:0 20px;
+            width:460px;
             background: $white;
             color:$font-black;
             @include media ('<700px') {
@@ -103,7 +114,7 @@ section.creators.list {
                 content:'';
                 display:block;
                 width:100%;
-                height:154px; // box height - 박스 하단부터 텍스트 아래까지의 padding - 텍스트의 높이
+                height:168px; // box height - 박스 하단부터 텍스트 아래까지의 padding - 텍스트의 높이
                 background-position:center center;
                 background-repeat:no-repeat;
             }
@@ -118,7 +129,8 @@ section.creators.list {
 
         .bi.numbers:before {
             background-image:url('~assets/images/bi-numbers@2x.png');
-            background-size:154px auto;
+            background-size:168px auto;
+            background-position:center calc(50% + 11px);
             @include media ('<700px') {
                 height:77px;
                 background-size:119px auto;
@@ -129,6 +141,7 @@ section.creators.list {
         .bi.eosys:before {
             background-image:url('~assets/images/bi-eosys@2x.png');
             background-size:134px auto;
+            background-position:center 13px;
             @include media ('<700px') {
                 background-size:96px auto;
                 background-position:center 70%;
@@ -137,7 +150,8 @@ section.creators.list {
 
         .bi.day1:before {
             background-image:url('~assets/images/bi-day-1@2x.png');
-            background-size:119px auto;
+            background-size:134px auto;
+            background-position:center calc(50% + 7px);
             @include media ('<700px') {
                 background-size:92px auto;
                 background-position:calc(50% - 4px) 66%;
@@ -153,7 +167,7 @@ section.creators.list {
         text-align: center;
         color: $font-black;
 
-        margin-top:60px;
+        margin-top:52px;
 
         @include media ('<700px') {
             font-size: rem(26);
@@ -169,15 +183,15 @@ section.creators.list {
         text-align: center;
         color: $font-black;
 
-        margin-top:24px;
+        margin-top:26px;
         padding:0 20px;
 
         @include media ('>=700px') {
             &:lang(ko) {
                 font-family: $korean;
-                font-size: rem(26);
+                font-size: rem(24);
                 font-weight: 200;
-                line-height: 1.46;
+                line-height: 1.6;
             }
         }
 
