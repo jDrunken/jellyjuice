@@ -15,15 +15,17 @@
         <div class="wrapper" :class="{expand : isExpandMenu}">
             <nav>
                 <ul>
-                    <li class="games">
+                    <li class="games" @mouseenter="toggleGamgesMenu('show')" @mouseleave="toggleGamgesMenu('hide')">
                         <nuxt-link :to="localePath('games-eos-blasterz')" :class="page === 'games-eos-blasterz' ? 'viewing' : null">{{$t('games')}}</nuxt-link>
-                        <ul>
-                            <li>
-                                <nuxt-link :to="localePath('games-eos-blasterz')">
-                                    EOS Blasterz
-                                </nuxt-link>
-                            </li>
-                        </ul>
+                        <transition name="dropdown">
+                            <ul v-if="isExpandGames">
+                                <li>
+                                    <nuxt-link :to="localePath('games-eos-blasterz')">
+                                        EOS Blasterz
+                                    </nuxt-link>
+                                </li>
+                            </ul>
+                        </transition>
                     </li>
                     <li class="partnership" :class="page === 'partnership' ? 'viewing' : null">
                         <nuxt-link :to="localePath('partnership')">
@@ -32,7 +34,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="locale change" :class="{expand : isExpandLocale}" @mouseleave="hideLocale()">
+            <div class="locale change" :class="{expand : isExpandLocale}">
                 <button type="button" class="locale status" :class="$i18n.locale" v-if="$i18n.locale === 'ko'" @click="toggleLocale()">Korean</button>
                 <button type="button" class="locale status" :class="$i18n.locale" v-if="$i18n.locale === 'en'" @click="toggleLocale()">English</button>
                 <button type="button" class="locale status" :class="$i18n.locale" v-if="$i18n.locale === 'zh'" @click="toggleLocale()">Chinese</button>
@@ -48,8 +50,25 @@
 </header>
 </template>
 
-<style lang="scss" scoped src="../assets/styles/header.scss"></style>
+<style lang="scss" src="../assets/styles/header.scss"></style>
 
+<style>
+.dropdown-enter {
+    opacity:0
+}
+
+.dropdown-enter-active {
+    transition: opacity 0.2s 0.1s;
+}
+
+.dropdown-leave-active {
+    opacity:0;
+}
+
+.dropdown-leave-to {
+    opacity: 0;
+}
+</style>
 <i18n src="../locales/header.json"/>
 
 <script>
@@ -59,6 +78,7 @@ export default {
         page : '/',
         isReflection : false,
         isExpandMenu : false,
+        isExpandGames : false,
         isExpandLocale : false
     }),
     watch : {
@@ -87,6 +107,15 @@ export default {
         },
         hideLocale () {
             this.isExpandLocale = false;
+        },
+        toggleGamgesMenu (status) {
+            if (status === 'show') {
+                this.isExpandGames = true
+            } else if (status === 'hide') {
+                this.isExpandGames = false
+            } else {
+                this.isExpandGames = !!this.isExpandGames ? false : true
+            }
         }
     },
     mounted () {
