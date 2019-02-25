@@ -2,10 +2,11 @@ footer {
     color:$font-gray;
     background:#292423;
 
-    padding-top:78px;
-    padding-bottom:76px;
+    padding-top:77px;
+    padding-bottom:78px;
 
     .container {
+        padding-left:24px;
         display:flex;
         justify-content: space-between;
         align-items:center;
@@ -34,6 +35,7 @@ footer {
 
     ul.communication.channel {
         order:2;
+        margin-top:5px;
 
         li {
             display:inline-block;
@@ -57,14 +59,14 @@ footer {
         }
 
         li + li {
-            margin-left:40px;
+            margin-left:36px;
         }
     }
 }
 
 @include media ('<750px') {
 footer {
-    padding:50px 20px 23px;
+    padding:50px 20px;
 
     .container {
         display:block;

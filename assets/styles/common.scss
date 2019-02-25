@@ -1,4 +1,3 @@
-header .container,
 footer .container,
 section > .container {
     max-width:1280px;
@@ -29,8 +28,8 @@ section.partners {
             content:'';
             display:block;
             left:1px;
-            right:0;
-            bottom:-9px;
+            right:1px;
+            bottom:-6px;
             height:1px;
             width:100%;
             background:$font-black;
@@ -47,7 +46,7 @@ section.partners {
 @mixin viewLink () {
     font-size: rem(26);
     font-weight: 600;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.8px;
     color: $font-yellow;
 
     background-image:url('../images/bg-arrow-yellow-right@2x.png');
@@ -56,7 +55,8 @@ section.partners {
     background-size:7px 15px;
     padding-right:13px;
 
-    &.comming.soon {
+    &.coming.soon {
+        padding:0;
         background:none;
     }
 

@@ -1,6 +1,6 @@
 section.partners {
-    padding-top:200px;
-    padding-bottom:200px;
+    padding-top:193px;
+    padding-bottom:220px;
     background-color: #f9fafc;
 
     @include media('<700px') {
@@ -9,23 +9,23 @@ section.partners {
     }
 
     .container {
+        max-width:1400px + 6px;
         text-align:center;
     }
 
     h2 + ul {
-        margin-top:50px;
-        @include media('<700px') {
-            margin-top:33px;
-        }
+        margin-top:31px;
     }
 
     ul.bi.group {
+        padding-left:6px;
+
         li {
             width:200px;
-            height:207px;
+            height:170px;
             margin-left:40px;
             margin-right:40px;
-            margin-top:70px;
+            margin-top:108px;
 
             @include media('<700px') {
                 width:108px;
@@ -36,14 +36,43 @@ section.partners {
             }
         }
 
-        a.bi.numbers:before    { background-size:140px auto; }
-        a.bi.sin_games:before  { background-size:100px auto; }
-        a.bi.eosys:before      { background-size:104px auto; }
-        a.bi.eos_knight:before { background-size:104px auto; }
-        a.bi.day1:before       { background-size:104px auto; }
-        a.bi.meetone:before    { background-size:100px auto; }
-        a.bi.nova:before       { background-size:110px auto; }
-        a.bi.scatter:before    { background-size:110px auto; }
+        a.bi.numbers:before {
+            background-size: auto 62.2px;
+            background-position-y:calc(50% - 4px);
+        }
+
+        a.bi.sin_games:before {
+            background-size: 110px 110px;
+            background-position-y:45%;
+        }
+
+        a.bi.eosys:before {
+            background-size: auto 120px;
+            background-position-y:45%;
+        }
+
+        a.bi.eos_knight:before {
+            background-size: 110px auto;
+        }
+
+        a.bi.day1:before {
+            background-size: 110px auto;
+        }
+
+        a.bi.meetone:before {
+            background-size: 110px auto;
+            background-position-y:43%;
+        }
+
+        a.bi.nova:before {
+            background-size: 110px auto;
+            background-position-y:41%;
+        }
+
+        a.bi.scatter:before {
+            background-size: 110px auto;
+            background-position-y:39%;
+        }
 
         @include media('<700px') {
             a.bi.numbers:before    { background-size:83.1px auto; }

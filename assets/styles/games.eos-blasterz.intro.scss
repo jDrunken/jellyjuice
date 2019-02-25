@@ -10,8 +10,8 @@ section.intro {
     }
 
     @include media ('<700px') {
-        background:url('../images/main-visual.jpg') center bottom no-repeat;
-        background-size:cover;
+        background-image:url('../images/bg-mainvisual-bottom@2x.png'),url('../images/main-visual.jpg');
+        background-size:contain, cover;
         min-height:auto;
         max-height:572px;
         height:100vh;
@@ -28,6 +28,11 @@ section.intro {
         @include media ('>1920px') {
             padding-top:14.1vw;
             padding-bottom:8.25vw;
+        }
+
+        @include media ('<700px') {
+            padding-top:220px;
+            // padding-bottom:8.25vw;
         }
     }
 
@@ -85,7 +90,11 @@ section.intro {
         background-image:linear-gradient(to bottom,#ff8a00 0%, #ff7a00 100% );
 
         @include media ('<700px') {
-            min-width:214px;
+            min-width:0;
+            width:180px;
+            padding:0;
+            height:46px;
+            line-height:46px;
             font-size:rem(20);
         }
     }

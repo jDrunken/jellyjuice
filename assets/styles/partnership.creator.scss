@@ -35,7 +35,12 @@ section.creators.title {
         display:block;
         padding-top:120px;
         padding-bottom:120px;
+
+        h2 {
+            padding:0 20px;
+        }
     }
+
 
     p {
         text-shadow: 0 0 20px rgba(255, 101, 0, 0.5);
@@ -167,11 +172,13 @@ section.creators.list {
         margin-top:24px;
         padding:0 20px;
 
-        &:lang(ko) {
-            font-family: $korean;
-            font-size: rem(26);
-            font-weight: 200;
-            line-height: 1.46;
+        @include media ('>=700px') {
+            &:lang(ko) {
+                font-family: $korean;
+                font-size: rem(26);
+                font-weight: 200;
+                line-height: 1.46;
+            }
         }
 
         @include media ('<700px') {

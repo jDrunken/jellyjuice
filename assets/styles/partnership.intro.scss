@@ -60,11 +60,13 @@ section.intro {
         letter-spacing: -1px;
         color: $font-black;
 
-        &:lang(ko) {
-            font-family: $korean;
-            font-size: rem(24);
-            font-weight: 200;
-            line-height: 1.46;
+        @include media ('>=700px') {
+            &:lang(ko) {
+                font-family: $korean;
+                font-size: rem(24);
+                font-weight: 200;
+                line-height: 1.46;
+            }
         }
 
         @include media ('<700px') {
@@ -92,13 +94,17 @@ section.intro {
         border-radius:35px;
         text-transform:capitalize;
 
-        &:lang(ko) {
-            font-family: $korean;
-            font-size: rem(26);
-            font-weight:700;
+        @include media ('>=700px') {
+            &:lang(ko) {
+                font-family: $korean;
+                font-size: rem(26);
+                font-weight:700;
+            }
         }
 
         @include media ('<700px') {
+            height:58px;
+            line-height:56px;
             min-width:214px;
             font-size:rem(20);
         }
@@ -110,8 +116,10 @@ section.intro {
         & + a {
             margin-top:50px;
 
-            &:lang(ko) {
-                margin-top:74px;
+            @include media ('>=700px') {
+                &:lang(ko) {
+                    margin-top:74px;
+                }
             }
         }
     }

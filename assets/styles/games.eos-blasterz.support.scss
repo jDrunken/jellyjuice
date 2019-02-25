@@ -39,9 +39,11 @@ section.support {
         color: #1d1a18;
         text-transform:uppercase;
 
-        &:lang(ko) {
-            font-family: $korean;
-            font-size: rem(26);
+        @include media ('>=700px') {
+            &:lang(ko) {
+                font-family: $korean;
+                font-size: rem(26);
+            }
         }
 
         @include media('<700px') {

@@ -6,10 +6,12 @@ section.description {
         color: $font-black;
         line-height:1.36;
 
-        &:lang(ko) {
-            font-family: $korean;
-            font-size: rem(42);
-            font-weight: 700;
+        @include media ('>=700px') {
+            &:lang(ko) {
+                font-family: $korean;
+                font-size: rem(42);
+                font-weight: 700;
+            }
         }
 
         @include media ('<700px') {
@@ -26,10 +28,12 @@ section.description {
         letter-spacing: -0.5px;
         color: $font-black;
 
-        &:lang(ko) {
-            font-family: $korean;
-            font-size: rem(26);
-            font-weight: 300;
+        @include media ('>=700px') {
+            &:lang(ko) {
+                font-family: $korean;
+                font-size: rem(26);
+                font-weight: 300;
+            }
         }
 
         @include media ('<700px') {
@@ -75,11 +79,13 @@ section.description {
             &:first-child {
                 margin-left:0;
             }
+
             height:90px;
 
             @include media('<700px') {
                 min-width:200px;
                 margin-left:0;
+                height:65px;
             }
 
             font-size: rem(26);
@@ -144,7 +150,7 @@ section.description {
     p + .btn_area {
         padding-top:80px;
         @include media ('<700px') {
-            padding-top:30px;
+            padding-top:43px;
         }
     }
 }

@@ -18,7 +18,7 @@
                     <li class="games" @mouseenter="toggleGamgesMenu('show')" @mouseleave="toggleGamgesMenu('hide')">
                         <nuxt-link :to="localePath('games-eos-blasterz')" :class="page === 'games-eos-blasterz' ? 'viewing' : null">{{$t('games')}}</nuxt-link>
                         <transition name="dropdown">
-                            <ul v-if="isExpandGames">
+                            <ul v-if="isExpandGames || $device.isMobile">
                                 <li>
                                     <nuxt-link :to="localePath('games-eos-blasterz')">
                                         EOS Blasterz
@@ -34,25 +34,43 @@
                     </li>
                 </ul>
             </nav>
-            <div class="locale change" :class="{expand : isExpandLocale}">
-                <button type="button" class="locale status" :class="$i18n.locale" v-if="$i18n.locale === 'ko'" @click="toggleLocale()">Korean</button>
-                <button type="button" class="locale status" :class="$i18n.locale" v-if="$i18n.locale === 'en'" @click="toggleLocale()">English</button>
-                <button type="button" class="locale status" :class="$i18n.locale" v-if="$i18n.locale === 'zh'" @click="toggleLocale()">Chinese</button>
-                <ul :class="{expand : isExpandLocale}">
-                    <li class="ko"><nuxt-link :to="switchLocalePath('ko')">Korean</nuxt-link></li>
-                    <li class="en"><nuxt-link :to="switchLocalePath('en')">English</nuxt-link></li>
-                    <li class="zh"><nuxt-link :to="switchLocalePath('zh')">Chinese</nuxt-link></li>
-                </ul>
+            <div class="locale change" :class="{expand : isExpandLocale}" @mouseleave="hideLocale()">
+                <div>
+                    <button type="button" class="locale status" :class="$i18n.locale" v-if="$i18n.locale === 'ko'" @click="toggleLocale()">Korean</button>
+                    <button type="button" class="locale status" :class="$i18n.locale" v-if="$i18n.locale === 'en'" @click="toggleLocale()">English</button>
+                    <button type="button" class="locale status" :class="$i18n.locale" v-if="$i18n.locale === 'zh'" @click="toggleLocale()">Chinese</button>
 
+                    <transition name="locale">
+                        <ul v-if="isExpandLocale || $device.isMobile">
+                            <li class="ko"><nuxt-link :to="switchLocalePath('ko')">Korean</nuxt-link></li>
+                            <li class="en"><nuxt-link :to="switchLocalePath('en')">English</nuxt-link></li>
+                            <li class="zh"><nuxt-link :to="switchLocalePath('zh')">Chinese</nuxt-link></li>
+                        </ul>
+                    </transition>
+                </div>
             </div>
         </div>
     </div>
 </header>
 </template>
 
-<style lang="scss" src="../assets/styles/header.scss"></style>
+<style lang="scss" scoped src="../assets/styles/header.scss"></style>
 
 <style>
+// menu animation
+.locale-enter {
+    opacity:0
+}
+
+.locale-leave-active {
+    transition: opacity 0.2s;
+}
+
+.locale-leave-to {
+    opacity: 0;
+}
+
+
 .dropdown-enter {
     opacity:0
 }

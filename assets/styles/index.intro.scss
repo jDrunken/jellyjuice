@@ -1,6 +1,7 @@
 section.intro {
     box-sizing:border-box;
     background:url('../images/bg-index-intro.svg') top center no-repeat;
+    background:url('../images/bg-index-intro.svg') top center no-repeat;
     // background:url('../images/bg-index-intro@2x.png') top center no-repeat;
     background-size:1920px auto;
 
@@ -25,12 +26,12 @@ section.intro {
     padding-top:286px;
     padding-bottom:190px;
     @include media ('>1920px') {
-        padding-top:411px;
-        padding-bottom:301px;
+        padding-top:426px;
+        padding-bottom:325px;
     }
 
     @include media ('<700px') {
-        padding-top:189px;
+        padding-top:192px;
         padding-bottom:120px;
     }
 
@@ -59,11 +60,13 @@ section.intro {
         max-width:900px;
         margin:0 auto;
 
-        &:lang(ko) {
-            font-family: $korean;
-            font-size: rem(24);
-            font-weight: 200;
-            line-height: 1.5;
+        @include media ('>=700px') {
+            &:lang(ko) {
+                font-family: $korean;
+                font-size: rem(24);
+                font-weight: 200;
+                line-height: 1.5;
+            }
         }
 
         @include media ('<700px') {

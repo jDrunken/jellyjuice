@@ -12,12 +12,14 @@ section.support {
         counter-increment:header;
         margin-top:117px;
 
-        &:lang(ko) {
-            font-family: $korean;
-            font-size: rem(42);
-            letter-spacing:-2px;
-            font-weight: 700;
-            line-height: 1.5;
+        @include media ('>=700px') {
+            &:lang(ko) {
+                font-family: $korean;
+                font-size: rem(42);
+                letter-spacing:-2px;
+                font-weight: 700;
+                line-height: 1.5;
+            }
         }
 
         @include media ('<700px') {
@@ -42,9 +44,11 @@ section.support {
         top:-119px;
         left:0;
 
-        &:lang(ko) {
-            font-family:volte;
-            top:-113px;
+        @include media ('>=700px') {
+            &:lang(ko) {
+                font-family:volte;
+                top:-113px;
+            }
         }
 
         @include media ('<700px') {
@@ -62,11 +66,13 @@ section.support {
         letter-spacing: -0.5px;
         color: $font-black;
 
-        &:lang(ko) {
-            font-family: $korean;
-            font-size: rem(26);
-            font-weight: 300;
-            letter-spacing:-1.5px;
+        @include media ('>=700px') {
+            &:lang(ko) {
+                font-family: $korean;
+                font-size: rem(26);
+                font-weight: 300;
+                letter-spacing:-1.5px;
+            }
         }
 
         @include media ('<700px') {
@@ -79,21 +85,25 @@ section.support {
     a {
         @include viewLink();
 
-        &:lang(ko) {
-            font-family: $korean;
-            font-size: rem(26);
-            line-height: 1.46;
-            padding-right:17px;
-            background-position-y:13px;
-            letter-spacing:-1.5px;
+        @include media ('>=700px') {
+            &:lang(ko) {
+                font-family: $korean;
+                font-size: rem(26);
+                line-height: 1.46;
+                padding-right:17px;
+                background-position-y:13px;
+                letter-spacing:-1.5px;
+            }
         }
 
     }
 
     h3 + p {
         margin-top:37px;
-        &:lang(ko) {
-            margin-top:27px;
+        @include media ('>=700px') {
+            &:lang(ko) {
+                margin-top:27px;
+            }
         }
 
         @include media ('<700px') {
@@ -103,8 +113,10 @@ section.support {
         & + a {
             margin-top:73px;
 
-            &:lang(ko) {
-                margin-top:46px;
+            @include media ('>=700px') {
+                &:lang(ko) {
+                    margin-top:46px;
+                }
             }
 
             @include media ('<700px') {
@@ -140,16 +152,20 @@ section.support.title {
 }
 
 section.support.funding {
-    a:lang(ko) {
-        padding-right:13px;
-        font-family:volte;
-        letter-spacing:-0.5px;
+    @include media ('>=700px') {
+        a:lang(ko) {
+            padding-right:13px;
+            font-family:volte;
+            letter-spacing:-0.5px;
+        }
     }
 
     p + a {
         margin-top:37px;
-        &:lang(ko) {
-            margin-top:74px;
+        @include media ('>=700px') {
+            &:lang(ko) {
+                margin-top:74px;
+            }
         }
     }
 }
@@ -244,11 +260,13 @@ section.support.marketing {
         display:flex;
         justify-content: space-between;
 
-        @include media ('<700px') {
-            display:block;
-        }
         margin-left:-20px;
         margin-right:-20px;
+
+        @include media ('<700px') {
+            margin:0;
+            display:block;
+        }
 
         li {
             flex:1;

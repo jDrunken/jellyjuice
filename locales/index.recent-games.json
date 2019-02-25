@@ -2,7 +2,7 @@
     "ko" : {
         "title" : "Recent Games",
         "learn-more" : "더 보기",
-        "comming-soon" : "출시 예정",
+        "coming-soon" : "출시 예정",
         "eos-blasterz" : {
             "title" : "EOS Blasterz",
             "descriptions" : [
@@ -21,7 +21,7 @@
     "en" : {
         "title" : "Recent Games",
         "learn-more" : "Learn more",
-        "comming-soon" : "Comming Soon",
+        "coming-soon" : "Coming soon",
         "eos-blasterz" : {
             "title" : "EOS Blasterz",
             "descriptions" : [
@@ -40,7 +40,7 @@
     "zh" : {
         "title" : "最新游戏",
         "learn-more" : "更多",
-        "comming-soon" : "即将公开",
+        "coming-soon" : "即将公开",
         "eos-blasterz" : {
             "title" : "EOS Blasterz",
             "descriptions" : [

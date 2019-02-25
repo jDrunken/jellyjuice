@@ -6,14 +6,17 @@ header {
     z-index:7;
     transition:background-color 0.2s;
 
-    .container {
+   div.container {
         box-sizing:border-box;
-        padding:0 20px;
         position:relative;
         height:inherit;
         display:flex;
         align-items:center;
         justify-content:space-between;
+
+        max-width:1319px;
+        padding:0 10px 0 20px;
+        margin:0 auto;
     }
 
     // 공통
@@ -44,13 +47,21 @@ header {
     // 언어 변환
     div.locale.change {
 
-        padding-left:20px;
-        padding-right:20px;
-        padding-top:20px;
-        padding-bottom:20px;
-        min-width:100px;
+        height:54px;
+        width:96px;
         box-sizing:border-box;
         text-align:center;
+
+        div {
+            padding-left:20px;
+            padding-right:20px;
+            padding-top:14px;
+            padding-bottom:16px;
+            transition:background-color 0.2s;
+            letter-spacing:-0.5px;
+            // radius
+            border-radius:5px;
+        }
 
         button {
             background-size:12px 12px;
@@ -60,16 +71,8 @@ header {
 
         position:relative;
         ul {
-            position:absolute;
-            left:0;
-            right:0;
-            display:none;
-            padding-top:10px;
-            padding-bottom: 10px;
-
             li {
-                padding-top:10px;
-                padding-bottom:10px;
+                padding-top:11px;
             }
 
             &.expand {
@@ -84,11 +87,7 @@ header {
         }
 
         &.expand {
-            transition:background-color 0.2s;
-            background-color:$orange;
-
-            ul {
-                transition:background-color 0.2s;
+            div {
                 background-color:$orange;
             }
 
@@ -99,24 +98,18 @@ header {
             a,button {
                 color:$white;
             }
-
-            // radius
-            border-radius:5px 5px 0 0;
-            ul {
-                border-radius:0 0 5px 5px;
-            }
         }
     }
 
     // gnb
     nav {
         $width:155px;
-        width:310px;
+        width:264px;
         height:81px;
         position:absolute;
         top:0;
         left:50%;
-        margin-left:-$width;
+        margin-left:calc(-264px / 2 - 7px);
 
         .viewing {
             font-weight:700;
@@ -130,9 +123,14 @@ header {
 
         > ul > li {
             float:left;
-            width:$width;
             text-align:center;
             line-height:81px;
+
+            margin-left:27px;
+
+            &:first-child {
+                margin-left:0;
+            }
 
             button,
             a {
@@ -151,6 +149,7 @@ header {
         }
 
         li.games {
+            width:$width;
             li {
                 padding:15px 0;
             }
@@ -285,13 +284,16 @@ header.reflection {
 // mobile
 @include media ('<700px') {
 header {
+    height:64px;
+
     h1 {
         width:122px;
         height:35px;
     }
 
-    .container {
-        padding:18px 16px;
+    div.container {
+        padding-left:18px;
+        // padding:15px 16px;
     }
 }
 
@@ -307,8 +309,8 @@ header {
 button.mobile.menu {
     z-index:9;
     position:absolute;
-    right:26px;
-    top:23px;
+    right:20px;
+    top:16px;
     display:inline-block;
     width:23px;
     height:32px;
@@ -441,8 +443,12 @@ header .wrapper {
     div.locale.change {
         position:absolute;
         left:30px;
-        bottom:60px;
-        padding:0;
+        bottom:0;
+        width:auto;
+
+        > div {
+            padding:0;
+        }
 
         .status {
             display:none;
