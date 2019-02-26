@@ -51,6 +51,7 @@ section.support {
         }
 
         @include media ('<700px') {
+            min-width:50px;
             top:-71px;
             font-size: rem(16);
             font-weight:400;
@@ -189,12 +190,22 @@ section.support.contract {
             @include media ('<700px') {
                 margin-left:0;
                 margin-top:50px;
+                position:relative;
+                overflow:hidden;
+                height:(224/320*100vw);
             }
 
             img {
+                margin-top:-33px;
+                position:absolute;
                 width:100%;
-                max-width:580px;
+                @include media ('<700px') {
+                    margin-top:-7px;
+                    position:absolute;
+                    width:100%;
+                }
             }
+
 
             img:nth-of-type(2) {
                 max-width:300px;

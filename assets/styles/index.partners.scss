@@ -5,7 +5,7 @@ section.partners {
 
     @include media('<700px') {
         padding-top:80px;
-        padding-bottom:80px;
+        padding-bottom:87px;
     }
 
     .container {
@@ -14,11 +14,14 @@ section.partners {
     }
 
     h2 + ul {
-        margin-top:31px;
+        margin-top:30px;
     }
 
     ul.bi.group {
         padding-left:6px;
+        @include media('<700px') {
+            padding-left:0;
+        }
 
         li {
             width:200px;
@@ -28,11 +31,19 @@ section.partners {
             margin-top:108px;
 
             @include media('<700px') {
-                width:108px;
-                height:111px;
-                margin-left:10px;
-                margin-right:10px;
-                margin-top:40px;
+                width:119px;
+                height:115px;
+                margin-top:36px;
+                margin-left:9px;
+                margin-right:9px;
+
+                &:nth-of-type(2n-1) {
+                    margin-left:0;
+                }
+
+                &:nth-of-type(2n) {
+                    margin-right:0;
+                }
             }
         }
 
@@ -75,11 +86,17 @@ section.partners {
         }
 
         @include media('<700px') {
-            a.bi.numbers:before    { background-size:83.1px auto; }
+            a.bi.numbers:before    {
+                background-size:auto 38px;
+                background-position:center center;
+            }
             a.bi.sin_games:before  { background-size:66px auto; }
             a.bi.eosys:before      { background-size:62px auto; }
             a.bi.eos_knight:before { background-size:66px auto; }
-            a.bi.day1:before       { background-size:66px auto; }
+            a.bi.day1:before {
+                background-size: 66px auto;
+                background-position:center 18px;
+            }
             a.bi.meetone:before    { background-size:66px auto; }
             a.bi.nova:before       { background-size:66px auto; }
             a.bi.scatter:before    { background-size:66px auto; }

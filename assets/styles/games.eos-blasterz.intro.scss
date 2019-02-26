@@ -11,7 +11,8 @@ section.intro {
 
     @include media ('<700px') {
         background-image:url('../images/bg-mainvisual-bottom@2x.png'),url('../images/main-visual.jpg');
-        background-size:contain, cover;
+        background-position:bottom center,70% center;
+        background-size:contain, auto 100%;
         min-height:auto;
         max-height:572px;
         height:100vh;
@@ -31,8 +32,7 @@ section.intro {
         }
 
         @include media ('<700px') {
-            padding-top:220px;
-            // padding-bottom:8.25vw;
+            padding-top:(190/320*100vw);
         }
     }
 

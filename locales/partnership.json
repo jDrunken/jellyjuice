@@ -51,7 +51,7 @@
                     "description" : "EOSYS는 EOS 메인넷 런칭 경험과 블록 프로듀서 경험을 바탕으로, EOS 스마트 컨트랙트 개발 및 디앱 구조의 새로운 패러다임을 제시합니다."
                 },
                 {
-                    "name" : "Day1",
+                    "name" : "DAY1",
                     "description" : "모두를 위한 게임을 만들어 온 하루 엔터테인먼트는 가볍고 독특한 캐주얼 게임들을 블록체인과 연동하여 서비스합니다. 이제 보다 많은 사람들이 블록체인 게임을 즐길 수 있습니다. "
                 }
             ]
@@ -109,8 +109,8 @@
                     "description" : "With EOS mainnet launching and operating experience, EOSYS builds smart contracts and leads new paradigm of dapp structures."
                 },
                 {
-                    "name" : "Day1",
-                    "description" : "Day1 Entertainment brings unique and casual games to blockchain space to reach out to broader end-users. Now, everyone can enjoy blockchain games."
+                    "name" : "DAY1",
+                    "description" : "DAY1 Entertainment brings unique and casual games to blockchain space to reach out to broader end-users. Now, everyone can enjoy blockchain games."
                 }
             ]
         }
@@ -167,8 +167,8 @@
                     "description" : "基于EOS主网的启动和运营经验，EOSYS提供智能合约开发和DApp构造的新范例。"
                 },
                 {
-                    "name" : "Day1",
-                    "description" : "Day1 Entertainment为区块链生态带来独特的休闲游戏，以覆盖更广泛的终端用户。现在，每个人都可以享受区块链游戏了。"
+                    "name" : "DAY1",
+                    "description" : "DAY1 Entertainment为区块链生态带来独特的休闲游戏，以覆盖更广泛的终端用户。现在，每个人都可以享受区块链游戏了。"
                 }
             ]
         }

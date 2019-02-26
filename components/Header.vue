@@ -8,11 +8,11 @@
                 class="mobile menu display"
                 role="button"
                 aria-hidden="hidden"
-                v-on:click="toggleMenu()"
+                v-on:click="toggleMenu('#gnb',$event)"
                 :class="{expand : isExpandMenu}">
             메뉴 열기/닫기
         </button>
-        <div class="wrapper" :class="{expand : isExpandMenu}">
+        <div id="gnb" class="wrapper" :class="{expand : isExpandMenu}">
             <nav>
                 <ul>
                     <li class="games" @mouseenter="toggleGamgesMenu('show')" @mouseleave="toggleGamgesMenu('hide')">
@@ -119,8 +119,85 @@ export default {
             this.isExpandLocale = false;
             return this.isReflection = scroll <= 0 ? false : true
         },
-        toggleMenu () {
-            this.isExpandMenu = !!this.isExpandMenu ? false : true
+        toggleMenu (id,event) {
+            console.log(this.isExpandMenu)
+            if (this.isExpandMenu === true) {
+                this.isExpandMenu = false
+                if (process.browser) {
+                    // document.querySelector('html').removeAttribute('style')
+                    // document.querySelector('body').removeAttribute('style')
+                    this.disableBodyScroll(false,id,event)
+                }
+            } else {
+                this.isExpandMenu = true
+                if (process.browser) {
+                    // document.querySelector('html').style.overflow = 'hidden'
+                    // document.querySelector('body').style.overflow = 'hidden'
+                    this.disableBodyScroll(true,id,event)
+                }
+
+            }
+        },
+        preventBodyScroll (event,_selector,_element) {
+            if (false === _element || !event.target.closest(_selector)) {
+                event.preventDefault();
+            }
+        },
+
+        disableBodyScroll : function (allow, selector,event) { // 🔗 Thijs Huijssoon https://gist.github.com/thuijssoon
+
+            /**
+             * Private variables
+             */
+            let _selector = false,
+                _element = false,
+                _clientY;
+
+            let captureClientY = function (event) {
+                // only respond to a single touch
+                if (event.targetTouches.length === 1) {
+                    _clientY = event.targetTouches[0].clientY;
+                }
+            };
+
+            let preventOverscroll = function (event) {
+
+                // only respond to a single touch
+                if (event.targetTouches.length !== 1) {
+                    return;
+                }
+
+                var clientY = event.targetTouches[0].clientY - _clientY;
+
+                if (_element.scrollTop === 0 && clientY > 0) {
+                    event.preventDefault();
+                }
+
+                if ((_element.scrollHeight - _element.scrollTop <= _element.clientHeight) && clientY < 0) {
+                    event.preventDefault();
+                }
+
+            };
+
+            if (typeof selector !== "undefined") {
+                _selector = selector;
+                _element = document.querySelector(selector);
+            }
+
+            if (true === allow) {
+                if (false !== _element) {
+                    _element.addEventListener('touchstart', captureClientY, { passive: false });
+                    _element.addEventListener('touchmove', preventOverscroll, { passive: false });
+                }
+                document.body.addEventListener("touchmove", this.preventBodyScroll(event,_selector,_element), { passive: false });
+            } else {
+                if (false !== _element) {
+                    _element.removeEventListener('touchstart', captureClientY, { passive: false });
+                    _element.removeEventListener('touchmove', preventOverscroll, { passive: false });
+                }
+                document.body.removeEventListener("touchmove", this.preventBodyScroll(event,_selector,_element), { passive: false });
+            }
+            // };
         },
         toggleLocale () {
             this.isExpandLocale = !!this.isExpandLocale ? false : true

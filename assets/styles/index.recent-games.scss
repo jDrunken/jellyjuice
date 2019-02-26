@@ -4,7 +4,7 @@ section.recent.games {
     overflow:hidden;
 
     @include media('<700px') {
-        padding-top:81px;
+        padding-top:(93/320*100vw);
         padding-bottom:80px;
     }
 
@@ -137,7 +137,7 @@ section.recent.games {
             color: $font-black;
 
             @include media('<700px') {
-                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+                font-family:volte;
                 font-size: 26px;
                 font-weight: bold;
                 letter-spacing: -0.4px;

@@ -10,10 +10,10 @@ section.intro {
     }
 
     @include media ('<700px') {
-        background-image:url('../images/bg-index-intro-top@2x.png'),
+        background-image:url('../images/bg-mobile-index-top.svg'),
                    url('../images/bg-index-intro-bottom@2x.png');
-        background-position:-435px top, bottom center;
-        background-size:auto 159px,auto 70px;
+        background-position:center top, bottom center;
+        background-size:contain,auto 70px;
         background-color:#fafcff;
     }
 
@@ -31,8 +31,8 @@ section.intro {
     }
 
     @include media ('<700px') {
-        padding-top:192px;
-        padding-bottom:120px;
+        padding-top:(136/320*100vw);
+        padding-bottom:(81/320*100vw);
     }
 
     h2 {
@@ -78,5 +78,9 @@ section.intro {
 
     h2 + p {
         margin-top: 32px;
+        @include media ('<700px') {
+            margin-top:21px;
+        }
     }
+
 }

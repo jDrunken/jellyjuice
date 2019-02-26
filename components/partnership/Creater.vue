@@ -16,7 +16,7 @@
             </li>
             <li>
                 <h3>DAY1</h3>
-                <p>Day1 Entertainment brings unique and casual games to blockchain space to reach out to broader end-users. Now, everyone can enjoy blockchain games.</p>
+                <p>DAY1 Entertainment brings unique and casual games to blockchain space to reach out to broader end-users. Now, everyone can enjoy blockchain games.</p>
             </li>
         </ul>
     </div>

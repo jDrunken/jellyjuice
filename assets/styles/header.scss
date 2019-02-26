@@ -167,6 +167,9 @@ header {
                 z-index:-1;
                 border-radius: 0 0 5px 5px;
                 transition:height 0.2s;
+                @include media ('<700px') {
+                    display:none;
+                }
             }
 
             position:relative;
@@ -181,6 +184,10 @@ header {
                 padding-bottom:15px;
                 max-height:200px;
                 height:auto;
+
+                @include media ('<700px') {
+                    padding-bottom:0;
+                }
             }
 
             button {
@@ -283,213 +290,213 @@ header.reflection {
 
 // mobile
 @include media ('<700px') {
-header {
-    height:64px;
+    header {
+        height:64px;
 
-    h1 {
-        width:122px;
-        height:35px;
+        h1 {
+            width:122px;
+            height:35px;
+        }
+
+        div.container {
+            padding-left:18px;
+            // padding:15px 16px;
+        }
     }
 
-    div.container {
-        padding-left:18px;
-        // padding:15px 16px;
-    }
-}
-
-.wrapper {
-    transition:transform 0.4s;
-    transform:translateX(100%)
-}
-
-.wrapper.expand {
-    transform:translateX(0)
-}
-
-button.mobile.menu {
-    z-index:9;
-    position:absolute;
-    right:20px;
-    top:16px;
-    display:inline-block;
-    width:23px;
-    height:32px;
-    background:url('../images/btn-bugger-white@2x.png') center center no-repeat;
-    background-size:contain;
-    @include ir();
-    animation: slideOutButton 2s;
-
-    header.partnership & {
-        background:url('../images/btn-bugger-orange@2x.png') center center no-repeat;
-        background-size:contain;
+    .wrapper {
+        transition:transform 0.4s;
+        transform:translateX(100%)
     }
 
-    header.reflection & {
+    .wrapper.expand {
+        transform:translateX(0)
+    }
+
+    button.mobile.menu {
+        z-index:9;
+        position:absolute;
+        right:20px;
+        top:16px;
+        display:inline-block;
+        width:23px;
+        height:32px;
         background:url('../images/btn-bugger-white@2x.png') center center no-repeat;
         background-size:contain;
-    }
-}
+        @include ir();
+        animation: slideOutButton 2s;
 
-header button.mobile.menu.expand {
-    background:url('../images/btn-close@2x.png') center center no-repeat;
-    background-size:contain;
-    animation: slideInButton 0.4s;
-}
+        header.partnership & {
+            background:url('../images/btn-bugger-orange@2x.png') center center no-repeat;
+            background-size:contain;
+        }
 
-@keyframes slideOutButton {
-    from {
-        opacity:0;
-    }
-
-    to {
-        opacity:1;
-    }
-}
-
-@keyframes slideInButton {
-    from {
-        opacity:0;
-    }
-
-    to {
-        opacity:1;
-    }
-}
-
-
-header .wrapper {
-    color:$white;
-    display:block;
-    box-sizing:border-box;
-    max-width:425px;
-    max-height:853px;
-    width:100vw;
-    height:100vh;
-    position:fixed;
-    right:0;
-    top:0;
-    background-color:#34262e;
-
-    padding-top:95px;
-    padding-left:30px;
-    padding-bottom:60px;
-
-
-    // initial
-    nav,
-    nav > ul,
-    nav > ul > li {
-        width:auto;
-        height:auto;
-        margin:0;
-        position:static;
-    }
-
-    nav > ul > li {
-        margin-top:52px;
-        &:first-child {
-            margin-top:0;
+        header.reflection & {
+            background:url('../images/btn-bugger-white@2x.png') center center no-repeat;
+            background-size:contain;
         }
     }
 
-    nav li {
-        float:none;
-        text-align:left;
-        line-height:1.1;
+    header button.mobile.menu.expand {
+        background:url('../images/btn-close@2x.png') center center no-repeat;
+        background-size:contain;
+        animation: slideInButton 0.4s;
+    }
 
-        button {
-            width:auto;
+    @keyframes slideOutButton {
+        from {
+            opacity:0;
         }
 
-        > button,
-        > a {
-            font-size: 24px;
-            font-weight: bold;
-            line-height: 1;
-            letter-spacing: -0.4px;
+        to {
+            opacity:1;
         }
     }
 
-    nav li ul {
+    @keyframes slideInButton {
+        from {
+            opacity:0;
+        }
+
+        to {
+            opacity:1;
+        }
+    }
+
+
+    header .wrapper {
+        color:$white;
         display:block;
-    }
-
-    nav li.games:hover {
-        background:none;
-    }
-
-    nav li.games li {
-        padding:0;
-    }
-
-    nav li li {
-        margin-top:22px;
-        a {
-            font-size: rem(22);
-            line-height: 1;
-            letter-spacing: -0.7px;
-            font-weight:400;
-
-            &:hover {
-                font-weight:inherit;
-            }
-        }
-    }
-
-    div.locale.change {
-        position:absolute;
-        left:30px;
+        box-sizing:border-box;
+        max-width:425px;
+        max-height:853px;
+        position:fixed;
+        top:0;
+        left:0;
         bottom:0;
-        width:auto;
+        right:0;
+        background-color:#34262e;
 
-        > div {
-            padding:0;
-        }
+        padding-top:95px;
+        padding-left:30px;
+        padding-bottom:60px;
 
-        .status {
-            display:none;
-        }
 
-        ul {
-            display:block;
+        // initial
+        nav,
+        nav > ul,
+        nav > ul > li {
+            width:auto;
+            height:auto;
+            margin:0;
             position:static;
-            padding:0;
         }
 
-        button.locale.status {
-            display:none;
-        }
-
-        ul li {
-            display:inline-block !important;
-            margin-left:18px;
-            padding:0;
-
+        nav > ul > li {
+            margin-top:52px;
             &:first-child {
-                margin-left:0;
+                margin-top:0;
             }
+        }
+
+        nav li {
+            float:none;
+            text-align:left;
+            line-height:1.1;
+
+            button {
+                width:auto;
+            }
+
+            > button,
+            > a {
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 1;
+                letter-spacing: -0.4px;
+            }
+        }
+
+        nav li ul {
+            display:block;
+        }
+
+        nav li.games:hover {
+            background:none;
+        }
+
+        nav li.games li {
+            padding:0;
+        }
+
+        nav li li {
+            margin-top:22px;
             a {
-                font-size: rem(16);
-                font-weight: 500;
+                font-size: rem(22);
                 line-height: 1;
                 letter-spacing: -0.7px;
-                color:#938c87;
+                font-weight:400;
 
+                &:hover {
+                    font-weight:inherit;
+                }
             }
-            html[lang='ko-KR'] &.ko a,
-            html[lang='zh-CN'] &.zh a,
-            html[lang='en-US'] &.en a {
-                font-weight:500;
-                color:$white;
-                display:inherit;
-            }
-
         }
 
-        &.expand,
-        &.expand ul {
-            background-color:transparent;
+        div.locale.change {
+            position:absolute;
+            left:30px;
+            bottom:0;
+            width:auto;
+
+            > div {
+                padding:0;
+            }
+
+            .status {
+                display:none;
+            }
+
+            ul {
+                display:block;
+                position:static;
+                padding:0;
+            }
+
+            button.locale.status {
+                display:none;
+            }
+
+            ul li {
+                display:inline-block !important;
+                margin-left:18px;
+                padding:0;
+
+                &:first-child {
+                    margin-left:0;
+                }
+                a {
+                    font-size: rem(16);
+                    font-weight: 500;
+                    line-height: 1;
+                    letter-spacing: -0.7px;
+                    color:#938c87;
+
+                }
+                html[lang='ko-KR'] &.ko a,
+                html[lang='zh-CN'] &.zh a,
+                html[lang='en-US'] &.en a {
+                    font-weight:500;
+                    color:$white;
+                    display:inherit;
+                }
+
+            }
+
+            &.expand,
+            &.expand ul {
+                background-color:transparent;
+            }
         }
     }
-}
 }
