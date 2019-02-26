@@ -18,7 +18,8 @@
                     <li class="games" @mouseenter="toggleGamgesMenu('show')" @mouseleave="toggleGamgesMenu('hide')">
                         <nuxt-link :to="localePath('index')" :class="page === 'index' ? 'viewing' : null">{{$t('games')}}</nuxt-link>
                         <transition name="dropdown">
-                            <ul v-if="isExpandGames || $device.isMobile">
+                            <!-- <ul v-if="isExpandGames"> -->
+                            <ul v-if="isExpandGames || isMobile">
                                 <li>
                                     <nuxt-link :to="localePath('games-eos-blasterz')">
                                         EOS Blasterz
@@ -41,7 +42,7 @@
                     <button type="button" class="locale status" :class="$i18n.locale" v-if="$i18n.locale === 'zh'" @click="toggleLocale()">Chinese</button>
 
                     <transition name="locale">
-                        <ul v-if="isExpandLocale || $device.isMobile">
+                        <ul v-if="isExpandLocale || isMobile">
                             <li class="ko"><nuxt-link :to="switchLocalePath('ko')">Korean</nuxt-link></li>
                             <li class="en"><nuxt-link :to="switchLocalePath('en')">English</nuxt-link></li>
                             <li class="zh"><nuxt-link :to="switchLocalePath('zh')">Chinese</nuxt-link></li>
@@ -97,7 +98,8 @@ export default {
         isReflection : false,
         isExpandMenu : false,
         isExpandGames : false,
-        isExpandLocale : false
+        isExpandLocale : false,
+        isMobile : new Boolean
     }),
     watch : {
         '$route' () {
@@ -141,6 +143,9 @@ export default {
         this.page = this.$route.name.replace(/_/g,'').replace(/(ko|en|zh)/g,'')
         window.addEventListener('scroll',this.viewReflection)
         window.addEventListener('DOMContentLoaded', this.viewReflection)
+
+        // 현 디바이스가 모바일인지 데스크탑인지 확인한다.
+        this.isMobile = this.$device.isMobile
     },
     destroyed () {
         window.removeEventListener('scroll',this.viewReflection)
