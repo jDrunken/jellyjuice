@@ -11,8 +11,9 @@
             </li>
         </ul>
         <div class="copyright and address">
+            JellyJuice <span class="bar">|</span> <a href="mailto:dappstudio@eosys.io">dappstudio@eosys.io</a>
+            <address>{{$t('info')}}</address>
             <p class="copyright">{{$t('copyright')}}</p>
-            <address>{{$t('address')}}</address>
         </div>
     </div>
 </footer>

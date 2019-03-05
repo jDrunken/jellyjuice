@@ -1,14 +1,14 @@
 {
     "ko" : {
         "copyright" : "Copyright © 2019 JellyJuice, All rights reserved.",
-        "address" : "서울시 강남구 테헤란로 302"
+        "info" : "서울시 강남구 테헤란로 302"
     },
     "en" : {
         "copyright" : "Copyright © 2019 JellyJuice, All rights reserved.",
-        "address" : "06210 301, Teheran-ro Gangnam-gu Seoul, Korea"
+        "info" : "06210 301, Teheran-ro Gangnam-gu Seoul, Korea"
     },
     "zh" : {
         "copyright" : "Copyright © 2019 JellyJuice, All rights reserved.",
-        "address" : "韩国首尔市江南区德黑兰路 302"
+        "info" : "韩国首尔市江南区德黑兰路 302"
     }
 }

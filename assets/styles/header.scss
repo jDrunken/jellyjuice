@@ -104,18 +104,21 @@ header {
     // gnb
     nav {
         $width:155px;
+        width:155px;
         height:81px;
         position:absolute;
         top:0;
         left:50%;
-        transform:translateX(-50%);
+        margin-left:calc(-140px / 2 - 7px);
 
         .viewing {
             font-weight:700;
         }
 
         > ul {
+            width:$width*2;
             height:inherit;
+            position:absolute;
         }
 
         > ul > li {
@@ -365,7 +368,6 @@ header.reflection {
         color:$white;
         display:block;
         box-sizing:border-box;
-        max-width:425px;
         max-height:853px;
         position:fixed;
         top:0;

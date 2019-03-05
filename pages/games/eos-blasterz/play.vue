@@ -1,8 +1,6 @@
 <template>
 <section class="play eos-blasterz">
     <div class="container">
-        <h2>Eos Blasterz</h2>
-
         <p v-if="$device.isDesktop" v-html="$t('notice')"></p>
 
         <p class="image container">

@@ -47,6 +47,10 @@ section.partners {
             }
         }
 
+        a[disabled] {
+            cursor:default;
+        }
+
         a.bi.numbers:before {
             background-size: auto 62.2px;
             background-position-y:calc(50% - 4px);

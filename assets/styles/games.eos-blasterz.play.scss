@@ -8,7 +8,7 @@ section.play {
         top:0;
         left:0;
         right:0;
-        height:1000px;
+        height:620px;
         background:url('../images/main-visual.jpg') center top no-repeat #000;
         background-size:1920px auto;
 
@@ -21,7 +21,7 @@ section.play {
     > .container {
         position:relative;
         text-align:center;
-        padding-top:167px;
+        padding-top:204px;
         padding-bottom:200px;
 
         @include media ('<700px') {
@@ -62,13 +62,14 @@ section.play {
 
         img {
             max-width:1280px;
-            width:100%;
+            // width:100%;
+            width:1280px;
         }
     }
 
     .btn_area {
         display:flex;
-        justify-content: space-between;
+        justify-content: center;
         margin-top:120px;
         max-width:950px;
         margin-left:auto;
@@ -79,7 +80,7 @@ section.play {
         }
 
         a {
-            flex:1;
+            flex:0 0 290px;
             margin-left:40px;
             &:first-child {
                 margin-left:0;
