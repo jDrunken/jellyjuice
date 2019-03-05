@@ -34,12 +34,12 @@
             </no-ssr>
         </div>
     </section>
-    <section class="description script" id="download">
+    <section class="description script">
         <div class="container">
             <div class="btn_area">
                 <!-- <a href="#" class="play ios">iOS Play</a> -->
                 <a href="https://play.google.com/store/apps/details?id=com.JellyJuice.Blasterz" target="_blank" class="play aos">Google Play</a>
-                <a href="#" class="download apk">Android APK</a>
+                <a href="#" class="download apk" id="download">Android APK</a>
                 <nuxt-link :to="localePath('games-eos-blasterz-play')" class="web">WEB</nuxt-link>
             </div>
             <h4>게임방법</h4>
