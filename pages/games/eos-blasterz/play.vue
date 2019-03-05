@@ -9,7 +9,7 @@
             <img src="../../../assets/images/img-blasterz-screenshot-skip.jpg" alt="">
         </p>
         <div class="btn_area">
-            <a href="#" class="play ios">iOS Play</a>
+            <!-- <a href="#" class="play ios">iOS Play</a> -->
             <a href="#" class="play aos">Google Play</a>
             <a href="#" class="download apk">Android APK</a>
         </div>
