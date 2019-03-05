@@ -6,6 +6,9 @@ section.description {
         color: $font-black;
         line-height:1.36;
 
+        margin-top:-130px;
+        padding-top:130px;
+
         @include media ('>=700px') {
             &:lang(ko) {
                 font-family: $korean;
@@ -15,6 +18,8 @@ section.description {
         }
 
         @include media ('<700px') {
+            padding-top:0;
+            margin-top:0;
             font-size: rem(26);
             font-weight: 600;
             line-height: 1.42;

@@ -3,7 +3,7 @@
     <div class="container">
         <h2>{{$t('intro.title')}}</h2>
         <p>{{$t('intro.description')}}</p>
-        <nuxt-link v-if="$device.isDesktop" :to="localePath('games-eos-blasterz-play')">{{$t('play')}}</nuxt-link>
+        <a v-if="$device.isDesktop" href="#downloadDesktop" v-scroll-to=" '#downloadDesktop' ">{{$t('download')}}</a>
         <a v-else href="#download" v-scroll-to="scrollToOption">{{$t('download')}}</a>
     </div>
 </section>
@@ -24,8 +24,9 @@ export default {
     }),
     methods : {
         getScrollPosition () {
-            this.scrollToOption.offset = document.querySelector(this.scrollToOption.el).offsetHeight - window.outerHeight
-        }
+            this.scrollToOption.offset = document.querySelector(this.scrollToOption.el).offsetHeight - window.outerHeight + 30
+        },
+        // }
     },
     mounted () {
         this.getScrollPosition();
