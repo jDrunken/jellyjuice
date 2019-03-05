@@ -104,21 +104,18 @@ header {
     // gnb
     nav {
         $width:155px;
-        width:264px;
         height:81px;
         position:absolute;
         top:0;
         left:50%;
-        margin-left:calc(-264px / 2 - 7px);
+        transform:translateX(-50%);
 
         .viewing {
             font-weight:700;
         }
 
         > ul {
-            width:$width*2;
             height:inherit;
-            position:absolute;
         }
 
         > ul > li {

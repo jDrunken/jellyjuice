@@ -28,11 +28,11 @@
                             </ul>
                         </transition>
                     </li>
-                    <li class="partnership" :class="page === 'partnership' ? 'viewing' : null">
-                        <nuxt-link :to="localePath('partnership')">
-                            {{$t('partnership')}}
-                        </nuxt-link>
-                    </li>
+                    <!-- <li class="partnership" :class="page === 'partnership' ? 'viewing' : null"> -->
+                    <!--     <nuxt-link :to="localePath('partnership')"> -->
+                    <!--         {{$t('partnership')}} -->
+                    <!--     </nuxt-link> -->
+                    <!-- </li> -->
                 </ul>
             </nav>
             <div class="locale change" :class="{expand : isExpandLocale}" @mouseleave="hideLocale()">
