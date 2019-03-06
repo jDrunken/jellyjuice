@@ -7,7 +7,7 @@
                 <a href="https://medium.com/eosys" class="sns medium" target="_blank">medium</a>
             </li>
             <li>
-                <a href="https://twitter.com/eosys_io" class="sns twitter" target="_blank">twitter</a>
+                <a href="http://t.me/EOSYSIOKR" class="sns telegram" target="_blank">telegram</a>
             </li>
         </ul>
         <div class="copyright and address">
