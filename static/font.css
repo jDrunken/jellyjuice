@@ -56,8 +56,14 @@
 
 @font-face {
     font-family: 'Apple SD Gothic Neo';
-    font-weight:200;
+    font-weight:100;
     src: local('AppleSDGothicNeo-Thin');
+}
+
+@font-face {
+    font-family: 'Apple SD Gothic Neo';
+    font-weight:200;
+    src: local('AppleSDGothicNeo-UltraLight');
 }
 
 @font-face {
@@ -89,3 +95,16 @@
     font-weight:700;
     src: local('AppleSDGothicNeo-Bold');
 }
+
+@font-face {
+    font-family: 'Apple SD Gothic Neo';
+    font-weight:800;
+    src: local('AppleSDGothicNeo-ExtraBold');
+}
+
+@font-face {
+    font-family: 'Apple SD Gothic Neo';
+    font-weight:900;
+    src: local('AppleSDGothicNeo-Heavy');
+}
+

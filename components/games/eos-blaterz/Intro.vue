@@ -24,7 +24,7 @@ export default {
     }),
     methods : {
         getScrollPosition () {
-            this.scrollToOption.offset = document.querySelector(this.scrollToOption.el).offsetHeight - window.outerHeight + 30
+            this.scrollToOption.offset = document.querySelector(this.scrollToOption.el).offsetHeight - window.outerHeight + 20
         },
         // }
     },

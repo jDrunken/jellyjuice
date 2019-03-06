@@ -2,16 +2,16 @@
     "ko" : {
         "locale" : "Korean",
         "games" : "Games",
-        "partnership" : "Partnership"
+        "partnership" : "Membership"
     },
     "en" : {
         "locale" : "English",
         "games" : "Games",
-        "partnership" : "Partnership"
+        "partnership" : "Membership"
     },
     "zh" : {
         "locale" : "Chinese",
         "games" : "游戏",
-        "partnership" : "合作伙伴"
+        "partnership" : "会员"
     }
 }

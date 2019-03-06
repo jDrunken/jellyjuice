@@ -1,6 +1,8 @@
 {
     "ko" : {
         "play" : "Play Now",
+        "howToPlay" : "게임 방법",
+        "explanation" : "게임 설명",
         "download" : "Download",
         "intro" : {
             "title" : "EOS Blasterz",
@@ -8,7 +10,8 @@
         },
         "detail" : {
             "title" : "복수의 시간,<br> 몬스터를 처치하고 상금을 획득하라!",
-            "description" : "가볍게 점프해서 몬스터를 처치하세요! EOS Blasterz는 EOS 메인넷 기반의 하이퍼 캐주얼 게임입니다. 유저들은 게임 내에서 경쟁하며 우승 보상으로 EOS를 받을 수 있습니다. 누구나 플레이하기 쉽고 재밌는 게임 인터페이스, 원터치 게임 컨트롤은 새로운 블록체인 엔터테인먼트를 제공합니다. 선호하는 경쟁 모드에 참여해 위너가 되어 보세요. 새로운 기능 업데이트와 캐릭터 스킨이 기다리고 있으니까요. 아, 블라스터만의 파이팅을 유지하는 것도 잊지 말고요!",
+            "description1" : "EOS Blasterz는 원터치 컨트롤 게임으로 발판이 나타나는 적절한 타이밍에 버튼을 누르면 더 많은 에너지를 얻을 수 있고, 마지막 발판에는 최대한 버튼을 꾸욱 눌러서 게이지를 많이 채운 후 떼야 더 강력한 에너지파를 발사할 수 있습니다. 처음 게임 시작 시 나타나는 보너스 상자에는 데미지를 높여주는 아이템이 랜덤하게 들어있으니 당신의 운을 믿어보세요!",
+            "description2" : "게임 모드는 라운드가 진행되는 시간에 따라 총 3가지(6시간, 24시간, 1주일) 모드로 구성되어 있으며, 각 모드 별 실제 플레이 시간은 4시간, 22시간, 166시간으로 남은 2시간은 정산 및 다음 라운드를 준비하기 위한 쿨타임으로 활용됩니다. 상금 분배 방식은 상위 10%부터 상위 50%까지 지급하는 다양한 방식이 존재합니다. 특정 라운드에서 가장 많은 몬스터를 처치한 상위권의 유저들에게는 해당 라운드에 모금된 상금들이 자동으로 분배됩니다. 향후 업데이트를 통해 분배 방식의 다변화와 새로운 캐릭터 스킨 및 기능 추가도 예정되어 있으니, 지금 바로 최고의 사냥꾼이 되어보세요!",
             "url" : "https://youtu.be/GVTLE35ZzmA"
         },
         "feature" : {
@@ -18,14 +21,17 @@
     },
     "en" : {
         "play" : "Play Now",
+        "howToPlay" : "Guide",
+        "explanation" : "Description",
         "download" : "Download",
         "intro" : {
             "title" : "EOS Blasterz",
             "description" : "Blast Monsters and Win EOS!"
         },
         "detail" : {
-            "title" : "It's payback time.<br>Blast monsters and win the prize!",
-            "description" : "Beware, push and jump to kill monsters! EOS Blasterz is a hyper casual game based on the EOS mainnet. Multiple users can compete, and win payback EOS tokens as a reward. Enjoy fun & easy-to-play game interface! One-touch game control will introduce new blockchain game experience. Jump into your favorite competition mode and be the winner. Stay tuned to enjoy upgrade features and skins. Oh, Don’t forget to bring your blaster spirit!",
+            "title" : "It's payback time.<br> Blast monsters and win the prize!",
+            "description1" : "EOS Blasterz is a one-touch control game based on the EOS mainnet. You can get more energy by pushing the button at the right time when the foothold appears. For the last step, press the button as long as possible to fill the gauge, then you will release more powerful energy waves. There are bonus boxes at the start of the game, containing a damage enhancement item randomly. So, trust your luck!",
+            "description2" : "There are three modes(Q6h, Daily, Weekly) depending on the duration of the round. For each mode, the actual play time is 4 hours, 22 hours, and 166 hours, and the remaining 2 hours are used for settlement and preparation for the next round. There are various ways to settle the reward from top 10% to 50%. The prize money raised in a round will be automatically distributed to the high ranked users who have killed the most monsters in that round. We plan to diversify the settlement rate and add new character skins and features in the future. Stay tuned for the next update!",
             "url" : "https://youtu.be/UWc4rjS2EYs"
 
         },
@@ -36,6 +42,8 @@
     },
     "zh" : {
         "play" : "开始",
+        "howToPlay" : "游戏规则",
+        "explanation" : "游戏说明",
         "download" : "下载",
         "intro" : {
             "title" : "EOS Blasterz",
@@ -43,8 +51,9 @@
         },
         "detail" : {
             "title" : "这是投资回收期。<br> 爆炸怪物并赢得奖品！",
-            "description" : "小心，推动和跳跃杀死怪物！ EOS Blasterz是一款基于EOS主网的超级休闲游戏。多个用户可以竞争，并赢得回报EOS令牌作为奖励。享受有趣和易玩的游戏界面！一键式游戏控制将引入新的区块链游戏体验。跳转到您最喜欢的比赛模式，成为赢家。请继续关注享受升级功能和皮肤。哦，别忘了带上你的冲击精神吧！",
-            "url" : "https://youtu.be/UWc4rjS2EYs"
+            "description1" : "EOS Blasterz是一键式控制游戏。在脚踏板出现的适当时机按下按钮,就能获得更多的能量,最后的脚踏板上要尽可能地按下按钮,在能量充沛后即可发射最大能量。 游戏开始时出现的礼物包内随机装着一个提高打击力的礼物,那就看你的运气了!",
+            "description2" : "游戏模式根据回合进行时间由3种(6小时,24小时,1周)模式构成,每个模式的实际玩法时间为4小时,22小时,166小时,剩下的2小时为清算及下一轮准备。 奖金分配方式存在从前10%到前50%的多种支付方式。 对于在特定回合中处理最多怪兽的上游用户,获得该回合中所募集的奖金将自动分配。 通过接下来的更新,我们将分配方式的多元化，新增角色护肤及功能。现在就是成为最佳猎人的最好时机!",
+            "url" : "https://youtu.be/LminSBcAer8"
 
         },
         "feature" : {

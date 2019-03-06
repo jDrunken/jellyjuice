@@ -8,8 +8,8 @@
         </p>
         <div class="btn_area">
             <!-- <a href="#" class="play ios">iOS Play</a> -->
-            <a href="#" class="play aos">Google Play</a>
-            <a href="#" class="download apk">Android APK</a>
+            <a href="https://play.google.com/store/apps/details?id=com.JellyJuice.Blasterz" class="play aos">Google Play</a>
+            <a href="http://syncmedia.macc.skcdn.com/_assembly/Blasterz-release_v7.apk" target="_blank" class="download apk">Android APK</a>
         </div>
     </div>
 </section>

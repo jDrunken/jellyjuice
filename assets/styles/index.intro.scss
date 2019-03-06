@@ -1,12 +1,13 @@
 section.intro {
     box-sizing:border-box;
     background:url('../images/bg-index-intro.svg') top center no-repeat;
-    background:url('../images/bg-index-intro.svg') top center no-repeat;
-    // background:url('../images/bg-index-intro@2x.png') top center no-repeat;
     background-size:1920px auto;
 
     @include media ('>1920px') {
+        display:flex;
+        height:(750/1920*100vw);
         background-size:cover;
+        align-items:center;
     }
 
     @include media ('<700px') {
@@ -23,12 +24,8 @@ section.intro {
         max-height:100vh;
     }
 
-    padding-top:286px;
-    padding-bottom:190px;
-    @include media ('>1920px') {
-        padding-top:417px;
-        padding-bottom:317px;
-    }
+    padding-top:320px;
+    padding-bottom:250px;
 
     @include media ('<700px') {
         padding-top:(136/320*100vw);
@@ -54,13 +51,18 @@ section.intro {
     p {
         font-size: rem(26);
         line-height: 1.31;
-        letter-spacing: -1px;
+        letter-spacing: -0.5px;
         text-align: center;
         color: $font-black;
         max-width:900px;
         margin:0 auto;
 
         @include media ('>=700px') {
+           & /deep/ br:nth-of-type(1),
+           & /deep/ br:nth-of-type(3) {
+                display:none;
+            }
+
             &:lang(ko) {
                 font-family: $korean;
                 font-size: rem(24);
@@ -77,7 +79,7 @@ section.intro {
     }
 
     h2 + p {
-        margin-top: 32px;
+        margin-top: 40px;
         @include media ('<700px') {
             margin-top:21px;
         }
