@@ -4,7 +4,7 @@
         <h2>jellyjuice</h2>
         <ul class="communication channel">
             <li>
-                <a href="https://medium.com/eosys" class="sns medium" target="_blank">medium</a>
+                <a href="http://t.me/EOSYSIOKR" class="sns telegram" target="_blank">telegram</a>
             </li>
             <li>
                 <a href="https://twitter.com/eosys_io" class="sns twitter" target="_blank">twitter</a>

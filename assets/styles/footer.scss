@@ -81,6 +81,11 @@ footer {
                     background:url('~assets/images/footer-medium@2x.png') center center no-repeat;
                     background-size:cover;
                 }
+
+                &.telegram {
+                    background:url('~assets/images/footer_telegram.png') center center no-repeat;
+                    background-size:cover;
+                }
             }
         }
 
