@@ -3,8 +3,7 @@
     <div class="container">
         <h2>{{$t('intro.title')}}</h2>
         <p>{{$t('intro.description')}}</p>
-        <a v-if="$device.isDesktop" href="#downloadDesktop" v-scroll-to=" '#downloadDesktop' ">{{$t('download')}}</a>
-        <a v-else href="#download" v-scroll-to="scrollToOption">{{$t('download')}}</a>
+        <a  href="#download" v-scroll-to="scrollToOption">{{$t('download')}}</a>
     </div>
 </section>
 </template>
@@ -24,7 +23,13 @@ export default {
     }),
     methods : {
         getScrollPosition () {
-            this.scrollToOption.offset = document.querySelector(this.scrollToOption.el).offsetHeight - window.outerHeight + 20
+
+            if (this.$device.isDesktop) {
+                this.scrollToOption.offset = -window.innerHeight + document.querySelector(this.scrollToOption.el).offsetHeight + 40
+            } else {
+                this.scrollToOption.offset = document.querySelector(this.scrollToOption.el).offsetHeight - window.outerHeight + 20
+            }
+
         },
         // }
     },

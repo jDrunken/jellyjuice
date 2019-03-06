@@ -2,7 +2,7 @@
 <div>
     <section class="description title">
         <div class="container">
-            <h3 v-html="$t('detail.title')" id="downloadDesktop"></h3>
+            <h3 v-html="$t('detail.title')"></h3>
         </div>
     </section>
     <section class="description screenshot">
