@@ -40,7 +40,8 @@
                 <!-- <a href="#" class="play ios">iOS Play</a> -->
                 <a href="https://play.google.com/store/apps/details?id=com.JellyJuice.Blasterz" target="_blank" class="play aos" >Google Play</a>
                 <a href="http://syncmedia.macc.skcdn.com/_assembly/Blasterz-release_v12.apk"  class="download apk" id="download">Android APK</a>
-                <!-- <nuxt-link :to="localePath('games-eos-blasterz-play')" class="web">WEB</nuxt-link> -->
+                <!-- /eos-blasterz/play 페이지는 헤더에서 새로운 스크립트를 요구하는데 nuxt-link를 쓰면 그 부분이 적용되지 않는 것 같습니다. 그냥 링크로 강제로 리프레시 되게 처리... -->
+                <a href="./eos-blasterz/play" class="web">WEB</a>
             </div>
             <h4>{{ $t('howToPlay') }}</h4>
             <p>{{$t('detail.description1')}}</p>

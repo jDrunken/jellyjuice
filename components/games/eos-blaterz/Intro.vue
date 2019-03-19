@@ -3,7 +3,7 @@
     <div class="container">
         <h2>{{$t('intro.title')}}</h2>
         <p>{{$t('intro.description')}}</p>
-        <a  href="#download" v-scroll-to="scrollToOption">{{$t('download')}}</a>
+        <a  href="#download" v-scroll-to="scrollToOption">{{$t('play')}}</a>
     </div>
 </section>
 </template>

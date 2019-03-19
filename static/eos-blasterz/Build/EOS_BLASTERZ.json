@@ -1,0 +1,13 @@
+{
+"companyName": "JellyJuice",
+"productName": "Blasterz",
+"dataUrl": "EOS_BLASTERZ.data.unityweb",
+"wasmCodeUrl": "EOS_BLASTERZ.wasm.code.unityweb",
+"wasmFrameworkUrl": "EOS_BLASTERZ.wasm.framework.unityweb",
+"TOTAL_MEMORY": 1073741824,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}
