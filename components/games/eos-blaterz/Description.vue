@@ -17,17 +17,17 @@
                 </slide>
                 <slide class="items">
                     <div>
-                        <img src="../../../assets/images/img-blasterz-screenshot-01.jpg" alt="">
+                        <img :src="require(`../../../assets/images/img-blasterz-screenshot-${locale}01.jpg`)" alt="">
                     </div>
                 </slide>
                 <slide class="items">
                     <div>
-                        <img src="../../../assets/images/img-blasterz-screenshot-skip.jpg" alt="">
+                        <img :src="require(`../../../assets/images/img-blasterz-screenshot-${locale}skip.jpg`)" alt="">
                     </div>
                 </slide>
                 <slide class="items">
                     <div>
-                        <img src="../../../assets/images/img-blasterz-screenshot-03.jpg" alt="">
+                        <img :src="require(`../../../assets/images/img-blasterz-screenshot-${locale}03.jpg`)" alt="">
                     </div>
                 </slide>
             </carousel>
@@ -59,6 +59,11 @@
 
 <script>
 export default {
-    name : 'Description'
+    name : 'Description',
+    computed : {
+        locale () {
+            return this.$i18n.locale === 'ko' ? 'ko-' : ''
+        }
+    }
 }
 </script>
