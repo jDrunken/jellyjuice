@@ -104,12 +104,12 @@ header {
     // gnb
     nav {
         $width:155px;
-        width:155px;
+        width:$width*2;
         height:81px;
         position:absolute;
         top:0;
         left:50%;
-        margin-left:calc(-140px / 2 - 7px);
+        transform:translateX(-50%);
 
         .viewing {
             font-weight:700;
@@ -241,7 +241,7 @@ header.games-eos-blasterz-play {
     }
 }
 
-header.partnership {
+header.membership {
     color:$orange;
 
     h1 {
@@ -326,7 +326,7 @@ header.reflection {
         @include ir();
         animation: slideOutButton 2s;
 
-        header.partnership & {
+        header.membership & {
             background:url('../images/btn-bugger-orange@2x.png') center center no-repeat;
             background-size:contain;
         }
@@ -388,6 +388,7 @@ header.reflection {
             width:auto;
             height:auto;
             margin:0;
+            transform:none;
             position:static;
         }
 

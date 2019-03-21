@@ -2,12 +2,12 @@
     "ko" : {
         "locale" : "Korean",
         "games" : "Games",
-        "partnership" : "Membership"
+        "membership" : "Membership"
     },
     "en" : {
         "locale" : "English",
         "games" : "Games",
-        "partnership" : "Membership"
+        "membership" : "Membership"
     },
     "zh" : {
         "locale" : "Chinese",

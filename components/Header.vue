@@ -28,11 +28,11 @@
                             </ul>
                         </transition>
                     </li>
-                    <!-- <li class="partnership" :class="page === 'partnership' ? 'viewing' : null"> -->
-                    <!--     <nuxt-link :to="localePath('partnership')"> -->
-                    <!--         {{$t('partnership')}} -->
-                    <!--     </nuxt-link> -->
-                    <!-- </li> -->
+                    <li class="partnership" :class="page === 'membership' ? 'viewing' : null">
+                        <nuxt-link :to="localePath('membership')">
+                            {{$t('membership')}}
+                        </nuxt-link>
+                    </li>
                 </ul>
             </nav>
             <div class="locale change" :class="{expand : isExpandLocale}" @mouseleave="hideLocale()">
@@ -107,11 +107,6 @@ export default {
             this.page = this.$route.name.replace(/_/g,'').replace(/(ko|en|zh)/g,'')
         }
     },
-    computed: {
-        availableLocales () {
-            return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
-        }
-    },
     methods : {
         viewReflection () {
             // return this.isReflection = this.$store.state.scrollPosition <= 0 ? false : true
@@ -119,92 +114,19 @@ export default {
             this.isExpandLocale = false;
             return this.isReflection = scroll <= 0 ? false : true
         },
-        toggleMenu (id,event) {
-            console.log(this.isExpandMenu)
-            if (this.isExpandMenu === true) {
-                this.isExpandMenu = false
-                if (process.browser) {
-                    // document.querySelector('html').removeAttribute('style')
-                    // document.querySelector('body').removeAttribute('style')
-                    this.disableBodyScroll(false,id,event)
-                }
-            } else {
-                this.isExpandMenu = true
-                if (process.browser) {
-                    // document.querySelector('html').style.overflow = 'hidden'
-                    // document.querySelector('body').style.overflow = 'hidden'
-                    this.disableBodyScroll(true,id,event)
-                }
 
-            }
-        },
-        preventBodyScroll (event,_selector,_element) {
-            if (false === _element || !event.target.closest(_selector)) {
-                event.preventDefault();
-            }
+        toggleMenu (event) {
+            this.isExpandMenu =  this.isExpandMenu === true ? false : true
         },
 
-        disableBodyScroll : function (allow, selector,event) { // 🔗 Thijs Huijssoon https://gist.github.com/thuijssoon
-
-            /**
-             * Private variables
-             */
-            let _selector = false,
-                _element = false,
-                _clientY;
-
-            let captureClientY = function (event) {
-                // only respond to a single touch
-                if (event.targetTouches.length === 1) {
-                    _clientY = event.targetTouches[0].clientY;
-                }
-            };
-
-            let preventOverscroll = function (event) {
-
-                // only respond to a single touch
-                if (event.targetTouches.length !== 1) {
-                    return;
-                }
-
-                var clientY = event.targetTouches[0].clientY - _clientY;
-
-                if (_element.scrollTop === 0 && clientY > 0) {
-                    event.preventDefault();
-                }
-
-                if ((_element.scrollHeight - _element.scrollTop <= _element.clientHeight) && clientY < 0) {
-                    event.preventDefault();
-                }
-
-            };
-
-            if (typeof selector !== "undefined") {
-                _selector = selector;
-                _element = document.querySelector(selector);
-            }
-
-            if (true === allow) {
-                if (false !== _element) {
-                    _element.addEventListener('touchstart', captureClientY, { passive: false });
-                    _element.addEventListener('touchmove', preventOverscroll, { passive: false });
-                }
-                document.body.addEventListener("touchmove", this.preventBodyScroll(event,_selector,_element), { passive: false });
-            } else {
-                if (false !== _element) {
-                    _element.removeEventListener('touchstart', captureClientY, { passive: false });
-                    _element.removeEventListener('touchmove', preventOverscroll, { passive: false });
-                }
-                document.body.removeEventListener("touchmove", this.preventBodyScroll(event,_selector,_element), { passive: false });
-            }
-            // };
-        },
         toggleLocale () {
             this.isExpandLocale = !!this.isExpandLocale ? false : true
         },
+
         hideLocale () {
             this.isExpandLocale = false;
         },
+
         toggleGamgesMenu (status) {
             if (status === 'show') {
                 this.isExpandGames = true
@@ -215,9 +137,10 @@ export default {
             }
         }
     },
-    mounted () {
+    created () {
         // 현재 페이지 이름을 받아와서 스타일링 하는데 쓴다.
         this.page = this.$route.name.replace(/_/g,'').replace(/(ko|en|zh)/g,'')
+        this.viewReflection()
         window.addEventListener('scroll',this.viewReflection)
         window.addEventListener('DOMContentLoaded', this.viewReflection)
 
